@@ -13,7 +13,7 @@
   .cardTitle {
     color: #1f90d2;
     font-size: 25px;
-    margin-bottom: 6px;
+    margin-bottom: 18px;
   }
 
   .container {
@@ -51,7 +51,7 @@
     display: inline-block;
     color: #737680;
     text-decoration: none;
-    padding-bottom: 50px;
+    padding-bottom: 18px;
     margin: 0;
     font-size: 16px;
     font-weight: bold;
