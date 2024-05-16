@@ -1,0 +1,85 @@
+.banner {
+    width: 100%;
+}
+
+.div_destaque {
+    background-color: #1f90d2;
+    height: 40px;
+}
+
+.div_agendamento {
+    text-align: center;
+}
+
+.texto {
+    font-size: 35px;
+    color: #1f90d2;
+    margin: 50px 0 60px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    flex-basis: 26%;
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    border: 0;
+    margin: 10px;
+}
+
+.icones {
+    height: 70px;
+}
+
+.texto1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #737680;
+    margin-top: 10px;
+}
+
+.div_Agendamento {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.botao_azul {
+    display: inline-block;
+    background-color: #1f90d2;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+.botao_azul:hover {
+    background-color: #145c93;
+}
+
+.material-icons {
+    margin-right: 15px;
+}
+
+
+.card_left {
+    align-self: flex-start;
+}
+
+.card_center {
+    align-self: center;
+}
+
+.card_right {
+    align-self: flex-end;
+}
