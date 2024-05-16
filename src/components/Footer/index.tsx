@@ -28,7 +28,7 @@ const Footer = () => {
             <p>Nos acompanhe nas redes sociais:</p>
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FaInstagramSquare className="redes-sociais" /></a>
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><FaFacebookSquare className="redes-sociais" /></a>
-            <a href="https://twitter.com/twitterbrasil" target="_blank" rel="noopener noreferrer"><FaTwitterSquare className="redes-sociais" /></a>
+            <a href="https://twitter.com/?lang=pt-br" target="_blank" rel="noopener noreferrer"><FaTwitterSquare className="redes-sociais" /></a>
           </div>
         </div>
       </section>
