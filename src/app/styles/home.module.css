@@ -1,7 +1,6 @@
-**** CONTEÚDO DO CÓDIGO CSS *******
-
 .bannerSection {
   width: 100%;
+  position: relative;
 }
 
 .bannerImage {
@@ -18,7 +17,7 @@
 }
 
 .container {
-  margin: 0 auto;
+  margin: 60px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -52,18 +51,8 @@
   text-align: center;
 }
 
-.featuredImage1 {
+.featuredImage {
   width: 110px;
-  margin-bottom: 20px;
-}
-
-.featuredImage2 {
-  width: 80px;
-  margin-bottom: 20px;
-}
-
-.featuredImage3 {
-  width: 140px;
   margin-bottom: 20px;
 }
 
@@ -113,12 +102,13 @@
 
 @media (min-width: 800px) {
   .featured {
-      margin-top: -150px;
-      height: 250px;
-      flex-direction: row;
+    position: relative;
+    margin-top: -150px;
+    height: 250px;
+    flex-direction: row;
   }
 
   .featuredItem {
-      width: 33.33%;
+    width: 33.33%;
   }
 }
