@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from 'react';
 import styles from './styles/home.module.css';
@@ -8,7 +8,7 @@ const Home = () => {
     <main>
       <section className={styles.bannerSection}>
         <img src="images/home/home-banner.jpg" className={styles.bannerImage} />
-        <div className={styles.bannerShadow}></div>
+        <div className={styles.bannerOverlay}></div>
       </section>
 
       <section className={styles.container}>
@@ -38,6 +38,7 @@ const Home = () => {
           <br />
           <p className={styles.facilitiesDescription}>Centro cirúrgico completo, com 17 salas preparadas para realizar quaisquer tipos de procedimentos, dos mais simples aos de alta complexidade, incluindo cirurgias por videolaparoscopia, tornando os procedimentos menos incisivos e minimizando o período de internação.</p>
         </div>
+        <div className={styles.gallery}>
         <div className={styles.card}>
           <div>
             <img className={styles.facilitiesImage} src="images/home/img-1.jpg" />
@@ -82,6 +83,7 @@ const Home = () => {
           <div>
             <img className={styles.facilitiesImage} src="images/home/img-9.png" />
           </div>
+        </div>
         </div>
       </section>
     </main>
