@@ -11,12 +11,13 @@ const Unidades = () => {
       <Head>
         <title>Units</title>
       </Head>
-      <main>
+      <main className={styles.recipiente}>
         <div className={styles.unitsContainer}>
           <h1 className={styles.heading}>Conheça as Unidades</h1>
         </div>
-        <section className={`container ${styles.container}`}>
-          <div className={`card ${styles.card}`}>
+        <p className={styles.text}>Estamos presentes em várias localidades para melhor atender você e sua família, sempre com o compromisso de oferecer atendimento de qualidade e personalizado. Conheça as nossas unidades e encontre a mais próxima de você:</p>
+        <section className={styles.container}>
+          <div className={styles.card}>
             <h3 className={styles.cardTitle}>Morumbi</h3>
             <div>
               <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} />
@@ -27,7 +28,7 @@ const Unidades = () => {
               <img className={styles.unitImage} src="/images/unidades/morumbi.jpg" alt="Morumbi" />
             </div>
           </div>
-          <div className={`card ${styles.card}`}>
+          <div className={styles.card}>
             <h3 className={styles.cardTitle}>Paulista</h3>
             <div>
               <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} />
@@ -38,7 +39,7 @@ const Unidades = () => {
               <img className={styles.unitImage} src="/images/unidades/paulista.jpeg" alt="Paulista" />
             </div>
           </div>
-          <div className={`card ${styles.card}`}>
+          <div className={styles.card}>
             <h3 className={styles.cardTitle}>Pompeia</h3>
             <div>
               <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} />
@@ -49,7 +50,7 @@ const Unidades = () => {
               <img className={styles.unitImage} src="/images/unidades/pompeia.png" alt="Pompeia" />
             </div>
           </div>
-          <div className={`card ${styles.card}`}>
+          <div className={styles.card}>
             <h3 className={styles.cardTitle}>Sumaré</h3>
             <div>
               <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} />

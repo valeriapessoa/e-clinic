@@ -9,10 +9,10 @@ const Footer = () => {
       <section className="container-flex">
         <div className="recipiente">
           <div className="footer-item">
-            <a href="/home"><img src="/logo-white.png" className="logo_branco" alt="Logo E-Clinic" /></a>
+            <a href="/"><img src="/logo-white.png" className="logo_branco" alt="Logo E-Clinic" /></a>
           </div>
           <div className="footer-item">
-            <p><a className="link" href="/home">Home</a></p>
+            <p><a className="link" href="/">Home</a></p>
             <p><a className="link" href="/convenios">Convênios</a></p>
             <p><a className="link" href="/unidades">Unidades</a></p>
             <p><a className="link" href="/agendar-consulta">Agendar Consulta</a></p>

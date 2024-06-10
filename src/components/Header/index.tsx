@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="custom-navbar">
       <Container>
-        <Navbar.Brand href="/home" className='logo-container'>
+        <Navbar.Brand href="/" className='logo-container'>
           <img
             src="./logo-white.png"
             alt="e-Clinic Logo"
@@ -19,7 +19,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className='navbar-toggler' />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/convenios">Convênios</Nav.Link>
             <Nav.Link href="/unidades">Unidades</Nav.Link>
             <Nav.Link href="/agendar-consulta">Agendar Consulta</Nav.Link>
