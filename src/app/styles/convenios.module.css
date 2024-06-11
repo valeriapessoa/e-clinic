@@ -1,63 +1,62 @@
- /******************* CONVÊNIOS **********************/
+/******************* CONVENIOS **********************/
 
-.recipiente {
-    margin: 75px;
+.container {
+  margin: 75px;
 }
 
-  .texto1 {
-    text-align: center;
-    font-size: 30px;
-    color: #1f90d2;
-    margin-bottom: 20px;
-  }
+.heading {
+  text-align: center;
+  font-size: 30px;
+  color: #1f90d2;
+  margin-bottom: 20px;
+}
 
-  .texto2 {
-    text-align: justify;
-    font-size: 20px;
-    color: #737680;
-    margin: 0;
-  }
+.paragraph {
+  text-align: justify;
+  font-size: 20px;
+  color: #737680;
+  margin: 0;
+}
 
-  .bloco {
-    margin: 15px;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-  }
+.block {
+  margin: 15px 0;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
 
-  .bloco div {
-    flex-grow: 1;
-    margin-bottom: 10px;
-  }
+.block div {
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
 
-  .imgUnidades {
-    max-width: 200px;
-  }
+.insuranceImage {
+  max-width: 90%;
+  height: auto;
+}
 
-  @media (max-width: 727px) {
-    .bloco {
+@media (max-width: 767px) {
+  .block {
       flex-basis: 50%;
-      margin: 15px 0;
-    }
-
-    .texto2 {
-      font-size: 20px;
-    }
+      margin: 10px 0;
   }
 
-  @media (max-width: 320px) {
-    .bloco {
+  .paragraph {
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .block {
       flex-basis: 100%;
-      margin: 15px 0;
-    }
-
-    .texto1 {
-      text-align: center;
-      font-size: 20px;
-      color: #1f90d2;
-    }
-
-    .texto2 {
-      font-size: 15px;
-    }
+      margin: 10px 0;
   }
+
+  .heading {
+      font-size: 24px;
+  }
+
+  .paragraph {
+      font-size: 16px;
+  }
+}
