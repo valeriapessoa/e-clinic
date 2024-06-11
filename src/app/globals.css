@@ -2,12 +2,13 @@
 
 /******************* Header **********************/
 
+/* Contêiner do logotipo */
 .logo-container {
     display: flex;
     align-items: center;
 }
 
-.logo {
+.header-logo {
     width: 222px;
     padding: 5px 0;
     margin-right: 190px;
@@ -17,12 +18,10 @@
     background: #1f90d2;
 }
 
-/* Estilos para a marca da barra de navegação */
 .custom-navbar .navbar-brand {
     margin-right: auto;
 }
 
-/* Estilos para os links de navegação */
 .custom-navbar .nav-link {
     color: #ffffff;
     font-size: large;
@@ -49,7 +48,6 @@
     width: 100%;
 }
 
-/* Cor do texto ao passar o mouse */
 .custom-navbar .nav-link:hover {
     color: #fff;
 }
@@ -77,11 +75,11 @@
     background-color: rgba(10, 0, 0, 0.3);
 }
 
-/* Alterando a cor do ícone da Navbar-toggler */
 .custom-navbar .navbar-toggler-icon {
     color: #fff;
 }
 
+/* Estilo para o botão de alternância da barra de navegação */
 .navbar-toggler {
     line-height: 1;
     color: #fff;
@@ -104,11 +102,6 @@
         margin-right: 0;
     }
 }
-
-
-
-
-
 
 
 /* ************************ Footer ******************************** */

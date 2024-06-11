@@ -1,87 +1,85 @@
-/******************* UNITS **********************/
-
-.recipiente {
+.container {
   margin: 75px;
 }
 
-.unitsContainer {
-    margin: 90px 0 20px 0;
-  }
+.unitsHeader {
+  margin: 90px 0 20px 0;
+}
 
-  .heading {
-    text-align: center;
-    font-size: 30px;
-    color: #1f90d2;
-  }
+.heading {
+  text-align: center;
+  font-size: 30px;
+  color: #1f90d2;
+}
 
-  .text {
-    text-align: justify;
-    font-size: 20px;
-    color: #737680;
-    margin: 0 0 20px 0;
-  }
+.description {
+  text-align: justify;
+  font-size: 20px;
+  color: #737680;
+  margin: 0 0 20px 0;
+}
 
-  .cardTitle {
-    color: #1f90d2;
-    font-size: 25px;
-    margin-bottom: 18px;
-  }
+.unitTitle {
+  color: #1f90d2;
+  font-size: 25px;
+  margin-bottom: 18px;
+}
 
-  .container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
-    color: #1f90d2;
-    margin-bottom: 150px;
-  }
+.unitsList {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  color: #1f90d2;
+  margin-bottom: 150px;
+}
 
-  .card {
-    margin: 15px;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    flex-basis: 45%;
-    border: none;
-  }
+.unitCard {
+  margin: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  flex-basis: 45%;
+  border: none;
+}
 
-  .card div {
-    flex-grow: 1;
-    margin-bottom: 10px;
-  }
+.unitCard div {
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
 
-  .address {
-    display: inline-block;
-    color: #737680;
-    font-size: 16px;
-    font-weight: bold;
-    margin-left: 8px;
-  }
+.unitAddress {
+  display: inline-block;
+  color: #737680;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 8px;
+}
 
-  .phone {
-    display: inline-block;
-    color: #737680;
-    text-decoration: none;
-    padding-bottom: 18px;
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-  }
+.unitPhone {
+  display: inline-block;
+  color: #737680;
+  text-decoration: none;
+  padding-bottom: 18px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
 
-  .unitImage {
-    display: block;
-    max-width: 420px;
-    width: 100%;
-  }
+.unitImage {
+  display: block;
+  max-width: 420px;
+  width: 100%;
+}
 
-  .icon {
-    color: #1f90d2;
-    margin-right: 5px;
-  }
+.icon {
+  color: #1f90d2;
+  margin-right: 5px;
+}
 
-  @media (max-width: 727px) {
-    .card {
-      flex-basis: 100%;
-      margin: 15px 0;
-    }
+@media (max-width: 727px) {
+  .unitCard {
+    flex-basis: 100%;
+    margin: 15px 0;
   }
+}
