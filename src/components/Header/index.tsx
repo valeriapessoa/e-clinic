@@ -24,7 +24,7 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="header-nav">
             <Nav.Link href="/" active={isActive('/')}>Home</Nav.Link>
-            <Nav.Link href="/convenios" active={isActive('/convenios')}>Serviços</Nav.Link>
+            <Nav.Link href="/convenios" active={isActive('/convenios')}>Convênios</Nav.Link>
             <Nav.Link href="/unidades" active={isActive('/unidades')}>Unidades</Nav.Link>
             <Nav.Link href="/agendar-consulta" active={isActive('/agendar-consulta')}>Agendar Consulta</Nav.Link>
           </Nav>
