@@ -1,9 +1,12 @@
 "use client";
 
 import React from 'react';
+import { usePathname } from 'next/navigation';
 import { FaInstagramSquare, FaFacebookSquare, FaTwitterSquare, FaPhoneAlt } from 'react-icons/fa';
 
 const Footer = () => {
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path ? 'link active': 'link';
   return (
     <footer className="footer">
       <section className="container-flex">
@@ -12,10 +15,10 @@ const Footer = () => {
             <a href="/"><img src="/logo-white.png" className="logo_branco" alt="Logo E-Clinic" /></a>
           </div>
           <div className="footer-item">
-            <p><a className="link" href="/">Home</a></p>
-            <p><a className="link" href="/convenios">Convênios</a></p>
-            <p><a className="link" href="/unidades">Unidades</a></p>
-            <p><a className="link" href="/agendar-consulta">Agendar Consulta</a></p>
+            <p><a className={isActive('/')} href="/">Home</a></p>
+            <p><a className={isActive('/convenios')} href="/convenios">Convênios</a></p>
+            <p><a className={isActive('/unidades')} href="/unidades">Unidades</a></p>
+            <p><a className={isActive('/agendar-consulta')} href="/agendar-consulta">Agendar Consulta</a></p>
           </div>
           <div className="footer-item">
             <p>Entre em contato conosco:</p>

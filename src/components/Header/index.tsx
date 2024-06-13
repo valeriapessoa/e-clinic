@@ -1,5 +1,6 @@
-"use client";
+'use client'
 
+import { usePathname } from 'next/navigation';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,6 +8,8 @@ import { FaPhoneAlt } from 'react-icons/fa';
 
 // Componente do cabeçalho
 const Header = () => {
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path;
   return (
     <Navbar collapseOnSelect expand="lg" className="custom-navbar">
       <Container>
@@ -20,10 +23,10 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className='navbar-toggler' />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="header-nav">
-            <Nav.Link href="/" active={window.location.pathname === '/'}>Home</Nav.Link>
-            <Nav.Link href="/convenios" active={window.location.pathname === '/convenios'}>Serviços</Nav.Link>
-            <Nav.Link href="/unidades" active={window.location.pathname === '/unidades'}>Unidades</Nav.Link>
-            <Nav.Link href="/agendar-consulta" active={window.location.pathname === '/agendar-consulta'}>Agendar Consulta</Nav.Link>
+            <Nav.Link href="/" active={isActive('/')}>Home</Nav.Link>
+            <Nav.Link href="/convenios" active={isActive('/convenios')}>Serviços</Nav.Link>
+            <Nav.Link href="/unidades" active={isActive('/unidades')}>Unidades</Nav.Link>
+            <Nav.Link href="/agendar-consulta" active={isActive('/agendar-consulta')}>Agendar Consulta</Nav.Link>
           </Nav>
           <Nav className='header-phone'>
             <Nav.Link href="tel:1122403434">
