@@ -2,7 +2,6 @@
 
 /******************* Header **********************/
 
-/* Contêiner do logotipo */
 .logo-container {
     display: flex;
     align-items: center;
@@ -66,7 +65,6 @@
     position: relative;
 }
 
-/* Ocultar o pseudo-elemento nos links do telefone */
 .header-phone .nav-link::after {
     display: none;
 }
@@ -106,47 +104,46 @@
 
 /* ************************ Footer ******************************** */
 
-.container-flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .footer-item, .footer-termo {
-    margin-top: 20px;
-  }
-
-  .footer-item, .footer-telefone, .link, .footer-termo {
-    color: #fff;
-  }
-
-  .footer-telefone {
-    text-decoration: none;
-  }
-
-  .link {
-    text-decoration: none;
-  }
-
-  /* Estilo base para os links no footer */
-.footer-item .link {
-    color: #fff;
-    text-decoration: none;
-    position: relative;
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
-/* Pseudo-elemento para a borda inferior dos links no footer */
+.footer-item, .footer-disclaimer {
+  margin-top: 20px;
+}
+
+.footer-item, .footer-phone, .link, .footer-disclaimer {
+  color: #fff;
+}
+
+.footer-phone {
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.footer-item .link {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Pseudo-elemento para a borda inferior dos links no rodapé */
 .footer-item .link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #66cc66;
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #66cc66;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
 }
 
 /* Animação da borda inferior ao passar o mouse e quando ativo */
@@ -157,26 +154,25 @@
   color: #fff;
 }
 
-.footer-item--social {
+.social-links {
   text-align: center;
 }
 
-.footer-termo {
+.footer-disclaimer {
   text-align: center;
 }
 
-.footer-contato {
+.footer-contact {
   display: flex;
   align-items: center;
 }
 
-.contato-icone {
-  margin-right: 10px;
-  font-size: 18px;
+.contact-icon {
   margin-right: 8px;
+  font-size: 18px;
 }
 
-.logo_branco {
+.white-logo {
   width: 250px;
 }
 
@@ -190,30 +186,28 @@ footer {
   align-items: center;
 }
 
-footer .recipiente {
+footer .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Alinha os itens no centro */
+  align-items: center;
   padding: 0;
   margin: 0;
 }
 
-
-
-.redes-sociais {
+.social-icon {
   font-size: 48px;
   padding: 0 10px;
   color: #fff;
 }
 
 @media (min-width: 1240px) {
-  .recipiente {
-      width: 1210px;
+  .wrapper {
+    width: 1210px;
   }
 }
 
 @media only screen and (min-width: 800px) {
-  footer .recipiente {
+  footer .wrapper {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
@@ -226,13 +220,7 @@ footer .recipiente {
     padding: 10px;
   }
 
-  .footer-item--social {
+  .social-links {
     text-align: left;
   }
 }
-
-
-
-
-
-
