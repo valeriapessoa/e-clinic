@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import styles from './styles/home.module.css';
+import styles from './page.module.css';
 
 const Home = () => {
   return (
@@ -10,7 +10,6 @@ const Home = () => {
         <img src="images/home/home-banner.jpg" className={styles.bannerImage} alt="Banner da home" />
         <div className={styles.bannerOverlay}></div>
       </section>
-
       <section className={styles.container}>
         <div className={styles.featured}>
           <div className={styles.featuredItem}>
