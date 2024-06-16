@@ -2,14 +2,14 @@
 
 import Head from 'next/head';
 
-const ConsultasAgendadas = () => {
+const Forms = () => {
   return (
     <main>
       <Head>
-        <title>Consultas Agendadas</title>
+        <title>Forms</title>
       </Head>
     </main>
   );
 };
 
-export default ConsultasAgendadas;
+export default Forms;
