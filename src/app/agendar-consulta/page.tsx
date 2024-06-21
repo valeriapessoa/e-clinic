@@ -36,7 +36,7 @@ const AgendarConsulta = () => {
         </div>
       </section>
       <div className={styles.onlineScheduling}>
-      <a href="login.php" target="_blank" className={styles.blueButton}>
+      <a href="login" target="_blank" className={styles.blueButton}>
         <FaBullseye className={styles.icon} />
         <span> Agendamento Online</span>
       </a>
