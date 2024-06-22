@@ -2,8 +2,9 @@
 
 import Head from 'next/head';
 import React from 'react';
-import styles from '../styles/auth/login.module.css';
+import styles from '../../styles/auth/login.module.css';
 import { FaEnvelope, FaLock, FaEye, FaGoogle, FaApple } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Login = () => {
   return (
@@ -36,8 +37,8 @@ const Login = () => {
           </div>
           <span className={styles.link}>Esqueceu sua senha?</span>
         </div>
-        <button className={styles.submitButton}>Sign In</button>
-        <p className={styles.text}>Não tem uma conta? <span className={styles.link}>Inscrever-se</span></p>
+        <button className={styles.submitButton}>Entrar</button>
+        <p className={styles.text}>Não tem uma conta? <Link href="/cadastrar-usuario" className={styles.link}>Inscrever-se</Link></p>
         <p className={`${styles.text} ${styles.separator}`}>Ou com</p>
 
         <div className={styles.socialButtonsContainer}>

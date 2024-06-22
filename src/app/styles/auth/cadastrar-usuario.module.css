@@ -1,0 +1,92 @@
+/* ***************** register-user.module.css  ***************** */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+    color: #1f90d2;
+    font-weight: 600;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+
+  .signin {
+    text-align: center;
+  }
+
+  .signin a {
+    color: #1f90d2;
+  }
+
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+
+  .label {
+    position: relative;
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+
+  .labelText {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+
+  .input:placeholder-shown + .labelText {
+    top: 15px;
+    font-size: 0.9em;
+  }
+
+  .input:focus + .labelText, .input:valid + .labelText {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+
+  .input:valid + .labelText {
+    color: green;
+  }
+
+  .submit {
+    border: none;
+    outline: none;
+    background-color: #1f90d2;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s ease;
+  }
+
+  .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }

@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -13,7 +14,7 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="custom-navbar">
       <Container>
-        <Navbar.Brand href="/" className='logo-container'>
+        <Navbar.Brand as={Link} href="/" className='logo-container'>
           <img
             src="./logo-white.png"
             alt="e-Clinic Logo"
@@ -23,10 +24,10 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className='navbar-toggler' />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="header-nav">
-            <Nav.Link href="/" active={isActive('/')}>Home</Nav.Link>
-            <Nav.Link href="/convenios" active={isActive('/convenios')}>Convênios</Nav.Link>
-            <Nav.Link href="/unidades" active={isActive('/unidades')}>Unidades</Nav.Link>
-            <Nav.Link href="/agendar-consulta" active={isActive('/agendar-consulta')}>Agendar Consulta</Nav.Link>
+            <Nav.Link as={Link} href="/" active={isActive('/')}>Home</Nav.Link>
+            <Nav.Link as={Link} href="/convenios" active={isActive('/convenios')}>Convênios</Nav.Link>
+            <Nav.Link as={Link} href="/unidades" active={isActive('/unidades')}>Unidades</Nav.Link>
+            <Nav.Link as={Link} href="/agendar-consulta" active={isActive('/agendar-consulta')}>Agendar Consulta</Nav.Link>
           </Nav>
           <Nav className='header-phone'>
             <Nav.Link href="tel:1122403434">

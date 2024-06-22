@@ -65,19 +65,20 @@
   font-size: 14px;
   color: black;
   font-weight: 400;
+  margin-left: 7px;
 }
 
 .link {
   font-size: 14px;
   margin-left: 5px;
-  color: #2d79f3;
+  color: #1f90d2;
   font-weight: 500;
   cursor: pointer;
 }
 
 .submitButton {
   margin: 20px 0 10px 0;
-  background-color: #151717;
+  background-color: #1f90d2;
   border: none;
   color: white;
   font-size: 15px;
@@ -89,7 +90,7 @@
 }
 
 .submitButton:hover {
-  background-color: #252727;
+  background-color: #2d79f3;
 }
 
 .text {

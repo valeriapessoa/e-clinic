@@ -3,6 +3,7 @@
 import Head from 'next/head';
 import styles from '../styles/agendar-consulta.module.css';
 import { FaBullseye } from 'react-icons/fa';
+import Link from 'next/link';
 
 const AgendarConsulta = () => {
   return (
@@ -36,10 +37,10 @@ const AgendarConsulta = () => {
         </div>
       </section>
       <div className={styles.onlineScheduling}>
-      <a href="login" target="_blank" className={styles.blueButton}>
+      <Link href="login" className={styles.blueButton}>
         <FaBullseye className={styles.icon} />
         <span> Agendamento Online</span>
-      </a>
+      </Link>
     </div>
     </main>
   );
