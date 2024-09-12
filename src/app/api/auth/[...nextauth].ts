@@ -1,84 +1,67 @@
 import NextAuth from "next-auth";
-import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { prisma } from "../../../../lib/prisma";
-import { NextApiRequest, NextApiResponse } from 'next';
-import { SessionStrategy } from "next-auth";
+import GoogleProvider from "next-auth/providers/google";
+import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcryptjs";
 
-let userAccount;
-const options = {
+const prisma = new PrismaClient();
+
+export default NextAuth({
   providers: [
     CredentialsProvider({
-      id: "credentials",
       name: "Credentials",
       credentials: {
         email: { label: "Email", type: "text" },
-        password: { label: "Password", type: "password" }
+        password: { label: "Password", type: "password" },
       },
-      async authorize(credentials, req) {
-        if (!credentials) {
-          return null;
+      async authorize(credentials) {
+        const user = await prisma.user.findUnique({
+          where: { email: credentials?.email ?? undefined }, // Corrigido
+        });
+
+        if (!user) {
+          throw new Error("Usuário não encontrado");
         }
 
-        const userCredentials = {
-          email: credentials.email,
-          password: credentials.password,
-        };
-
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/user/login`,
-          {
-            method: "POST",
-            body: JSON.stringify(userCredentials),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
+        const isValidPassword = await bcrypt.compare(
+          credentials!.password,
+          user.password!
         );
-        const user = await res.json();
 
-        if (res.ok && user) {
-          userAccount = user;
-          console.log(userAccount);
-          return user;
-        } else {
-          return null;
+        if (!isValidPassword) {
+          throw new Error("Senha inválida");
         }
+
+        return user;
       },
     }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+    }),
   ],
-
-  adapter: PrismaAdapter(prisma),
-  secret: process.env.NEXTAUTH_SECRET,
-  session: { strategy: "jwt" as SessionStrategy, maxAge: 24 * 60 * 60 },
-
-  jwt: {
-    secret: process.env.NEXTAUTH_SECRET,
-    maxAge: 60 * 60 * 24 * 30,
-    encryption: true,
-  },
-
-  pages: {
-    signIn: "/login",
-    signOut: "/login",
-    error: "/login",
-  },
-
   callbacks: {
-    async session({ session, user, token }: { session: any, user: any, token: any }) {
-      if (user !== null) {
-        session.user = user;
+    async session({ session, token }) {
+      // Garante que 'session.user' e 'email' existam
+      if (session?.user?.email) {
+        const user = await prisma.user.findUnique({
+          where: { email: session.user.email },
+        });
+        if (user) {
+          session.user.id = user.id; // Adiciona o 'id' ao objeto da sessão
+        }
       }
       return session;
     },
-
-    async jwt({ token, user }: { token: any, user: any }) {
+    async jwt({ token, user }) {
       if (user) {
-        token.accessToken = `${user.id}-${user.email}-${user.name}`;
+        token.id = user.id; // Adiciona o 'id' ao token
       }
       return token;
     },
   },
-};
+  pages: {
+    signIn: "/auth/login", // Redirecionamento para a página de login personalizada
+  },
+});
 
-export default (req: NextApiRequest, res: NextApiResponse) => NextAuth(req, res, options);
