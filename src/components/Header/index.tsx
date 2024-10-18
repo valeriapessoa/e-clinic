@@ -16,7 +16,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand as={Link} href="/" className='logo-container'>
           <img
-            src="./logo-white.png"
+            src="/logo-white.png"
             alt="e-Clinic Logo"
             className="header-logo"
           />

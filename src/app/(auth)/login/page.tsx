@@ -3,13 +3,20 @@
 import Head from 'next/head';
 import React, { useState } from 'react';
 import styles from '../../styles/auth/login.module.css';
-import { FaEnvelope, FaLock, FaEye, FaGoogle, FaApple } from 'react-icons/fa';
+import { FaEnvelope, FaLock, FaEye, FaGoogle, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { redirect } from 'next/navigation'
 import { useRouter } from 'next/navigation';
 
 const Login = () => {
+  const { data: session } = useSession();
+
+  if(session) {
+    return redirect(`/consultas/consultas-agendadas`)
+  }
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -84,13 +91,13 @@ const Login = () => {
         <p className={`${styles.text} ${styles.separator}`}>Ou com</p>
 
         <div className={styles.socialButtonsContainer}>
-          <button className={`${styles.socialButton} ${styles.google}`}>
+          <button className={`${styles.socialButton} ${styles.google}`}  onClick={() => signIn("google")}>
             <FaGoogle size={20} />
             Google
           </button>
-          <button className={`${styles.socialButton} ${styles.apple}`}>
-            <FaApple size={20} />
-            Apple
+          <button className={`${styles.socialButton} ${styles.gitHub}`} onClick={() => signIn("github")}>
+            <FaGithub size={20} />
+            GitHub
           </button>
         </div>
       </form>
