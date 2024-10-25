@@ -1,37 +1,51 @@
-"use client"
+"use client";
 
-import Head from 'next/head';
-import { signIn, signOut, useSession } from "next-auth/react";
-import { redirect } from 'next/navigation'
-import Image from "next/image";
+import { Container, Table, Image } from "react-bootstrap";
+import styles from "../../styles/consultas/consultas-agendadas.module.css";
 
 const ConsultasAgendadas = () => {
-  const { data: session } = useSession();
-  if(!session) {
-    return redirect(`/login`)
-  }
+  const consultas = [
+    {
+      id: 1,
+      pacienteNome: "João Silva",
+      unidade: "Morumbi",
+      especialidade: "Cardiologia",
+      dataHora: "2024-10-30T10:00",
+    },
+    {
+      id: 2,
+      pacienteNome: "Maria Oliveira",
+      unidade: "Centro",
+      especialidade: "Dermatologia",
+      dataHora: "2024-10-31T14:30",
+    },
+  ];
+
   return (
-    <main>
-      <Head>
-        <title>Consultas Agendadas</title>
-      </Head>
-      <Image
-        src={session.user?.image as string}
-        width={100}
-        height={100}
-        alt={session.user?.name as string}
-      ></Image>
-      <h1>
-        {session.user?.name}
-      </h1>
-      <p>{session.user?.email}</p>
-      <button
-        onClick={() => signOut()}
-        className="rounded-lg btn btn-danger px-5 py-1"
-      >
-        Sign Out
-      </button>
-    </main>
+    <Container className={styles.container}>
+      <Image src="/images/consultas/banner.jpg" fluid className={styles.bannerImage} alt="Banner de Consultas" />
+      <h2 className={styles.title}>Consultas Agendadas</h2>
+      <Table striped bordered hover responsive>
+        <thead>
+          <tr>
+            <th>Nome do Paciente</th>
+            <th>Unidade</th>
+            <th>Especialidade</th>
+            <th>Data e Hora</th>
+          </tr>
+        </thead>
+        <tbody>
+          {consultas.map((consulta) => (
+            <tr key={consulta.id}>
+              <td>{consulta.pacienteNome}</td>
+              <td>{consulta.unidade}</td>
+              <td>{consulta.especialidade}</td>
+              <td>{new Date(consulta.dataHora).toLocaleString()}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </Container>
   );
 };
 
