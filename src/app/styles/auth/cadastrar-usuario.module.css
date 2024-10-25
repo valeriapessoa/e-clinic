@@ -1,92 +1,108 @@
 /* ***************** register-user.module.css  ***************** */
 
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 20px;
-  }
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-  .title {
-    font-size: 28px;
-    color: #1f90d2;
-    font-weight: 600;
-    letter-spacing: -1px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+.title {
+  font-size: 28px;
+  color: #1f90d2;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
 
-  .message, .signin {
-    color: rgba(88, 87, 87, 0.822);
-    font-size: 14px;
-  }
+.label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
 
-  .signin {
-    text-align: center;
-  }
+.input {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+}
 
-  .signin a {
-    color: #1f90d2;
-  }
+.input-group .btn {
+  border-radius: 0 10px 10px 0;
+  background-color: #1f90d2;
+  color: #fff;
+}
 
-  .signin a:hover {
-    text-decoration: underline royalblue;
-  }
+.input-group .btn:hover {
+  background-color: rgb(56, 90, 194);
+}
 
-  .label {
-    position: relative;
-    width: 100%;
-  }
+.submit {
+  background-color: #1f90d2;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+}
 
-  .input {
-    width: 100%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid rgba(105, 105, 105, 0.397);
-    border-radius: 10px;
-  }
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
 
-  .labelText {
-    position: absolute;
-    left: 10px;
-    top: 15px;
-    color: grey;
-    font-size: 0.9em;
-    cursor: text;
-    transition: 0.3s ease;
-  }
+.googleButton {
+  background-color: #db4437; /* Cor original do Google */
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Transição suave */
+}
 
-  .input:placeholder-shown + .labelText {
-    top: 15px;
-    font-size: 0.9em;
-  }
+.googleButton:hover {
+  background-color: #fff; /* Fundo branco ao passar o mouse */
+  color: #db4437; /* Cor do texto ao passar o mouse */
+}
 
-  .input:focus + .labelText, .input:valid + .labelText {
-    top: 30px;
-    font-size: 0.7em;
-    font-weight: 600;
-  }
+.googleButton:hover .icon {
+  color: #db4437; /* Cor do ícone do Google ao passar o mouse */
+}
 
-  .input:valid + .labelText {
-    color: green;
-  }
+.githubButton {
+  background-color: #333; /* Cor original do GitHub */
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Transição suave */
+}
 
-  .submit {
-    border: none;
-    outline: none;
-    background-color: #1f90d2;
-    padding: 10px;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 16px;
-    transition: 0.3s ease;
-  }
+.githubButton:hover {
+  background-color: #fff; /* Fundo branco ao passar o mouse */
+  color: #333; /* Cor do texto ao passar o mouse */
+}
 
-  .submit:hover {
-    background-color: rgb(56, 90, 194);
-  }
+.githubButton:hover .icon {
+  color: #333; /* Cor do ícone do GitHub ao passar o mouse */
+}
+
+.dividerText {
+  background-color: #fff;
+  padding: 0 10px;
+  color: #888;
+  font-size: 14px;
+}
+
+.signin {
+  color: #888;
+  font-size: 14px;
+}
+
+.signin a {
+  color: #1f90d2;
+  text-decoration: none;
+}
+
+.signin a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  font-size: 24px;
+  transition: color 0.2s ease-in-out; /* Transição suave para ícones */
+}

@@ -1,83 +1,49 @@
 /* ******************** Login ******************** */
 
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   background-color: #ffffff;
   padding: 30px;
   width: 100%;
   max-width: 450px;
   border-radius: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Roboto, 'Open Sans', sans-serif;
 }
 
-.form button {
-  align-self: flex-end;
-}
-
-.labelContainer > label {
+.label {
   color: #151717;
   font-weight: 600;
 }
 
 .inputContainer {
-  border: 1.5px solid #ecedec;
-  border-radius: 10px;
-  height: 50px;
+  position: relative;
   display: flex;
   align-items: center;
-  padding-left: 10px;
-  transition: 0.2s ease-in-out;
+  gap: 10px;
+  border-radius: 10px;
 }
 
 .input {
-  margin-left: 10px;
+  padding: 10px;
   border-radius: 10px;
-  border: none;
-  width: 100%;
-  height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .input:focus {
   outline: none;
+  border-color: #2d79f3;
 }
 
-.input::placeholder {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.inputContainer:focus-within {
-  border: 1.5px solid #2d79f3;
-}
-
-.optionsContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  justify-content: space-between;
-}
-
-.optionsContainer > div > label {
-  font-size: 14px;
-  color: black;
-  font-weight: 400;
-  margin-left: 7px;
-}
-
-.link {
-  font-size: 14px;
-  margin-left: 5px;
-  color: #1f90d2;
-  font-weight: 500;
+.showPasswordButton {
+  position: absolute;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #2d79f3;
   cursor: pointer;
 }
 
 .submitButton {
-  margin: 20px 0 10px 0;
+  margin-top: 20px;
   background-color: #1f90d2;
   border: none;
   color: white;
@@ -85,59 +51,66 @@
   font-weight: 500;
   border-radius: 10px;
   height: 50px;
-  width: 100%;
-  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .submitButton:hover {
   background-color: #2d79f3;
 }
 
-.text {
-  text-align: center;
-  color: black;
-  font-size: 14px;
-  margin: 5px 0;
+.link {
+  color: #1f90d2;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-.separator {
-  margin-top: 15px;
-}
-
-.socialButtonsContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  justify-content: space-between;
+.link:hover {
+  color: #2d79f3;
 }
 
 .socialButton {
-  margin-top: 10px;
-  width: 100%;
-  height: 50px;
-  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 500;
   gap: 10px;
-  border: 1px solid #ededef;
-  background-color: white;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-}
-
-.socialButton:hover {
-  border: 1px solid #2d79f3;
+  font-weight: 500;
+  border-radius: 10px;
 }
 
 .google {
   background-color: #db4437;
   color: white;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.gitHub {
-  background-color: #000000;
-  color: white;
+.google:hover {
+  background-color: #fff;
+  color: #db4437;
 }
+
+.google:hover .icon {
+  color: #db4437;
+}
+
+.github {
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.github:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.githubB:hover .icon {
+  color: #333;
+}
+
+.icon {
+  font-size: 24px;
+  transition: color 0.2s ease-in-out;
+}
+
