@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Container, Table, Image } from 'react-bootstrap';
-import styles from "../../styles/consultas/minhas-consultas.module.css"; 
+import styles from "../../styles/consultas/minhas-consultas.module.css";
 
 // Define a interface para os dados da consulta
 interface Consulta {
@@ -19,7 +19,7 @@ const ConsultasAgendadas = () => {
     useEffect(() => {
         const fetchConsultas = async () => {
             try {
-                const response = await fetch('/api/consultas'); // Faz uma requisição para obter as consultas agendadas.
+                const response = await fetch('/api/consultations'); // Faz uma requisição para obter as consultas agendadas.
                 if (!response.ok) {
                     throw new Error('Erro ao buscar consultas');
                 }
@@ -32,6 +32,20 @@ const ConsultasAgendadas = () => {
 
         fetchConsultas(); // Chama a função para buscar as consultas quando o componente é montado.
     }, []);
+
+    const formatarDataHora = (dataHora: string) => {
+        const date = new Date(dataHora);
+
+        // Formata a data
+        const optionsDate: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+        const dataFormatada = date.toLocaleDateString('pt-BR', optionsDate);
+
+        // Formata a hora
+        const optionsTime: Intl.DateTimeFormatOptions = { hour: 'numeric', minute: 'numeric', hour12: true };
+        const horaFormatada = date.toLocaleTimeString('pt-BR', optionsTime);
+
+        return `${dataFormatada} às ${horaFormatada}`; // Exibe a data e hora formatadas
+    };
 
     return (
         <Container className={styles.container}>
@@ -47,14 +61,20 @@ const ConsultasAgendadas = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {consultas.map(consulta => (
-                        <tr key={consulta._id}>
-                            <td>{consulta.pacienteNome}</td>
-                            <td>{consulta.unidade}</td>
-                            <td>{consulta.especialidade}</td>
-                            <td>{new Date(consulta.consultaDataHora).toLocaleString()}</td> {/* Formata a data/hora */}
+                    {consultas.length > 0 ? (
+                        consultas.map(consulta => (
+                            <tr key={consulta._id}>
+                                <td>{consulta.pacienteNome}</td>
+                                <td>{consulta.unidade}</td>
+                                <td>{consulta.especialidade}</td>
+                                <td>{formatarDataHora(consulta.consultaDataHora)}</td> {/* Formata a data/hora */}
+                            </tr>
+                        ))
+                    ) : (
+                        <tr>
+                            <td colSpan={4} className="text-center">Nenhuma consulta agendada.</td>
                         </tr>
-                    ))}
+                    )}
                 </tbody>
             </Table>
         </Container>
