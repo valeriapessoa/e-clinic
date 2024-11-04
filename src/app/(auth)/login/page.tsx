@@ -16,7 +16,7 @@ const Signin = () => {
 
   useEffect(() => {
     if (session?.user) {
-      router.push("/consultas/consultas-agendadas");
+      router.push("/consultas/form-agendar-consulta");
     }
   }, [session, router]);
 
@@ -33,7 +33,7 @@ const Signin = () => {
     if (res?.error) {
       setError(res.error as string);
     } else {
-      router.push("/");
+      router.push("/consultas/form-agendar-consulta");
     }
   };
 

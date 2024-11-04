@@ -43,7 +43,7 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   pages: {
-    signIn: "/consultas/consultas-agendadas",
+    signIn: "/",
   },
   session: {
     strategy: "jwt",

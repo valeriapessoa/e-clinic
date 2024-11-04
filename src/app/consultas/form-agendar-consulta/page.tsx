@@ -1,12 +1,13 @@
 "use client";
 
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import { useState } from "react";
 import { Form, Button, Container, Image } from "react-bootstrap";
 import { consultationSchema } from "@/models/consultationSchema"; // Importando o schema de validação
 import styles from "../../styles/consultas/form-agendar-consulta.module.css"; // Ajuste o caminho conforme necessário
 import { z } from 'zod';
 import { useRouter } from 'next/navigation'; // Importa useRouter para redirecionamento
+import { redirect } from 'next/navigation'
 
 const FormAgendarConsulta = () => {
   const { data: session } = useSession();
@@ -95,6 +96,10 @@ const FormAgendarConsulta = () => {
       }
     }
   };
+
+  if(!session) {
+    return redirect(`/login`)
+  }
 
   return (
     <Container className={styles.formContainer}>
@@ -212,6 +217,13 @@ const FormAgendarConsulta = () => {
         <Button className={styles.button} variant="primary" type="submit">
           Agendar Consulta
         </Button>
+
+        <button
+          onClick={() => signOut()}
+          className="rounded-lg btn btn-danger px-5 py-1 mt-3"
+        >
+          Sair
+        </button>
 
       </Form>
     </Container>
