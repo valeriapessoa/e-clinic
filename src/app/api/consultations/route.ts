@@ -39,8 +39,16 @@ export async function POST(request: NextRequest) {
 // Endpoint para buscar todas as consultas (GET)
 export async function GET(request: NextRequest) {
   try {
+    const token = await getToken({ req: request });
+
+    if (!token) {
+      return NextResponse.json({ message: "Não autorizado" }, { status: 401 });
+    }
+
+    const userId = token.id;
+
     await connectDB(); // Conecta ao banco de dados antes de buscar as consultas.
-    const consultas = await Consultation.find(); // Busca todas as consultas no banco de dados.
+    const consultas = await Consultation.find({userId: userId}); // Busca todas as consultas no banco de dados.
 
     return NextResponse.json(consultas); // Retorna as consultas encontradas como resposta.
   } catch (error) {

@@ -16,7 +16,7 @@ const Signup = () => {
 
   useEffect(() => {
     if (session) {
-      router.push("/consultas/consultas-agendadas");
+      router.push("/consultas/form-agendar-consulta");
     }
   }, [session, router]);
 
