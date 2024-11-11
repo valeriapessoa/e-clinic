@@ -304,3 +304,11 @@ footer .wrapper {
     text-align: left;
   }
 }
+
+.testimonial .carousel-indicators {
+  margin-bottom: -1.2rem!important;
+}
+
+.testimonial .carousel-indicators [data-bs-target] {
+  background-color: #1f90d2!important;
+}

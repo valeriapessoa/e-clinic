@@ -24,7 +24,6 @@
   flex-flow: row wrap;
   justify-content: center;
   color: #1f90d2;
-  margin-bottom: 150px;
 }
 
 .featured {
@@ -113,4 +112,207 @@
   .featuredItem {
     width: 33.33%;
   }
+}
+
+/* ************************ Testimonials ******************************** */
+/* Estilização da seção de testimonials */
+.testimonialSection {
+  background-color: #f8f9fa; /* Cor de fundo clara */
+  padding: 60px 0;
+}
+
+/* Estilo do título */
+.testimonialSection h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Linha abaixo do título */
+.testimonialSection h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #1f90d2;
+  margin: 10px auto 20px;
+}
+
+/* Estilização da descrição */
+.testimonialSection p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: #e74c3c;
+  margin: 0 auto 20px;
+}
+
+.testimonialBlock {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 20px;
+  min-height: 250px;
+}
+
+.testimonialTitle {
+  font-weight: 600;
+  color: #2a3b5a;
+}
+
+.testimonialName {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.feedbackText {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.quoteIcon {
+  font-size: 2rem;
+  color: #1f90d2;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+
+/* ************************ About ******************************** */
+.about {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.about-img {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.about-img-inner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  height: 150px;
+  border: 10px solid var(--bs-white);
+  border-radius: 50%;
+}
+
+.inner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-experience {
+  position: absolute;
+  top: 236px;
+  left: -125px;
+  transform: rotate(-90deg);
+  background: transparent;
+  color: #1f90d2;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.custom-button {
+  background-color: #1f90d2;
+  border-color: #1f90d2;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.custom-icon {
+  color: #1f90d2;
+}
+
+/* ************************ Services ******************************** */
+.services {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.service-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon {
+  font-size: 40px;
+  color: #1f90d2;
+}
+
+/* ************************ Installations ******************************** */
+/* page.module.css */
+.installations {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.small-img {
+  height: 250px; /* Ajuste a altura das imagens pequenas conforme necessário */
+  object-fit: cover;
+  margin: 0 10px;
+}
+
+.large-img {
+  height: 350px; /* Ajuste a altura da imagem grande conforme necessário */
+  object-fit: cover;
+  margin: 0 10px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-indicators {
+  bottom: -30px; /* Ajuste a posição dos indicadores conforme necessário */
+}
+
+.carousel-indicators li {
+  background-color: blue; /* Cor dos indicadores */
+}
+
+.carousel-indicators .active {
+  background-color: darkblue; /* Cor do indicador ativo */
+}
+
+.text {
+  text-align: justify;
 }

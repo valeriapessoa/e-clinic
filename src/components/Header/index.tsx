@@ -9,17 +9,16 @@ import { FaPhoneAlt, FaCaretDown, FaUserCircle } from 'react-icons/fa';
 import { MdOutlineLibraryBooks, MdCalendarMonth } from "react-icons/md";
 import { SlLogout } from "react-icons/sl";
 import { useState } from 'react';
-import { useSession, signOut } from "next-auth/react"; // Importa useSession e signOut
+import { useSession, signOut } from "next-auth/react";
 
-// Componente do cabeçalho
 const Header = () => {
-  const { data: session } = useSession(); // Obtém os dados da sessão
+  const { data: session } = useSession();
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
-  const [dropdownOpen, setDropdownOpen] = useState(false); // Estado para controlar o dropdown
+  const [dropdownOpen, setDropdownOpen] = useState(false); 
 
   const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen); // Alterna a visibilidade do dropdown
+    setDropdownOpen(!dropdownOpen);
   };
 
   return (
@@ -45,17 +44,16 @@ const Header = () => {
               <FaPhoneAlt /> +55 11 2240-3434
             </Nav.Link>
           </Nav>
-          {session && ( // Verifica se a sessão existe
+          {session && (
             <div className="user-menu">
-              {/* Exibe a imagem do usuário se disponível ou um ícone padrão */}
               {session.user.image ? (
                 <img
-                  src={session.user.image} // Caminho da imagem do usuário
+                  src={session.user.image}
                   alt="Usuário"
                   className="user-image"
                 />
               ) : (
-                <FaUserCircle className="user-icon" /> // Ícone padrão se não houver imagem
+                <FaUserCircle className="user-icon" />
               )}
               <FaCaretDown
                 className="caret-icon"
@@ -64,17 +62,16 @@ const Header = () => {
                 aria-expanded={dropdownOpen}
               />
               <div className={`user-menu-dropdown ${dropdownOpen ? 'show' : ''}`}>
-                {/* Linha com fundo azul para o nome do usuário */}
                 <div className="flex flex-column border-bottom py-2 mb-2">
                   <div className="ps-3 user-info">
                     {session.user.name && (
                       <>
-                        <FaUserCircle className="user-name-icon" /> {/* Ícone ao lado do nome */}
+                        <FaUserCircle className="user-name-icon" />
                         <span className="user-name text-capitalize">{session.user.name}</span>
                       </>
                     )}
                   </div>
-                  {session.user.email && ( // Exibe o email abaixo do nome
+                  {session.user.email && (
                     <div className="ps-3 user-email text-secondary fw-light">{session.user.email}</div>
                   )}
                 </div>

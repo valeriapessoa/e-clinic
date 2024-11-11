@@ -1,16 +1,67 @@
 "use client";
 
-import React from 'react';
-import styles from './page.module.css';
+import React from "react";
+import styles from "./page.module.css";
+import Testimonials from "../components/Testimonials";
+import About from "../components/About";
+import Services from "../components/Services";
+import Installations from "../components/Installations";
 
 const Home = () => {
+  const testimonialsData = [
+      {
+        image: "/images/home/test-thumb1.jpg",
+        title: "Serviço incrível!",
+        name: "Camila Silva",
+        feedback:
+          "O atendimento foi simplesmente incrível! Desde a recepção até a consulta, fui tratada com muito carinho e profissionalismo. Recomendo a todos!",
+      },
+      {
+        image: "/images/home/test-thumb2.jpg",
+        title: "Médicos especialistas!",
+        name: "João Pereira",
+        feedback:
+          "Os médicos são extremamente competentes e especializados. Senti muita confiança durante todo o tratamento. Excelente equipe!",
+      },
+      {
+        image: "/images/home/test-thumb3.jpg",
+        title: "Bom suporte!",
+        name: "Maria Oliveira",
+        feedback:
+          "O suporte que recebi foi excepcional. Todas as minhas dúvidas foram esclarecidas rapidamente e com muita atenção. Agradeço a toda a equipe!",
+      },
+      {
+        image: "/images/home/test-thumb4.jpg",
+        title: "Ambiente agradável!",
+        name: "Carlos Ferreira",
+        feedback:
+          "A clínica possui um ambiente muito agradável e acolhedor. Me senti confortável e bem-vindo desde o momento em que entrei.",
+      },
+      {
+        image: "/images/home/test-thumb5.jpg",
+        title: "Equipamentos modernos!",
+        name: "Fernanda Costa",
+        feedback:
+          "Fiquei impressionada com a modernidade dos equipamentos e a tecnologia utilizada na clínica. Isso fez toda a diferença no meu tratamento.",
+      },
+      {
+        image: "/images/home/test-thumb6.jpg",
+        title: "Ótimo atendimento!",
+        name: "Lucas Almeida",
+        feedback:
+          "O atendimento foi excelente! Todos os funcionários são muito educados e prestativos. Com certeza voltarei sempre que precisar.",
+      },
+    ];
+
   return (
     <main>
-      <section className={styles.bannerSection}>
+           <section className={styles.bannerSection}>
         <img src="images/home/home-banner.jpg" className={styles.bannerImage} alt="Banner da home" />
         <div className={styles.bannerOverlay}></div>
       </section>
-      <section className={styles.container}>
+
+          <About/>
+          <section className={styles.container}>
         <div className={styles.featured}>
           <div className={styles.featuredItem}>
             <div className={styles.featuredContent}>
@@ -31,6 +82,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+        </section>
+          <Installations/>
+          <Services/>
+        {/* <section>
         <div className={styles.facilities}>
           <h2 className={styles.facilitiesHeading}>Nossas instalações</h2>
           <p className={styles.facilitiesDescription}>A E-Clinic disponibiliza instalações modernas para prestar atendimento de qualidade a seus pacientes. Humanização, cuidado, atenção e respeito são palavras que orientam há anos todas as atividades das equipes.</p>
@@ -65,6 +120,15 @@ const Home = () => {
             <img className={styles.facilitiesImage} src="images/home/img-9.png" alt="Imagem 9 da galeria" />
           </div>
         </div>
+      </section> */}
+
+      {/* Seção de Depoimentos */}
+      <section>
+        <Testimonials
+          testimonials={testimonialsData}
+          sectionTitle="O Que Nossos Pacientes Dizem"
+          sectionDescription="Estamos orgulhosos de ter ajudado mais de 15.000 pacientes a alcançar uma melhor qualidade de vida. Veja o que alguns deles têm a dizer sobre a experiência em nossa clínica."
+        />
       </section>
     </main>
   );
