@@ -34,7 +34,7 @@
   object-fit: cover;
 }
 
-.customButton {
+.editButton {
   background-color: #1f90d2;
   color: white;
   margin-right: 10px;
@@ -44,8 +44,22 @@
   transition: background-color 0.3s;
 }
 
-.customButton:hover {
+.editButton:hover {
   background-color: #145c93;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.deleteButton:hover {
+  background-color: #a32f3a;
 }
 
 @media (max-width: 768px) {

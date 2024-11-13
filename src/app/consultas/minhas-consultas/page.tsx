@@ -6,7 +6,6 @@ import styles from "../../styles/consultas/minhas-consultas.module.css";
 import { consultationSchema } from "@/models/consultationSchema";
 import { z } from 'zod';
 
-
 interface Consulta {
   _id: string;
   pacienteNome: string;
@@ -18,8 +17,9 @@ interface Consulta {
 const ConsultasAgendadas = () => {
   const [consultas, setConsultas] = useState<Consulta[]>([]);
   const [showModal, setShowModal] = useState(false);
+  const [showConfirmDeleteModal, setShowConfirmDeleteModal] = useState(false); // Novo estado para o modal de confirmação
   const [selectedConsulta, setSelectedConsulta] = useState<Consulta | null>(null);
-  const [formData, setFormData] = useState({ consultaDataHora: "" }); // Apenas o campo de data/hora
+  const [formData, setFormData] = useState({ consultaDataHora: "" });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   useEffect(() => {
@@ -45,10 +45,17 @@ const ConsultasAgendadas = () => {
     return `${dataFormatada} às ${horaFormatada}`;
   };
 
-  const handleDelete = async (id: string) => {
-    if (confirm("Você tem certeza que deseja cancelar esta consulta?")) {
-      await fetch(`/api/consultations/${id}`, { method: 'DELETE' });
-      setConsultas(consultas.filter(consulta => consulta._id !== id));
+  const handleDelete = (consulta: Consulta) => {
+    setSelectedConsulta(consulta); // Armazena a consulta selecionada
+    setShowConfirmDeleteModal(true); // Abre o modal de confirmação
+  };
+
+  const confirmDelete = async () => {
+    if (selectedConsulta) {
+      await fetch(`/api/consultations/${selectedConsulta._id}`, { method: 'DELETE' });
+      setConsultas(consultas.filter(consulta => consulta._id !== selectedConsulta._id));
+      setShowConfirmDeleteModal(false); // Fecha o modal de confirmação
+      alert("Consulta cancelada com sucesso!"); // Mensagem de sucesso
     }
   };
 
@@ -122,8 +129,8 @@ const ConsultasAgendadas = () => {
                 <td>{consulta.especialidade}</td>
                 <td>{formatarDataHora(consulta.consultaDataHora)}</td>
                 <td>
-                  <Button className={styles.customButton}  onClick={() => handleEditClick(consulta)}>Editar</Button>
-                  <Button className={styles.customButton}  onClick={() => handleDelete(consulta._id)}>Cancelar</Button>
+                  <Button className={styles.editButton} onClick={() => handleEditClick(consulta)}>Editar</Button>
+                  <Button className={styles.deleteButton} onClick={() => handleDelete(consulta)}>Cancelar</Button>
                 </td>
               </tr>
             ))
@@ -158,6 +165,23 @@ const ConsultasAgendadas = () => {
           </Form>
         </Modal.Body>
       </Modal>
+
+      {/* Modal de confirmação de exclusão */}
+      <Modal show={showConfirmDeleteModal} onHide={() => setShowConfirmDeleteModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirmar Cancelamento</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Você tem certeza que deseja cancelar esta consulta?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowConfirmDeleteModal(false)}>
+            Cancelar
+          </Button>
+          <Button variant="danger" onClick={confirmDelete}>
+            Confirmar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
     </Container>
   );
 };
