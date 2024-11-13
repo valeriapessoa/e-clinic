@@ -1,41 +1,55 @@
 .container {
-    padding: 30px;
-  }
+  padding: 30px;
+}
 
-  .title {
-    color: #1f90d2;
-    margin-bottom: 30px;
-    text-align: center;
-  }
+.title {
+  color: #1f90d2;
+  margin-bottom: 30px;
+  text-align: center;
+}
 
-  .bannerImage {
-    margin-bottom: 30px;
-    border-radius: 8px;
-  }
+.bannerImage {
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
 
-  .table {
-    margin-top: 20px;
-  }
+.table {
+  margin-top: 20px;
+}
 
-  .table th {
-    background-color: #1f90d2;
-    color: white;
-  }
+.table th {
+  background-color: #1f90d2;
+  color: white;
+}
 
-  .table td {
-    color: #333;
-  }
+.table td {
+  color: #333;
+}
 
-  .bannerImage {
-    margin-bottom: 30px;
-    border-radius: 8px;
-    width: 100%;
-    height: 390px;
-    object-fit: cover;
+.bannerImage {
+  margin-bottom: 30px;
+  border-radius: 8px;
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+
+.customButton {
+  background-color: #1f90d2;
+  color: white;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.customButton:hover {
+  background-color: #145c93;
 }
 
 @media (max-width: 768px) {
-    .bannerImage {
-        height: 150px;
-    }
+  .bannerImage {
+    height: 150px;
+  }
 }

@@ -55,13 +55,11 @@ const Home = () => {
 
   return (
     <main>
-           <section className={styles.bannerSection}>
+      <section className={styles.bannerSection}>
         <img src="images/home/home-banner.jpg" className={styles.bannerImage} alt="Banner da home" />
         <div className={styles.bannerOverlay}></div>
       </section>
-
-          <About/>
-          <section className={styles.container}>
+      <section className={styles.container}>
         <div className={styles.featured}>
           <div className={styles.featuredItem}>
             <div className={styles.featuredContent}>
@@ -83,6 +81,8 @@ const Home = () => {
           </div>
         </div>
         </section>
+
+          <About/>
           <Installations/>
           <Services/>
         {/* <section>

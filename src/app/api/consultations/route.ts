@@ -56,3 +56,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ message: "Erro ao buscar consultas" }, { status: 500 }); // Retorna um erro se algo der errado.
   }
 }
+
+// Endpoint para atualizar uma consulta (PUT)
+
+// Endpoint para excluir uma consulta (DELETE)

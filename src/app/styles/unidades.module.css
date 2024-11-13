@@ -1,85 +1,78 @@
 .container {
-  margin: 75px;
+  margin: 75px auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .unitsHeader {
-  margin: 90px 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .heading {
   text-align: center;
-  font-size: 30px;
+  font-size: 36px;
   color: #1f90d2;
 }
 
 .description {
   text-align: justify;
-  font-size: 20px;
+  font-size: 18px;
   color: #737680;
-  margin: 0 0 20px 0;
-}
-
-.unitTitle {
-  color: #1f90d2;
-  font-size: 25px;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .unitsList {
-  width: 100%;
-  margin: 0 auto;
   display: flex;
-  flex-flow: row wrap;
-  color: #1f90d2;
-  margin-bottom: 150px;
+  flex-wrap: wrap;
 }
 
 .unitCard {
   margin: 15px;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   align-items: center;
-  flex-basis: 45%;
-  border: none;
+  flex-basis: calc(50% - 30px);
 }
 
-.unitCard div {
-  flex-grow: 1;
-  margin-bottom: 10px;
+.unitTitle {
+  color: #1f90d2;
+  font-size: 24px;
 }
 
-.unitAddress {
-  display: inline-block;
-  color: #737680;
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 8px;
+.unitImage {
+  max-width: calc(100% - 20px);
+  margin-top: 15px;
 }
 
+.unitAddress,
 .unitPhone {
   display: inline-block;
   color: #737680;
   text-decoration: none;
-  padding-bottom: 18px;
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
 }
 
-.unitImage {
-  display: block;
-  max-width: 420px;
-  width: 100%;
+.unitPhone:hover {
+  color: #1f90d2;
+  text-decoration: none;
 }
 
 .icon {
   color: #1f90d2;
-  margin-right: 5px;
+  margin-right: 10px;
+}
+
+.imageAnimation {
+  transition: transform .3s ease;
+}
+
+.imageAnimation:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 727px) {
-  .unitCard {
-    flex-basis: 100%;
-    margin: 15px 0;
-  }
+    .unitCard {
+    flex-basis: calc(100% - 30px);
+    margin-bottom:20px;
+}
 }
