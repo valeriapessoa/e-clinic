@@ -17,7 +17,9 @@ interface Consulta {
 const ConsultasAgendadas = () => {
   const [consultas, setConsultas] = useState<Consulta[]>([]);
   const [showModal, setShowModal] = useState(false);
-  const [showConfirmDeleteModal, setShowConfirmDeleteModal] = useState(false); // Novo estado para o modal de confirmação
+  const [showConfirmDeleteModal, setShowConfirmDeleteModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false); // Novo estado para o modal de sucesso
+  const [successMessage, setSuccessMessage] = useState(""); // Mensagem de sucesso
   const [selectedConsulta, setSelectedConsulta] = useState<Consulta | null>(null);
   const [formData, setFormData] = useState({ consultaDataHora: "" });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -46,22 +48,23 @@ const ConsultasAgendadas = () => {
   };
 
   const handleDelete = (consulta: Consulta) => {
-    setSelectedConsulta(consulta); // Armazena a consulta selecionada
-    setShowConfirmDeleteModal(true); // Abre o modal de confirmação
+    setSelectedConsulta(consulta);
+    setShowConfirmDeleteModal(true);
   };
 
   const confirmDelete = async () => {
     if (selectedConsulta) {
       await fetch(`/api/consultations/${selectedConsulta._id}`, { method: 'DELETE' });
       setConsultas(consultas.filter(consulta => consulta._id !== selectedConsulta._id));
-      setShowConfirmDeleteModal(false); // Fecha o modal de confirmação
-      alert("Consulta cancelada com sucesso!"); // Mensagem de sucesso
+      setShowConfirmDeleteModal(false);
+      setSuccessMessage("Sua consulta foi cancelada com sucesso!"); // Define a mensagem de sucesso
+      setShowSuccessModal(true); // Abre o modal de sucesso
     }
   };
 
   const handleEditClick = (consulta: Consulta) => {
     setSelectedConsulta(consulta);
-    setFormData({ consultaDataHora: consulta.consultaDataHora }); // Apenas a data/hora
+    setFormData({ consultaDataHora: consulta.consultaDataHora });
     setShowModal(true);
   };
 
@@ -75,30 +78,28 @@ const ConsultasAgendadas = () => {
     e.preventDefault();
 
     try {
-      // Valida apenas a data/hora
       consultationSchema.pick({ consultaDataHora: true }).parse(formData);
 
-      // Envia a requisição para atualizar a consulta
       const response = await fetch(`/api/consultations/${selectedConsulta?._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ consultaDataHora: formData.consultaDataHora }) // Envia apenas a nova data/hora
+        body: JSON.stringify({ consultaDataHora: formData.consultaDataHora })
       });
 
       if (!response.ok) {
         throw new Error('Erro ao atualizar consulta');
       }
 
-      // Atualiza a lista de consultas
       setConsultas(consultas.map(c => c._id === selectedConsulta?._id ? { ...c, consultaDataHora: formData.consultaDataHora } : c));
-      setShowModal(false); // Fecha o modal
-      alert("Consulta atualizada com sucesso!"); // Mensagem de sucesso
+      setShowModal(false);
+      setSuccessMessage("Consulta atualizada com sucesso!"); // Define a mensagem de sucesso
+      setShowSuccessModal(true); // Abre o modal de sucesso
     } catch (error) {
       if (error instanceof z.ZodError) {
         const formErrors = error.errors.reduce((acc, curr) => {
           acc[curr.path[0]] = curr.message; return acc;
         }, {} as { [key: string]: string });
-        setErrors(formErrors); // Atualiza os erros no estado
+        setErrors(formErrors);
       } else {
         console.error("Erro ao atualizar consulta:", error);
         alert("Erro ao atualizar consulta");
@@ -178,6 +179,19 @@ const ConsultasAgendadas = () => {
           </Button>
           <Button variant="danger" onClick={confirmDelete}>
             Confirmar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      {/* Modal de Sucesso */}
+      <Modal show={showSuccessModal} onHide={() => setShowSuccessModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Sucesso!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{successMessage}</Modal.Body> {/* Mensagem de sucesso */}
+        <Modal.Footer>
+          <Button variant="primary" onClick={() => setShowSuccessModal(false)}>
+            Fechar
           </Button>
         </Modal.Footer>
       </Modal>
