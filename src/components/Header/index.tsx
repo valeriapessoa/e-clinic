@@ -15,7 +15,7 @@ const Header = () => {
   const { data: session } = useSession();
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
-  const [dropdownOpen, setDropdownOpen] = useState(false); 
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -77,13 +77,12 @@ const Header = () => {
                 </div>
                 <Link href="/consultas/minhas-consultas"><MdOutlineLibraryBooks className="me-1" /> Minhas Consultas</Link>
                 <Link href="/consultas/form-agendar-consulta"><MdCalendarMonth className="me-1" /> Agendar Consulta</Link>
-                {/* Link de Sair */}
                 <button
                   onClick={() => signOut()}
                   className='logout'
                   aria-label="Sair"
                 >
-                 <SlLogout className='me-1'/> Sair
+                  <SlLogout className='me-1'/> Sair
                 </button>
               </div>
             </div>

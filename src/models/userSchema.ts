@@ -11,5 +11,5 @@ export const userSchema = z.object({
     .min(3, "O nome completo deve ter pelo menos 3 caracteres")
     .max(30, "O nome completo deve ter no máximo 30 caracteres")
     .nonempty("O nome completo é obrigatório"),
-  phone: z.string().optional(), // O telefone é opcional
+  phone: z.string().optional(), 
 });

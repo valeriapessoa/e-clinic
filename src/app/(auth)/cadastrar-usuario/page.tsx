@@ -5,8 +5,8 @@ import axios, { AxiosError } from "axios";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { BiLogoGoogle, BiLogoGithub, BiSolidShow, BiSolidHide } from "react-icons/bi"; // Adicionado BiLogoGithub
-import styles from '../../styles/auth/cadastrar-usuario.module.css';
+import { BiLogoGoogle, BiLogoGithub, BiSolidShow, BiSolidHide } from "react-icons/bi";
+import styles from "../../styles/auth/cadastrar-usuario.module.css";
 
 const Signup = () => {
   const [error, setError] = useState<string | undefined>(undefined);
@@ -24,7 +24,7 @@ const Signup = () => {
     event.preventDefault();
     try {
       const formData = new FormData(event.currentTarget);
-      const signupResponse = await axios.post('/api/auth/signup', {
+      const signupResponse = await axios.post("/api/auth/signup", {
         email: formData.get("email"),
         password: formData.get("password"),
         name: formData.get("name"),
@@ -39,7 +39,6 @@ const Signup = () => {
 
       if (res?.ok) return router.push("/");
     } catch (error) {
-      console.log(error);
       if (error instanceof AxiosError) {
         const errorMessage = error.response?.data.message;
         setError(errorMessage);

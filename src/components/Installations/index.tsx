@@ -1,4 +1,3 @@
-// Installations.tsx
 import { Carousel } from 'react-bootstrap';
 import styles from '../../app/page.module.css';
 

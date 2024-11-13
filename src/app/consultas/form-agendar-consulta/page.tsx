@@ -3,15 +3,15 @@
 import { useSession, signOut } from "next-auth/react";
 import { useState } from "react";
 import { Form, Button, Container, Image } from "react-bootstrap";
-import { consultationSchema } from "@/models/consultationSchema"; // Importando o schema de validação
-import styles from "../../styles/consultas/form-agendar-consulta.module.css"; // Ajuste o caminho conforme necessário
+import { consultationSchema } from "@/models/consultationSchema";
+import styles from "../../styles/consultas/form-agendar-consulta.module.css";
 import { z } from 'zod';
-import { useRouter } from 'next/navigation'; // Importa useRouter para redirecionamento
+import { useRouter } from 'next/navigation';
 import { redirect } from 'next/navigation'
 
 const FormAgendarConsulta = () => {
   const { data: session } = useSession();
-  const router = useRouter(); // Inicializa o router
+  const router = useRouter();
   const [formData, setFormData] = useState({
     pacienteNome: "",
     numeroCelular: "",
@@ -29,7 +29,7 @@ const FormAgendarConsulta = () => {
 
     // Filtra a entrada para permitir apenas dígitos
     if (name === "numeroCelular" || name === "carteirinhaNumero") {
-      const filteredValue = value.replace(/\D/g, ''); // Remove tudo que não é dígito
+      const filteredValue = value.replace(/\D/g, '');
 
       // Limita o número de caracteres
       if (name === "numeroCelular" && filteredValue.length > 11) {
@@ -133,7 +133,7 @@ const FormAgendarConsulta = () => {
             onChange={handleFormChange}
             isInvalid={!!errors.numeroCelular}
             required
-            maxLength={11} // Limita a quantidade máxima de dígitos
+            maxLength={11}
           />
           <Form.Control.Feedback type="invalid">{errors.numeroCelular}</Form.Control.Feedback>
         </Form.Group>
@@ -168,7 +168,7 @@ const FormAgendarConsulta = () => {
             onChange={handleFormChange}
             isInvalid={!!errors.carteirinhaNumero}
             required
-            maxLength={10} // Limita a quantidade máxima de dígitos
+            maxLength={10}
           />
           <Form.Control.Feedback type="invalid">{errors.carteirinhaNumero}</Form.Control.Feedback>
         </Form.Group>
@@ -213,7 +213,6 @@ const FormAgendarConsulta = () => {
           />
         </Form.Group>
 
-        {/* Botão de Submissão */}
         <Button className={styles.button} variant="primary" type="submit">
           Agendar Consulta
         </Button>

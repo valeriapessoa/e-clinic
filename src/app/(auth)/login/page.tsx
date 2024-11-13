@@ -5,8 +5,8 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
-import { FaEye, FaEyeSlash, FaGoogle, FaGithub } from 'react-icons/fa';
-import styles from '../../styles/auth/login.module.css';
+import { FaEye, FaEyeSlash, FaGoogle, FaGithub } from "react-icons/fa";
+import styles from "../../styles/auth/login.module.css";
 
 const Signin = () => {
   const [error, setError] = useState("");
@@ -23,7 +23,6 @@ const Signin = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-
     const res = await signIn("credentials", {
       email: formData.get("email"),
       password: formData.get("password"),
@@ -100,7 +99,7 @@ const Signin = () => {
               signIn("github");
             }}
           >
-            <FaGithub className={`me-2 ${styles.icon}`}  /> GitHub
+            <FaGithub className={`me-2 ${styles.icon}`} /> GitHub
           </button>
         </div>
 

@@ -1,4 +1,4 @@
-/* ******************** Login ******************** */
+/* ******************** login.module.css ******************** */
 
 .form {
   background-color: #ffffff;
@@ -89,10 +89,6 @@
   color: #db4437;
 }
 
-.google:hover .icon {
-  color: #db4437;
-}
-
 .github {
   background-color: #333;
   color: white;
@@ -105,12 +101,7 @@
   color: #333;
 }
 
-.githubB:hover .icon {
-  color: #333;
-}
-
 .icon {
   font-size: 24px;
   transition: color 0.2s ease-in-out;
 }
-

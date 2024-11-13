@@ -1,29 +1,31 @@
+/* ******************** agendar-consulta.module.css ******************** */
+
 .banner {
     width: 100%;
-}
+  }
 
-.highlight {
+  .highlight {
     background-color: #1f90d2;
     height: 40px;
-}
+  }
 
-.scheduling {
+  .scheduling {
     text-align: center;
-}
+  }
 
-.title {
+  .title {
     font-size: 35px;
     color: #1f90d2;
     margin: 50px 0 60px 0;
-}
+  }
 
-.container {
+  .container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
+  }
 
-.card {
+  .card {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -33,25 +35,25 @@
     padding: 20px;
     border: 0;
     margin: 10px;
-}
+  }
 
-.icons {
+  .icons {
     height: 74px;
-}
+  }
 
-.text {
+  .text {
     font-size: 20px;
     font-weight: bold;
     color: #737680;
     margin-top: 10px;
-}
+  }
 
-.onlineScheduling {
+  .onlineScheduling {
     text-align: center;
     margin-top: 30px;
-}
+  }
 
-.blueButton {
+  .blueButton {
     display: inline-block;
     background-color: #1f90d2;
     text-decoration: none;
@@ -61,25 +63,25 @@
     border-radius: 15px;
     margin-top: 30px;
     margin-bottom: 150px;
-}
+  }
 
-.blueButton:hover {
+  .blueButton:hover {
     background-color: #145c93;
-}
+  }
 
-.icon {
+  .icon {
     vertical-align: middle;
     margin-right: 8px;
-}
+  }
 
-.card_left {
+  .card_left {
     align-self: flex-start;
-}
+  }
 
-.card_center {
+  .card_center {
     align-self: center;
-}
+  }
 
-.card_right {
+  .card_right {
     align-self: flex-end;
-}
+  }

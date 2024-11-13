@@ -115,20 +115,18 @@
 }
 
 /* ************************ Testimonials ******************************** */
-/* Estilização da seção de testimonials */
+
 .testimonialSection {
-  background-color: #f8f9fa; /* Cor de fundo clara */
+  background-color: #f8f9fa;
   padding: 60px 0;
 }
 
-/* Estilo do título */
 .testimonialSection h2 {
   font-size: 2.5rem;
   font-weight: bold;
   color: #2c3e50;
 }
 
-/* Linha abaixo do título */
 .testimonialSection h2::after {
   content: '';
   display: block;
@@ -138,7 +136,6 @@
   margin: 10px auto 20px;
 }
 
-/* Estilização da descrição */
 .testimonialSection p {
   font-size: 1rem;
   color: #7f8c8d;
@@ -189,6 +186,7 @@
 
 
 /* ************************ About ******************************** */
+
 .about {
   position: relative;
   overflow: hidden;
@@ -246,6 +244,7 @@
 }
 
 /* ************************ Services ******************************** */
+
 .services {
   position: relative;
   overflow: hidden;
@@ -273,7 +272,7 @@
 }
 
 /* ************************ Installations ******************************** */
-/* page.module.css */
+
 .installations {
   position: relative;
   overflow: hidden;
@@ -282,13 +281,13 @@
 }
 
 .small-img {
-  height: 250px; /* Ajuste a altura das imagens pequenas conforme necessário */
+  height: 250px;
   object-fit: cover;
   margin: 0 10px;
 }
 
 .large-img {
-  height: 350px; /* Ajuste a altura da imagem grande conforme necessário */
+  height: 350px;
   object-fit: cover;
   margin: 0 10px;
 }
@@ -302,15 +301,15 @@
 }
 
 .carousel-indicators {
-  bottom: -30px; /* Ajuste a posição dos indicadores conforme necessário */
+  bottom: -30px;
 }
 
 .carousel-indicators li {
-  background-color: blue; /* Cor dos indicadores */
+  background-color: blue;
 }
 
 .carousel-indicators .active {
-  background-color: darkblue; /* Cor do indicador ativo */
+  background-color: darkblue; 
 }
 
 .text {

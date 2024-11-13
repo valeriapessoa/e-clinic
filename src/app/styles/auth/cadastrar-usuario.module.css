@@ -1,4 +1,4 @@
-/* ***************** register-user.module.css  ***************** */
+/* ***************** cadastrar-usuario.module.css ***************** */
 
 .form {
   max-width: 400px;
@@ -50,35 +50,35 @@
 }
 
 .googleButton {
-  background-color: #db4437; /* Cor original do Google */
+  background-color: #db4437;
   color: white;
   border-radius: 10px;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Transição suave */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .googleButton:hover {
-  background-color: #fff; /* Fundo branco ao passar o mouse */
-  color: #db4437; /* Cor do texto ao passar o mouse */
+  background-color: #fff;
+  color: #db4437;
 }
 
 .googleButton:hover .icon {
-  color: #db4437; /* Cor do ícone do Google ao passar o mouse */
+  color: #db4437;
 }
 
 .githubButton {
-  background-color: #333; /* Cor original do GitHub */
+  background-color: #333;
   color: white;
   border-radius: 10px;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Transição suave */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .githubButton:hover {
-  background-color: #fff; /* Fundo branco ao passar o mouse */
-  color: #333; /* Cor do texto ao passar o mouse */
+  background-color: #fff;
+  color: #333;
 }
 
 .githubButton:hover .icon {
-  color: #333; /* Cor do ícone do GitHub ao passar o mouse */
+  color: #333;
 }
 
 .dividerText {
@@ -104,5 +104,5 @@
 
 .icon {
   font-size: 24px;
-  transition: color 0.2s ease-in-out; /* Transição suave para ícones */
+  transition: color 0.2s ease-in-out;
 }

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import Head from 'next/head';
-import styles from '../styles/agendar-consulta.module.css';
-import { FaBullseye } from 'react-icons/fa';
-import Link from 'next/link';
+import Head from "next/head";
+import styles from "../styles/agendar-consulta.module.css";
+import { FaBullseye } from "react-icons/fa";
+import Link from "next/link";
 
 const AgendarConsulta = () => {
   return (
@@ -37,11 +37,11 @@ const AgendarConsulta = () => {
         </div>
       </section>
       <div className={styles.onlineScheduling}>
-      <Link href="login" className={styles.blueButton}>
-        <FaBullseye className={styles.icon} />
-        <span> Agendamento Online</span>
-      </Link>
-    </div>
+        <Link href="login" className={styles.blueButton}>
+          <FaBullseye className={styles.icon} />
+          <span> Agendamento Online</span>
+        </Link>
+      </div>
     </main>
   );
 };

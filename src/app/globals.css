@@ -87,21 +87,19 @@
   position: relative;
 }
 
-
-
 .user-info {
-  display: flex; /* Flexbox para alinhar o ícone e o nome */
-  align-items: center; /* Centraliza verticalmente */
+  display: flex;
+  align-items: center;
   font-weight: bold;
 }
 
 .user-name {
-  margin-left: 8px; /* Espaçamento à esquerda do nome */
+  margin-left: 8px;
 }
 
 .user-email {
-  margin-top: 4px; /* Espaçamento acima do email */
-  font-size: 0.9rem; /* Tamanho da fonte menor para o email */
+  margin-top: 4px;
+  font-size: 0.9rem;
 }
 
 .user-image {
@@ -169,17 +167,16 @@
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-
 @media (min-width: 800px) {
- .header-phone {
-     margin-left:auto;
- }
+  .header-phone {
+    margin-left:auto;
+  }
 }
 
 @media (max-width: 799px) {
- .custom-navbar .nav-link {
-     margin-right: 10px;
- }
+  .custom-navbar .nav-link {
+      margin-right: 10px;
+  }
 }
 
 /* ************************ Footer ******************************** */
@@ -213,7 +210,6 @@
   position: relative;
 }
 
-/* Pseudo-elemento para a borda inferior dos links no rodapé */
 .footer-item .link::after {
   content: '';
   display: block;
@@ -226,7 +222,6 @@
   left: 0;
 }
 
-/* Animação da borda inferior ao passar o mouse e quando ativo */
 .footer-item .link:hover::after,
 .footer-item .link.active::after,
 .footer-item .link:active::after {

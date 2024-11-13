@@ -18,8 +18,8 @@ const ConsultasAgendadas = () => {
   const [consultas, setConsultas] = useState<Consulta[]>([]);
   const [showModal, setShowModal] = useState(false);
   const [showConfirmDeleteModal, setShowConfirmDeleteModal] = useState(false);
-  const [showSuccessModal, setShowSuccessModal] = useState(false); // Novo estado para o modal de sucesso
-  const [successMessage, setSuccessMessage] = useState(""); // Mensagem de sucesso
+  const [showSuccessModal, setShowSuccessModal] = useState(false); 
+  const [successMessage, setSuccessMessage] = useState("");
   const [selectedConsulta, setSelectedConsulta] = useState<Consulta | null>(null);
   const [formData, setFormData] = useState({ consultaDataHora: "" });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});

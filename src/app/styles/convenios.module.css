@@ -1,7 +1,9 @@
+/* ******************** convenios.module.css ******************** */
+
 .container {
-  margin: 75px auto; /* Margem superior e inferior de 75px, centraliza horizontalmente */
-  max-width: 1200px; /* Define uma largura máxima para o contêiner */
-  padding: 0 20px; /* Adiciona um padding lateral de 20px */
+  margin: 75px auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .heading {
@@ -25,13 +27,13 @@
 }
 
 .insuranceImage {
-  max-width: 70%; /* Reduz o tamanho máximo das imagens */
+  max-width: 70%;
   height: auto;
-  transition: transform 0.3s ease; /* Transição suave */
+  transition: transform 0.3s ease;
 }
 
 .insuranceImage:hover {
-  transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  transform: scale(1.05);
 }
 
 @media (max-width: 767px) {

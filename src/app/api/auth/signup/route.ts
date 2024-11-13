@@ -4,7 +4,6 @@ import User from "@/models/User";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
-
 export async function POST(request: Request) {
   try {
     await connectDB();
@@ -18,7 +17,6 @@ export async function POST(request: Request) {
     }
 
     const userFound = await User.findOne({ email });
-
     if (userFound) {
       return NextResponse.json(
         { message: "O e-mail já existe" },
@@ -27,7 +25,6 @@ export async function POST(request: Request) {
     }
 
     const hashedPassword = await bcrypt.hash(password, 12);
-
     const user = new User({
       name,
       email,
@@ -62,7 +59,6 @@ export async function POST(request: Request) {
 export async function PUT(request: Request) {
   try {
     await connectDB();
-
     const { userId, name, email, password, phone, address } = await request.json();
 
     if (password && password.length < 6) {
@@ -73,7 +69,6 @@ export async function PUT(request: Request) {
     }
 
     const userToUpdate = await User.findById(userId);
-
     if (!userToUpdate) {
       return NextResponse.json(
         { message: "Usuário não encontrado" },
@@ -81,30 +76,16 @@ export async function PUT(request: Request) {
       );
     }
 
-    if (name) {
-      userToUpdate.name = name;
-    }
-
-    if (email) {
-      userToUpdate.email = email;
-    }
-
+    if (name) userToUpdate.name = name;
+    if (email) userToUpdate.email = email;
     if (password) {
       const hashedPassword = await bcrypt.hash(password, 12);
       userToUpdate.password = hashedPassword;
     }
-
-    if (phone) {
-      userToUpdate.phone = phone;
-    }
-
-    if (address) {
-      userToUpdate.address = address;
-    }
+    if (phone) userToUpdate.phone = phone;
+    if (address) userToUpdate.address = address;
 
     await userToUpdate.save();
-
-    console.log(userToUpdate);
 
     return NextResponse.json(
       {
@@ -135,11 +116,9 @@ export async function PUT(request: Request) {
 export async function DELETE(request: Request) {
   try {
     await connectDB();
-
     const { userId } = await request.json();
 
     const user = await User.findById(userId);
-
     if (!user) {
       return NextResponse.json(
         { message: "Usuário não encontrado" },
@@ -154,7 +133,7 @@ export async function DELETE(request: Request) {
       { status: 200 }
     );
   } catch (error) {
-    console.error("Erro durante a exclusão do usuário/item do carrinho:", error);
+    console.error("Erro durante a exclusão do usuário:", error);
     return NextResponse.error();
   }
 }

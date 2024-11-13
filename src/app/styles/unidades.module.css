@@ -1,3 +1,5 @@
+/* ******************** unidades.module.css ******************** */
+
 .container {
   margin: 75px auto;
   max-width: 1200px;
@@ -71,8 +73,8 @@
 }
 
 @media (max-width: 727px) {
-    .unitCard {
+  .unitCard {
     flex-basis: calc(100% - 30px);
     margin-bottom:20px;
-}
+  }
 }
