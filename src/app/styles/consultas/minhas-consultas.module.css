@@ -5,7 +5,7 @@
 }
 
 .title {
-  color: #1f90d2;
+  color: #0075cd;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -23,7 +23,7 @@
 }
 
 .table th {
-  background-color: #1f90d2;
+  background-color: #0075cd;
   color: white;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .editButton {
-  background-color: #1f90d2;
+  background-color: #0075cd;
   color: white;
   margin-right: 10px;
   border: none;

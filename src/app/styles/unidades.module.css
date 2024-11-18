@@ -13,7 +13,7 @@
 .heading {
   text-align: center;
   font-size: 36px;
-  color: #1f90d2;
+  color: #0075cd;
 }
 
 .description {
@@ -21,7 +21,6 @@
   font-size: 18px;
   color: #737680;
   margin-bottom: 30px;
-  margin-top: 30px;
 }
 
 .unitsList {
@@ -38,7 +37,7 @@
 }
 
 .unitTitle {
-  color: #1f90d2;
+  color: #0075cd;
   font-size: 24px;
 }
 
@@ -55,12 +54,12 @@
 }
 
 .unitPhone:hover {
-  color: #1f90d2;
+  color: #0075cd;
   text-decoration: none;
 }
 
 .icon {
-  color: #1f90d2;
+  color: #0075cd;
   margin-right: 10px;
 }
 
@@ -70,6 +69,13 @@
 
 .imageAnimation:hover {
   transform: scale(1.05);
+}
+
+.iconContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 17px;
 }
 
 @media (max-width: 727px) {

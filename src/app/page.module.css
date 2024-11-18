@@ -6,7 +6,8 @@
 }
 
 .bannerImage {
-  width: 100%;
+  max-width: 67%;
+  height: auto;
 }
 
 .bannerOverlay {
@@ -23,11 +24,11 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  color: #1f90d2;
+  color: #0075cd;
 }
 
 .featured {
-  background-color: #1f90d2;
+  background-color: #0075cd;
   margin-top: -30px;
   width: 100%;
   display: flex;
@@ -70,7 +71,7 @@
 .facilitiesHeading {
   text-align: center;
   font-size: 30px;
-  color: #1f90d2;
+  color: #0075cd;
   font-weight: bold;
   margin-bottom: 40px;
 }
@@ -117,7 +118,7 @@
 /* ************************ Testimonials ******************************** */
 
 .testimonialSection {
-  background-color: #f8f9fa;
+  background-color: #fff;
   padding: 60px 0;
 }
 
@@ -132,7 +133,7 @@
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #1f90d2;
+  background-color: #0075cd;
   margin: 10px auto 20px;
 }
 
@@ -178,7 +179,7 @@
 
 .quoteIcon {
   font-size: 2rem;
-  color: #1f90d2;
+  color: #0075cd;
   position: absolute;
   bottom: 15px;
   right: 15px;
@@ -223,15 +224,15 @@
   left: -125px;
   transform: rotate(-90deg);
   background: transparent;
-  color: #1f90d2;
+  color: #0075cd;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 4px;
 }
 
 .custom-button {
-  background-color: #1f90d2;
-  border-color: #1f90d2;
+  background-color: #0075cd;
+  border-color: #0075cd;
 }
 
 .custom-button:hover {
@@ -240,7 +241,7 @@
 }
 
 .custom-icon {
-  color: #1f90d2;
+  color: #0075cd;
 }
 
 /* ************************ Services ******************************** */
@@ -268,7 +269,7 @@
 
 .service-icon {
   font-size: 40px;
-  color: #1f90d2;
+  color: #0075cd;
 }
 
 /* ************************ Installations ******************************** */
@@ -309,9 +310,117 @@
 }
 
 .carousel-indicators .active {
-  background-color: darkblue; 
+  background-color: darkblue;
 }
 
 .text {
   text-align: justify;
+}
+
+
+
+
+
+
+
+.bannerContent {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.bannerTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bannerSubtitle {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.text {
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+.buttonGroup {
+  text-align: left;
+}
+
+
+
+
+
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.text {
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+.buttonGroup {
+  text-align: left;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  top: 58%;
+  left: 52%;
+  width: 450px;
+  height: 450px;
+  background-color: rgba(31, 144, 210, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.bannerImage {
+  max-width: 61%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.alignRight {
+  margin-left: 190px;
+  margin-right: 0;
 }

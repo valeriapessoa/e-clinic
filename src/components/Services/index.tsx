@@ -4,7 +4,7 @@ import styles from '../../app/page.module.css';
 
 const Services = () => {
   return (
-    <div className={`container-fluid services bg-light py-5 ${styles.services}`}>
+    <div className={`container-fluid services py-5 ${styles.services}`}>
       <div className="container py-5">
         <div className="section-title text-center mb-5">
           <h4 className="sub-title pe-3 mb-0">Nossos Serviços</h4>

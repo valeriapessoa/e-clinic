@@ -6,6 +6,7 @@ import Testimonials from "../components/Testimonials";
 import About from "../components/About";
 import Services from "../components/Services";
 import Installations from "../components/Installations";
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const Home = () => {
   const testimonialsData = [
@@ -55,11 +56,28 @@ const Home = () => {
 
   return (
     <main>
-      <section className={styles.bannerSection}>
-        <img src="images/home/home-banner.jpg" className={styles.bannerImage} alt="Banner da home" />
-        <div className={styles.bannerOverlay}></div>
-      </section>
-      <section className={styles.container}>
+      <Container className="mt-5">
+        <Row>
+          <Col md={6} className="d-flex flex-column justify-content-center">
+            <h5 className={styles.title}>Bem-vindo à E-Clinic</h5>
+            <h1 className={styles.subtitle}>Agende uma Consulta</h1>
+            <p className={styles.text}>
+              Na E-Clinic, oferecemos atendimento médico de qualidade com profissionais altamente capacitados. Nossa missão é cuidar da sua saúde com dedicação e excelência. Agende sua consulta e experimente um atendimento personalizado e humanizado.
+            </p>
+            <div className={styles.buttonGroup}>
+              <Button variant="primary" className="me-2">Contact us</Button>
+              <Button variant="light">Read more</Button>
+            </div>
+          </Col>
+          <Col md={6} className={styles.imageContainer}>
+            <div className={styles.circle}></div>
+            <img src="images/home/home-banner.png" alt="Doctor" className={`${styles.bannerImage} ${styles.alignRight}`} />
+          </Col>
+        </Row>
+      </Container>
+
+
+      {/* <section className={styles.container}>
         <div className={styles.featured}>
           <div className={styles.featuredItem}>
             <div className={styles.featuredContent}>
@@ -80,7 +98,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        </section>
+        </section> */}
 
           <About/>
           <Installations/>

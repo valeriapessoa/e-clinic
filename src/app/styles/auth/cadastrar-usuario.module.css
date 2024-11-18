@@ -11,7 +11,7 @@
 
 .title {
   font-size: 28px;
-  color: #1f90d2;
+  color: #0075cd;
   font-weight: 600;
   letter-spacing: -1px;
 }
@@ -30,7 +30,7 @@
 
 .input-group .btn {
   border-radius: 0 10px 10px 0;
-  background-color: #1f90d2;
+  background-color: #0075cd;
   color: #fff;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .submit {
-  background-color: #1f90d2;
+  background-color: #0075cd;
   border-radius: 10px;
   color: white;
   padding: 10px;
@@ -94,7 +94,7 @@
 }
 
 .signin a {
-  color: #1f90d2;
+  color: #0075cd;
   text-decoration: none;
 }
 

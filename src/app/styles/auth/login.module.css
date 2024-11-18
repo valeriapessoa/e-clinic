@@ -44,7 +44,7 @@
 
 .submitButton {
   margin-top: 20px;
-  background-color: #1f90d2;
+  background-color: #0075cd;
   border: none;
   color: white;
   font-size: 15px;
@@ -59,7 +59,7 @@
 }
 
 .link {
-  color: #1f90d2;
+  color: #0075cd;
   font-weight: 500;
   text-decoration: none;
 }

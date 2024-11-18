@@ -4,7 +4,7 @@ import styles from '../../app/page.module.css';
 
 const About = () => {
   return (
-    <div className={`container-fluid about bg-light py-5 ${styles.about}`}>
+    <div className={`container-fluid about py-5 ${styles.about}`}>
       <div className="container py-5">
         <div className="row g-5 align-items-center">
           <div className="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">

@@ -25,24 +25,32 @@ const Unidades = () => {
               address: "Praça Roberto Gomes Pedrosa, 782 - Morumbi, SP",
               phone: "(11) 3244-2020",
               image: "/images/unidades/morumbi.jpg",
+              mapsLink: "https://maps.app.goo.gl/B8HncGY511YPcJGUA",
+              wazeLink: "https://www.waze.com/pt-PT/live-map/directions/br/sp/hospital-sao-camilo-sp-unidade-pompeia-(pronto-socorro)?navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location&to=place.ChIJTY_7SN1XzpQRhohJUy2oNog"
             },
             {
               title: "Paulista",
               address: "Av. Paulista, 325 - Bela Vista, SP",
               phone: "(11) 3230-1010",
               image: "/images/unidades/paulista.jpeg",
+              mapsLink: "https://maps.app.goo.gl/B8HncGY511YPcJGUA",
+              wazeLink: "https://www.waze.com/pt-PT/live-map/directions/br/sp/hospital-sao-camilo-sp-unidade-pompeia-(pronto-socorro)?navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location&to=place.ChIJTY_7SN1XzpQRhohJUy2oNog"
             },
             {
               title: "Pompeia",
               address: "Av. Pompéia, 1422 - Pompeia, SP",
               phone: "(11) 3240-6631",
               image: "/images/unidades/pompeia.png",
+              mapsLink: "https://maps.app.goo.gl/B8HncGY511YPcJGUA",
+              wazeLink: "https://www.waze.com/pt-PT/live-map/directions/br/sp/hospital-sao-camilo-sp-unidade-pompeia-(pronto-socorro)?navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location&to=place.ChIJTY_7SN1XzpQRhohJUy2oNog"
             },
             {
               title: "Sumaré",
               address: "R. Duartina, 203 - Sumaré, SP",
               phone: "(11) 3277-2100",
               image: "/images/unidades/sumare.jpg",
+              mapsLink: "https://maps.app.goo.gl/B8HncGY511YPcJGUA",
+              wazeLink: "https://www.waze.com/pt-PT/live-map/directions/br/sp/hospital-sao-camilo-sp-unidade-pompeia-(pronto-socorro)?navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location&to=place.ChIJTY_7SN1XzpQRhohJUy2oNog"
             },
           ].map((unit, index) => (
             <div key={index} className={styles.unitCard}>
@@ -54,6 +62,20 @@ const Unidades = () => {
                 <FontAwesomeIcon icon={faPhone} className={styles.icon} />
                 <a className={styles.unitPhone} href={`tel:${unit.phone.replace(/\D/g, '')}`}>{unit.phone}</a>
                 <img className={`${styles.unitImage} ${styles.imageAnimation}`} src={unit.image} alt={unit.title} />
+                <div className={styles.iconContainer}>
+                  <div className="elementor-widget-container">
+                    <a href={unit.mapsLink} target="_blank">
+                      <img loading="lazy" decoding="async" width="48" height="48" src="https://hospitalsaocamilosp.org.br/wp-content/uploads/2024/07/icons8-google-maps-48.png" className="attachment-full size-full wp-image-2547" alt="Google Maps" />
+                    </a>
+                    <p>Maps</p>
+                  </div>
+                  <div className="elementor-widget-container">
+                    <a href={unit.wazeLink} target="_blank">
+                      <img loading="lazy" decoding="async" width="48" height="48" src="https://hospitalsaocamilosp.org.br/wp-content/uploads/2024/07/1200x630wa-1.png" className="attachment-full size-full wp-image-3229" alt="Waze" />
+                    </a>
+                    <p>Waze</p>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
