@@ -56,98 +56,32 @@ const Home = () => {
 
   return (
     <main>
-      <Container className="mt-5">
+      <Container className={`mt-5 ${styles.container}`}>
         <Row>
           <Col md={6} className="d-flex flex-column justify-content-center">
             <h5 className={styles.title}>Bem-vindo à E-Clinic</h5>
-            <h1 className={styles.subtitle}>Agende uma Consulta</h1>
+            <h1 className={styles.subtitle}>Marque sua consulta agora</h1>
             <p className={styles.text}>
               Na E-Clinic, oferecemos atendimento médico de qualidade com profissionais altamente capacitados. Nossa missão é cuidar da sua saúde com dedicação e excelência. Agende sua consulta e experimente um atendimento personalizado e humanizado.
             </p>
             <div className={styles.buttonGroup}>
-              <Button variant="primary" className="me-2">Contact us</Button>
-              <Button variant="light">Read more</Button>
+              <Button className={`rounded-pill text-white py-3 px-5 me-3 ${styles.btnPrimary}`}>Agendar</Button>
+              <Button variant="light" className={`rounded-pill py-3 px-5 me-3 ${styles.btnSecondary}`}>Serviços</Button>
             </div>
           </Col>
           <Col md={6} className={styles.imageContainer}>
-            <div className={styles.circle}></div>
+            <div className={styles.circlePrimary}></div>
+            <div className={styles.circleSecondary}></div>
             <img src="images/home/home-banner.png" alt="Doctor" className={`${styles.bannerImage} ${styles.alignRight}`} />
           </Col>
         </Row>
       </Container>
-
-
-      {/* <section className={styles.container}>
-        <div className={styles.featured}>
-          <div className={styles.featuredItem}>
-            <div className={styles.featuredContent}>
-              <img className={styles.featuredImage} src="images/home/atendimento.png" alt="Ícone de atendimento" />
-              <h4 className={styles.featuredText}>ATENDIMENTO DE QUALIDADE</h4>
-            </div>
-          </div>
-          <div className={styles.featuredItem}>
-            <div className={styles.featuredContent}>
-              <img className={styles.featuredImage} src="images/home/especialidades.png" alt="Ícone de especialidades" />
-              <h4 className={styles.featuredText}>DIVERSAS ESPECIALIDADES</h4>
-            </div>
-          </div>
-          <div className={styles.featuredItem}>
-            <div className={styles.featuredContent}>
-              <img className={styles.featuredImage} src="images/home/exames.png" alt="Ícone de exames e procedimentos" />
-              <h4 className={styles.featuredText}>EXAMES E PROCEDIMENTOS</h4>
-            </div>
-          </div>
-        </div>
-        </section> */}
-
           <About/>
           <Installations/>
           <Services/>
-        {/* <section>
-        <div className={styles.facilities}>
-          <h2 className={styles.facilitiesHeading}>Nossas instalações</h2>
-          <p className={styles.facilitiesDescription}>A E-Clinic disponibiliza instalações modernas para prestar atendimento de qualidade a seus pacientes. Humanização, cuidado, atenção e respeito são palavras que orientam há anos todas as atividades das equipes.</p>
-          <p className={styles.facilitiesDescription}>Centro cirúrgico completo, com 17 salas preparadas para realizar quaisquer tipos de procedimentos, dos mais simples aos de alta complexidade, incluindo cirurgias por videolaparoscopia, tornando os procedimentos menos incisivos e minimizando o período de internação.</p>
-        </div>
-        <div className={styles.gallery}>
-          <div className={styles.card}>
-            <img className={styles.facilitiesImage} src="images/home/img-1.jpg" alt="Imagem 1 da galeria" />
-          </div>
-          <div className={styles.card}>
-            <img className={styles.facilitiesImage} src="images/home/img-2.jpg" alt="Imagem 2 da galeria" />
-          </div>
-          <div className={styles.card}>
-            <img className={styles.facilitiesImage} src="images/home/img-3.jpg" alt="Imagem 3 da galeria" />
-          </div>
-          <div className={styles.card}>
-            <img className={styles.facilitiesImage} src="images/home/img-4.jpg" alt="Imagem 4 da galeria" />
-          </div>
-          <div className={styles.card}>
-            <img className={styles.facilitiesImage} src="images/home/img-5.jpeg" alt="Imagem 5 da galeria" />
-          </div>
-          <div className={styles.card}>
-            <img className={styles.facilitiesImage} src="images/home/img-6.jpg" alt="Imagem 6 da galeria" />
-          </div>
-          <div className={styles.card}>
-            <img className={styles.facilitiesImage} src="images/home/img-7.bmp" alt="Imagem 7 da galeria" />
-          </div>
-          <div className={styles.card}>
-            <img className={styles.facilitiesImage} src="images/home/img-8.jpg" alt="Imagem 8 da galeria" />
-          </div>
-          <div className={styles.card}>
-            <img className={styles.facilitiesImage} src="images/home/img-9.png" alt="Imagem 9 da galeria" />
-          </div>
-        </div>
-      </section> */}
-
-      {/* Seção de Depoimentos */}
-      <section>
-        <Testimonials
-          testimonials={testimonialsData}
-          sectionTitle="O Que Nossos Pacientes Dizem"
-          sectionDescription="Estamos orgulhosos de ter ajudado mais de 15.000 pacientes a alcançar uma melhor qualidade de vida. Veja o que alguns deles têm a dizer sobre a experiência em nossa clínica."
-        />
-      </section>
+          <Testimonials
+            testimonials={testimonialsData}
+          />
     </main>
   );
 };

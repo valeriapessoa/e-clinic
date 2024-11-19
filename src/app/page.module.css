@@ -1,118 +1,257 @@
 /* ******************* HOME ******************* */
 
-.bannerSection {
-  width: 100%;
+.container {
+  margin: 75px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  color: #0075cd;
+}
+
+.subtitle {
+  margin: 25px 0;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.text {
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 55px;
+}
+
+.buttonGroup {
+  text-align: left;
+}
+
+.imageContainer {
   position: relative;
 }
 
-.bannerImage {
-  max-width: 67%;
-  height: auto;
+.circlePrimary {
+  position: absolute;
+  top: 58%;
+  left: 52%;
+  width: 450px;
+  height: 450px;
+  background-color: rgba(31, 144, 210, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
-.bannerOverlay {
+.circleSecondary {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  top: 41%;
+  left: 77%;
+  width: 450px;
+  height: 450px;
+  background-color: rgba(31, 144, 210, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
+
+.bannerImage {
+  max-width: 69%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.alignRight {
+  margin-left: 190px;
+  margin-right: 0;
+}
+
+.btnPrimary {
+  background-color: #0075cd;
+  border-color: #0075cd;
+}
+
+.btnPrimary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btnSecondary {
+  border: 3px solid #0075cd;
+  color: #0075cd;
+}
+
+.btnSecondary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #ffffff;
+}
+
+.primary-title {
+  font-size: 1.9rem;
+  color: #0075cd;
+}
+
+.secondary-title {
+  font-size: 3.3rem;
+}
+
+/* ************************ About ******************************** */
 
 .container {
-  margin: 60px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  margin: 75px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.about {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.about-img {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.about-img-inner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  height: 150px;
+  border: 10px solid var(--bs-white);
+  border-radius: 50%;
+}
+
+.inner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-experience {
+  position: absolute;
+  top: 236px;
+  left: -125px;
+  transform: rotate(-90deg);
+  background: transparent;
+  color: #0075cd;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.custom-button {
+  background-color: #0075cd;
+  border-color: #0075cd;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.custom-icon {
   color: #0075cd;
 }
 
-.featured {
-  background-color: #0075cd;
-  margin-top: -30px;
-  width: 100%;
+/* ************************ Installations ******************************** */
+
+.wave-style {
+  width:100%;
+}
+
+.installations {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.small-img {
+  height: 250px;
+  object-fit: cover;
+  margin: 0 10px;
+}
+
+.large-img {
+  height: 350px;
+  object-fit: cover;
+  margin: 0 10px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-indicators {
+  bottom: -30px;
+}
+
+.carousel-indicators li {
+  background-color: blue;
+}
+
+.carousel-indicators .active {
+  background-color: darkblue;
+}
+
+.text {
+  text-align: justify;
+}
+
+/* ************************ Services ******************************** */
+.services {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.service-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-.featuredItem {
+.service-item:hover {
+  transform: translateY(-10px);
+}
+
+
+.icon-circle {
+  background-color: #0075cd;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-color: rgba(0, 0, 0, 0.1);
-  border-style: solid;
-  width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
-  transition: 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-  border-width: 0 1px 1px 0;
-  min-height: 200px;
-}
-
-.featuredContent {
-  text-align: center;
-}
-
-.featuredImage {
-  width: 110px;
-  margin-bottom: 20px;
-}
-
-.featuredText {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.facilities {
-  margin: 50px;
-}
-
-.facilitiesHeading {
-  text-align: center;
-  font-size: 30px;
-  color: #0075cd;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
-
-.facilitiesDescription {
-  text-align: justify;
-  font-size: 20px;
-  line-height: 1.4em;
-  color: #737680;
-  margin: 0;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto 20px;
 }
 
-.card {
-  margin: 10px;
-}
-
-.facilitiesImage {
-  display: block;
-  max-width: 410px;
-  width: 100%;
-  margin-bottom: 20px;
-  margin-right: 20px;
-}
-
-@media (min-width: 800px) {
-  .featured {
-    position: relative;
-    margin-top: -150px;
-    height: 250px;
-    flex-direction: row;
-  }
-
-  .featuredItem {
-    width: 33.33%;
-  }
+.service-icon {
+  font-size: 40px;
+  color: #FFF;
 }
 
 /* ************************ Testimonials ******************************** */
@@ -185,242 +324,3 @@
   right: 15px;
 }
 
-
-/* ************************ About ******************************** */
-
-.about {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.about-img {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.about-img-inner {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 150px;
-  height: 150px;
-  border: 10px solid var(--bs-white);
-  border-radius: 50%;
-}
-
-.inner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about-experience {
-  position: absolute;
-  top: 236px;
-  left: -125px;
-  transform: rotate(-90deg);
-  background: transparent;
-  color: #0075cd;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 4px;
-}
-
-.custom-button {
-  background-color: #0075cd;
-  border-color: #0075cd;
-}
-
-.custom-button:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-}
-
-.custom-icon {
-  color: #0075cd;
-}
-
-/* ************************ Services ******************************** */
-
-.services {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.service-item {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.service-item:hover {
-  transform: translateY(-10px);
-}
-
-.service-icon {
-  font-size: 40px;
-  color: #0075cd;
-}
-
-/* ************************ Installations ******************************** */
-
-.installations {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.small-img {
-  height: 250px;
-  object-fit: cover;
-  margin: 0 10px;
-}
-
-.large-img {
-  height: 350px;
-  object-fit: cover;
-  margin: 0 10px;
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-.carousel-indicators {
-  bottom: -30px;
-}
-
-.carousel-indicators li {
-  background-color: blue;
-}
-
-.carousel-indicators .active {
-  background-color: darkblue;
-}
-
-.text {
-  text-align: justify;
-}
-
-
-
-
-
-
-
-.bannerContent {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  z-index: 2;
-}
-
-.bannerTitle {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.bannerSubtitle {
-  font-size: 1.5rem;
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-
-
-
-.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: left;
-}
-
-.subtitle {
-  font-size: 5rem;
-  font-weight: bold;
-  text-align: left;
-}
-
-.text {
-  font-size: 1.25rem;
-  text-align: left;
-}
-
-.buttonGroup {
-  text-align: left;
-}
-
-
-
-
-
-
-.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: left;
-}
-
-.subtitle {
-  font-size: 4rem;
-  font-weight: bold;
-  text-align: left;
-}
-
-.text {
-  font-size: 1.25rem;
-  text-align: left;
-}
-
-.buttonGroup {
-  text-align: left;
-}
-
-.imageContainer {
-  position: relative;
-}
-
-.circle {
-  position: absolute;
-  top: 58%;
-  left: 52%;
-  width: 450px;
-  height: 450px;
-  background-color: rgba(31, 144, 210, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
-.bannerImage {
-  max-width: 61%;
-  height: auto;
-  position: relative;
-  z-index: 1;
-}
-
-.alignRight {
-  margin-left: 190px;
-  margin-right: 0;
-}

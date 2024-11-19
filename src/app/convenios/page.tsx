@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import styles from '../styles/convenios.module.css';
+import DoctorsCarousel from "../../components/DoctorsCarousel";
 
 const Convenios = () => {
   return (
@@ -22,7 +23,6 @@ const Convenios = () => {
             Confira abaixo a lista completa dos convênios atendidos na E-Clinic:
           </p>
         </section>
-
         <div className={`row ${styles.imageRow}`}>
           {Array.from({ length: 15 }, (_, index) => (
             <div key={index} className="col-6 col-md-4 col-lg-3">
@@ -38,6 +38,7 @@ const Convenios = () => {
             </div>
           ))}
         </div>
+        <DoctorsCarousel />
       </main>
     </>
   );

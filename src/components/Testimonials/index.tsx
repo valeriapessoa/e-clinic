@@ -28,12 +28,11 @@ const Testimonials = ({ testimonials, sectionTitle, sectionDescription }: Testim
   return (
     <section className={`${styles.testimonialSection} py-5 testimonial`}>
       <div className="container text-center">
-        <h4 className="sub-title pe-3 mb-0">{sectionTitle || 'Depoimentos'}</h4>
-        <h1 className="display-3 mb-4">{sectionTitle || 'O Que Nossos Pacientes Dizem'}</h1>
+        <h4 className={`${styles['primary-title']} pe-3 mb-0`}>{sectionTitle || 'Depoimentos'}</h4>
+        <h1 className={`${styles['secondary-title']} mb-4`}>{sectionTitle || 'O Que Nossos Pacientes Dizem'}</h1>
         <p>
           {sectionDescription || 'Estamos orgulhosos de ter ajudado mais de 15.000 pacientes a alcançar uma melhor qualidade de vida. Veja o que alguns deles têm a dizer sobre a experiência em nossa clínica:'}
         </p>
-
         <Carousel indicators interval={3000} controls={false} pause="hover" wrap={true}>
           {chunkedTestimonials.map((pair, index) => (
             <Carousel.Item key={index}>
