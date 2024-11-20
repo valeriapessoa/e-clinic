@@ -1,0 +1,56 @@
+.parallaxContainer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .materialParallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  .parallaxImage {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .parallaxContent {
+    position: relative;
+    z-index: 1;
+  }
+
+  .offset-top-30 {
+    margin-top: 30px;
+  }
+
+  .btn-white {
+    color: #272727;
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+  .btn-ellipse {
+    border-radius: 23px;
+  }
+
+  .btn-white:focus,
+  .btn-white:hover {
+    color: #fff;
+    background-color: #2a93c9;
+    border-color: #2a93c9;
+  }
+
+  @media (min-width: 768px) {
+    .section-sm-110 {
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+  }
