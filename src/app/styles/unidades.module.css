@@ -1,81 +1,38 @@
 /* ******************** unidades.module.css ******************** */
 
-.container {
-  margin: 75px auto;
-  max-width: 1200px;
-  padding: 0 20px;
+.banner {
+  width: 100vw;
+  height: auto;
 }
 
-.unitsHeader {
-  margin-bottom: 20px;
+.bannerSection {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-left: calc(-50vw + 50%);
 }
 
-.heading {
-  text-align: center;
-  font-size: 36px;
-  color: #0075cd;
+.banner {
+  width: 100vw;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao banner */
 }
 
-.description {
-  text-align: justify;
-  font-size: 18px;
-  color: #737680;
-  margin-bottom: 30px;
+.bannerSection {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-left: calc(-50vw + 50%);
 }
 
-.unitsList {
-  display: flex;
-  flex-wrap: wrap;
+.bannerContainer {
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Adiciona a sombra ao container do banner */
 }
 
-.unitCard {
-  margin: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-basis: calc(50% - 30px);
-}
-
-.unitTitle {
-  color: #0075cd;
-  font-size: 24px;
-}
-
-.unitImage {
-  max-width: calc(100% - 20px);
-  margin-top: 15px;
-}
-
-.unitAddress,
-.unitPhone {
-  display: inline-block;
-  color: #737680;
-  text-decoration: none;
-}
-
-.unitPhone:hover {
-  color: #0075cd;
-  text-decoration: none;
-}
-
-.icon {
-  color: #0075cd;
-  margin-right: 10px;
-}
-
-.imageAnimation {
-  transition: transform .3s ease;
-}
-
-.imageAnimation:hover {
-  transform: scale(1.05);
-}
-
-.iconContainer {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-top: 17px;
+.banner {
+  width: 100vw;
+  height: auto;
 }
 
 @media (max-width: 727px) {
@@ -84,3 +41,4 @@
     margin-bottom:20px;
   }
 }
+

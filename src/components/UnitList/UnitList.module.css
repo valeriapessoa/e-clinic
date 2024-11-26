@@ -1,0 +1,171 @@
+.primary-title {
+  font-weight: bold;
+  font-size: 1.9rem;
+  color: #103182;
+}
+
+.secondary-title {
+  font-size: 3.3rem;
+  font-weight: bold;
+  color: #103182;
+}
+
+.highlight {
+  color: #316fd8;
+  font-weight: 900;
+}
+
+.description {
+  text-align: justify;
+  font-size: 18px;
+  color: #737680;
+  margin-bottom: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-top: 12rem;
+  margin-bottom: -2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: -135px;
+  left: 32%;
+  transform: translateX(-50%);
+  text-align: left;
+  color: black;
+  z-index: 10;
+}
+
+.mainTitle {
+  font-size: 4.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subTitle {
+  font-size: 3.9rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Conteúdo principal */
+.content {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Imagem */
+.divImage {
+  width: 38%;
+}
+
+.image {
+  height: 89%;
+  border-radius: 10px;
+}
+
+.infoSection {
+  flex: 1;
+}
+
+.list {
+  list-style: none;
+  padding-top: 75px;
+  margin-left: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #007bff;
+}
+
+.listItem strong {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.listItem p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* Ajuste aqui */
+}
+
+.modalContent {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  margin-left: 1rem;
+}
+
+.closeBtn:hover {
+  color: #555;
+}
+
+.link {
+  text-decoration: none;
+  color: #007bff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  transition: transform 0.2s;
+}
+
+.link img {
+  margin-bottom: 0.5rem;
+  width: 48px;
+  height: 48px;
+}
+
+.link p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.link:hover {
+  transform: scale(1.05);
+}

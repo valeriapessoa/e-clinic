@@ -1,5 +1,5 @@
 import { Carousel } from 'react-bootstrap';
-import styles from '../../app/page.module.css';
+import styles from '../../components/Installations/installations.module.css';
 
 const Installations = () => {
   return (
@@ -8,7 +8,7 @@ const Installations = () => {
       <div className="container py-5">
         <div className="section-title text-center mb-5">
           <h4 className={`${styles['primary-title']} pe-3 mb-0`}>Nossas Instalações</h4>
-          <h1 className={`${styles['secondary-title']} mb-4`}>Conheça Nossa Estrutura</h1>
+          <h1 className={`${styles['secondary-title']} mb-4`}>Conheça <span className={styles.highlight}>Nossa Estrutura</span></h1>
           <p className={`mb-4 ${styles['text']}`}>A E-Clinic disponibiliza instalações modernas para prestar atendimento de qualidade a seus pacientes. Humanização, cuidado, atenção e respeito são palavras que orientam há anos todas as atividades das equipes.</p>
           <p className={`mb-4 ${styles['text']}`}>Centro cirúrgico completo, com 17 salas preparadas para realizar quaisquer tipos de procedimentos, dos mais simples aos de alta complexidade, incluindo cirurgias por videolaparoscopia, tornando os procedimentos menos incisivos e minimizando o período de internação.</p>
         </div>

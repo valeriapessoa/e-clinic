@@ -1,0 +1,82 @@
+/* ************************ Testimonials ******************************** */
+
+.primary-title {
+    font-size: 1.9rem;
+    color: #316fd8;
+    font-weight: 900;
+}
+
+.secondary-title {
+    font-size: 3.3rem;
+    font-weight: bold;
+    color: #103182;
+}
+
+.testimonialSection {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.testimonialSection h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.testimonialSection h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #0075cd;
+    margin: 10px auto 20px;
+}
+
+.testimonialSection p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.divider {
+    width: 80px;
+    height: 4px;
+    background-color: #e74c3c;
+    margin: 0 auto 20px;
+}
+
+.testimonialBlock {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 20px;
+    min-height: 250px;
+}
+
+.testimonialTitle {
+    font-weight: 600;
+    color: #2a3b5a;
+}
+
+.testimonialName {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.feedbackText {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.quoteIcon {
+    font-size: 2rem;
+    color: #316fd8;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+

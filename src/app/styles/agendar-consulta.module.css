@@ -1,87 +1,93 @@
 /* ******************** agendar-consulta.module.css ******************** */
 
 .banner {
-    width: 100%;
-  }
+  width: 100%;
+}
 
-  .highlight {
-    background-color: #0075cd;
-    height: 40px;
-  }
+.scheduling {
+  text-align: center;
+}
 
-  .scheduling {
-    text-align: center;
-  }
+.primary-title {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #103182;
+}
 
-  .title {
-    font-size: 35px;
-    color: #0075cd;
-    margin: 50px 0 60px 0;
-  }
+.secondary-title {
+  font-size: 3.3rem;
+  font-weight: bold;
+  color: #103182;
+}
 
-  .container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
+.highlight {
+  color: #316fd8;
+  font-weight: 900;
+}
 
-  .card {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    flex-basis: 26%;
-    text-align: center;
-    width: 200px;
-    padding: 20px;
-    border: 0;
-    margin: 10px;
-  }
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
-  .icons {
-    height: 74px;
-  }
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  flex-basis: 26%;
+  text-align: center;
+  width: 200px;
+  padding: 20px;
+  border: 0;
+  margin: 10px;
+}
 
-  .text {
-    font-size: 20px;
-    font-weight: bold;
-    color: #737680;
-    margin-top: 10px;
-  }
+.icons {
+  height: 74px;
+}
 
-  .onlineScheduling {
-    text-align: center;
-    margin-top: 30px;
-  }
+.text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #737680;
+  margin-top: 10px;
+}
 
-  .blueButton {
-    display: inline-block;
-    background-color: #0075cd;
-    text-decoration: none;
-    font-size: 25px;
-    color: #fff;
-    padding: 20px 40px;
-    border-radius: 15px;
-    margin-top: 30px;
-    margin-bottom: 150px;
-  }
+.onlineScheduling {
+  text-align: center;
+  margin-top: 30px;
+}
 
-  .blueButton:hover {
-    background-color: #145c93;
-  }
+.blueButton {
+  display: inline-block;
+  background-color: #0075cd;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-bottom: 150px;
+}
 
-  .icon {
-    vertical-align: middle;
-    margin-right: 8px;
-  }
+.blueButton:hover {
+  background-color: #145c93;
+}
 
-  .card_left {
-    align-self: flex-start;
-  }
+.icon {
+  vertical-align: middle;
+  margin-right: 8px;
+}
 
-  .card_center {
-    align-self: center;
-  }
+.card_left {
+  align-self: flex-start;
+}
 
-  .card_right {
-    align-self: flex-end;
-  }
+.card_center {
+  align-self: center;
+}
+
+.card_right {
+  align-self: flex-end;
+}

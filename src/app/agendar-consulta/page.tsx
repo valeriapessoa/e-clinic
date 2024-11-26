@@ -13,8 +13,9 @@ const AgendarConsulta = () => {
       </Head>
       <img src="/images/agendar-consulta/img-1.png" className={styles.banner} />
       <div className={styles.highlight}></div>
-      <div className={styles.scheduling}>
-        <h1 className={styles.title}>Agende sua consulta</h1>
+      <div className="section-title text-center mb-5">
+        <h4 className={`${styles['primary-title']} pe-3 mb-0`}>Agendar Consulta</h4>
+        <h1 className={`${styles['secondary-title']} mb-4`}>Agende sua <span className={styles.highlight}>Consulta</span></h1>
       </div>
       <section className={styles.container}>
         <div className={styles.card}>

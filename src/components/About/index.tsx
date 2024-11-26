@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import styles from '../../app/page.module.css';
+import styles from '../../components/About/about.module.css';
 
 const About = () => {
   return (
@@ -19,7 +19,7 @@ const About = () => {
           <div className="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
             <div className="section-title text-start mb-5">
               <h4 className={`${styles['primary-title']} pe-3 mb-0`}>Sobre Nós</h4>
-              <h1 className={`${styles['secondary-title']} mb-4`}>Comprometidos com a Sua Saúde e Bem-Estar</h1>
+              <h1 className={`${styles['secondary-title']} mb-4`}>Comprometidos com a Sua <span className={styles.highlight}>Saúde e Bem-estar</span></h1>
               <p className="mb-4">Na E-Clinic, dedicamo-nos a oferecer o melhor atendimento possível. Com 15 anos de experiência, nossa equipe está preparada para cuidar de você com excelência e dedicação. Nossa missão é proporcionar tratamentos personalizados que atendam às suas necessidades específicas.</p>
               <div className="mb-4">
                 <p className="text-secondary"><FontAwesomeIcon icon={faCheck} className={`me-2 ${styles['custom-icon']}`} /> Atendimento personalizado e humanizado.</p>

@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { FaQuoteRight } from 'react-icons/fa';
 import Carousel from 'react-bootstrap/Carousel';
-import styles from '../../app/page.module.css';
+import styles from '../../components/Testimonials/testimonials.module.css';
 
 interface Testimonial {
   title: string;
@@ -15,12 +15,13 @@ interface Testimonial {
 
 interface TestimonialsProps {
   testimonials: Testimonial[];
-  sectionTitle?: string;
+  primaryTitle?: string;
+  secondaryTitle?: string;
   sectionDescription?: string;
 }
 
-const Testimonials = ({ testimonials, sectionTitle, sectionDescription }: TestimonialsProps) => {
-  const chunkedTestimonials = [];
+const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, primaryTitle, secondaryTitle, sectionDescription }) => {
+  const chunkedTestimonials: Testimonial[][] = [];
   for (let i = 0; i < testimonials.length; i += 2) {
     chunkedTestimonials.push(testimonials.slice(i, i + 2));
   }
@@ -28,8 +29,8 @@ const Testimonials = ({ testimonials, sectionTitle, sectionDescription }: Testim
   return (
     <section className={`${styles.testimonialSection} py-5 testimonial`}>
       <div className="container text-center">
-        <h4 className={`${styles['primary-title']} pe-3 mb-0`}>{sectionTitle || 'Depoimentos'}</h4>
-        <h1 className={`${styles['secondary-title']} mb-4`}>{sectionTitle || 'O Que Nossos Pacientes Dizem'}</h1>
+        <h4 className={`${styles['primary-title']} pe-3 mb-0`}>{primaryTitle || 'Depoimentos'}</h4>
+        <h1 className={`${styles['secondary-title']} mb-4`}>{secondaryTitle || 'O Que Nossos Pacientes Dizem'}</h1>
         <p>
           {sectionDescription || 'Estamos orgulhosos de ter ajudado mais de 15.000 pacientes a alcançar uma melhor qualidade de vida. Veja o que alguns deles têm a dizer sobre a experiência em nossa clínica:'}
         </p>

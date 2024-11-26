@@ -1,0 +1,55 @@
+/* ************************ Services ******************************** */
+
+.primary-title {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #103182;
+}
+
+.secondary-title {
+    font-size: 3.3rem;
+    font-weight: bold;
+    color: #103182;
+}
+
+.highlight {
+    color: #316fd8;
+    font-weight: 900;
+}
+
+.services {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.service-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.icon-circle {
+    background-color: #103182;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #FFF;
+}

@@ -2,7 +2,6 @@
 
 import Head from 'next/head';
 import styles from '../styles/convenios.module.css';
-import DoctorsCarousel from "../../components/DoctorsCarousel";
 
 const Convenios = () => {
   return (
@@ -10,9 +9,13 @@ const Convenios = () => {
       <Head>
         <title>Convênios</title>
       </Head>
-      <main className={styles.container}>
-        <section className={styles.healthPlanSection}>
-          <h1 className={styles.heading}>Planos de Saúde</h1>
+      <main >
+        <section className={styles.bannerSection}>
+          <img src="/images/convenios/banner.jpg" className={styles.banner} alt="Banner" />
+        </section>
+        <section className={`${styles.healthPlanSection} ${styles.container}`}>
+          <h4 className={`${styles.primaryTitle} pe-3 mb-0`}>Nossos Convênios</h4>
+          <h1 className={`${styles.secondaryTitle} mb-4`}>Confira os <span className={styles.highlight}>Planos de Saúde</span></h1>
           <p className={styles.paragraph}>
             Na E-Clinic, valorizamos a vida dos nossos pacientes em cada atendimento. Oferecemos cuidado excepcional com o jeito E-Clinic de fazer saúde. Nossa equipe trabalha unida diariamente para proporcionar o que há de melhor na medicina moderna a todos que confiam em nossos serviços.
           </p>
@@ -38,7 +41,6 @@ const Convenios = () => {
             </div>
           ))}
         </div>
-        <DoctorsCarousel />
       </main>
     </>
   );

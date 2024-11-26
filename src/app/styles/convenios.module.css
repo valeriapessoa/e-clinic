@@ -6,11 +6,24 @@
   padding: 0 20px;
 }
 
-.heading {
+.primaryTitle {
   text-align: center;
-  font-size: 30px;
-  color: #0075cd;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #103182;
+}
+
+.secondaryTitle {
+  text-align: center;
+  font-size: 3.3rem;
+  font-weight: bold;
+  color: #103182;
   margin-bottom: 20px;
+}
+
+.highlight {
+  color: #316fd8;
+  font-weight: 900;
 }
 
 .paragraph {

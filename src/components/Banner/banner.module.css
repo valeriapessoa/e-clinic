@@ -1,0 +1,100 @@
+/* *************************** banner.module.css *************************** */
+
+.container {
+    margin: 75px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    color: #103182;
+}
+
+.subtitle {
+    margin: 25px 0;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #103182;
+}
+
+.highlight {
+    color: #316fd8;
+    font-weight: 900;
+}
+
+.text {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 55px;
+}
+
+.buttonGroup {
+    text-align: left;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.circlePrimary {
+    position: absolute;
+    top: 58%;
+    left: 37%;
+    width: 404px;
+    height: 404px;
+    background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.circleSecondary {
+    position: absolute;
+    top: 41%;
+    left: 77%;
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.bannerImage {
+    max-width: 69%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.alignRight {
+    margin-left: 190px;
+    margin-right: 0;
+}
+
+.btnPrimary {
+    background-color: #316fd8;
+    border-color: #316fd8;
+}
+
+.btnPrimary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btnSecondary {
+    border: 3px solid #316fd8;
+    color: #316fd8;
+}
+
+.btnSecondary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #ffffff;
+}
