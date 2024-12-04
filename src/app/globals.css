@@ -323,6 +323,17 @@ footer .wrapper {
   background-color: #0075cd!important;
 }
 
+.healthTipsCarousel .react-multi-carousel-item {
+  padding: 10px!important;
+  padding-bottom: 30px!important;
+}
+
+.newsCarousel .react-multi-carousel-item {
+  padding-bottom: 40px!important;
+}
+
+
+
 @media (min-width: 1400px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
       max-width: 1200px;

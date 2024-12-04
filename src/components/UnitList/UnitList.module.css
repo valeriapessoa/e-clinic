@@ -1,20 +1,3 @@
-.primary-title {
-  font-weight: bold;
-  font-size: 1.9rem;
-  color: #103182;
-}
-
-.secondary-title {
-  font-size: 3.3rem;
-  font-weight: bold;
-  color: #103182;
-}
-
-.highlight {
-  color: #316fd8;
-  font-weight: 900;
-}
-
 .description {
   text-align: justify;
   font-size: 18px;
@@ -34,7 +17,7 @@
 
 .header {
   position: absolute;
-  top: -135px;
+  top: -126px;
   left: 32%;
   transform: translateX(-50%);
   text-align: left;
@@ -43,7 +26,7 @@
 }
 
 .mainTitle {
-  font-size: 4.4rem;
+  font-size: 3.9rem;
   font-weight: 900;
   text-transform: uppercase;
   margin: 0;
@@ -56,19 +39,19 @@
   margin: 0;
 }
 
-/* Conteúdo principal */
 .content {
   display: flex;
   gap: 2rem;
+  margin-bottom: 33px;
 }
 
-/* Imagem */
+
 .divImage {
   width: 38%;
 }
 
 .image {
-  height: 89%;
+  height: 90%;
   border-radius: 10px;
 }
 
@@ -78,11 +61,11 @@
 
 .list {
   list-style: none;
-  padding-top: 75px;
-  margin-left: 27px;
+  padding-top: 55px;
+  margin-left: 224px;
   display: flex;
   flex-direction: column;
-  gap: 4.5rem;
+  gap: 0.5rem;
 }
 
 .listItem {
@@ -110,7 +93,6 @@
   margin: 0;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   top: 0;
@@ -121,7 +103,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1050; /* Ajuste aqui */
+  z-index: 1050;
 }
 
 .modalContent {
@@ -169,3 +151,4 @@
 .link:hover {
   transform: scale(1.05);
 }
+

@@ -7,38 +7,80 @@ import styles from '../styles/unidades.module.css';
 import DoctorsCarousel from '../../components/DoctorsCarousel/DoctorsCarousel';
 import ParallaxSection from "../../components/paralaxSection/ParallaxSection";
 import UnitList from '../../components/UnitList/UnitList';
-import RealEstateAdcopy2 from '../../components/ClinicAd/ClinicAd';
+import ClinicServices from '../../components/ClinicServices/ClinicServices';
 
 const doctors = [
   {
-    name: "Dr. Utdew Erry",
-    description: "Eye Specialist",
-    image: "/images/home/doctors-2.png",
+    name: "Dra. Juliana Lima",
+    description: "Especialista em Oftalmologia",
+    image: "/images/unidades/img-1.jpg",
+    facebookLink: "https://www.facebook.com/",
+    instagramLink: "https://www.instagram.com/",
+    twitterLink: "https://twitter.com/"
   },
   {
-    name: "Dr. Mariya Ruk",
-    description: "Dental Specialist",
-    image: "/images/home/doctors-1.jpg",
+    name: "Dra. Isadora Figueiredo",
+    description: "Especialista em Dermatologia",
+    image: "/images/unidades/img-2.jpg",
+    facebookLink: "https://www.facebook.com/",
+    instagramLink: "https://www.instagram.com/",
+    twitterLink: "https://twitter.com/"
   },
   {
-    name: "Dr. Nurul Hoq",
-    description: "Heart Specialist",
-    image: "/images/home/doctors-1.jpg",
+    name: "Dr. Felipe Almeida",
+    description: "Especialista em Cardiologia",
+    image: "/images/unidades/img-3.jpg",
+    facebookLink: "https://www.facebook.com/",
+    instagramLink: "https://www.instagram.com/",
+    twitterLink: "https://twitter.com/"
   },
   {
-    name: "Dr. Alex Green",
-    description: "Orthopedic Specialist",
-    image: "/images/home/doctors-2.png",
+    name: "Dra. Beatriz Carvalho",
+    description: "Especialista em Ortopedia",
+    image: "/images/unidades/img-4.jpg",
+    facebookLink: "https://www.facebook.com/",
+    instagramLink: "https://www.instagram.com/",
+    twitterLink: "https://twitter.com/"
   },
   {
-    name: "Dr. Linda Lee",
-    description: "Pediatric Specialist",
-    image: "/images/home/doctors-1.jpg",
+    name: "Dr. Pedro Lacerda",
+    description: "Especialista em Pediatria",
+    image: "/images/unidades/img-5.jpg",
+    facebookLink: "https://www.facebook.com/",
+    instagramLink: "https://www.instagram.com/",
+    twitterLink: "https://twitter.com/"
   },
   {
-    name: "Dr. Michael Wong",
-    description: "Cardiologist",
-    image: "/images/home/doctors-1.jpg",
+    name: "Dr. Fernando Oliveira",
+    description: "Especialista em Oftalmologia",
+    image: "/images/unidades/img-6.jpg",
+    facebookLink: "https://www.facebook.com/",
+    instagramLink: "https://www.instagram.com/",
+    twitterLink: "https://twitter.com/"
+  },
+  {
+    name: "Dr. Carlos Martins",
+    description: "Especialista em Neurologia",
+    image: "/images/unidades/img-7.jpg",
+    facebookLink: "https://www.facebook.com/",
+    instagramLink: "https://www.instagram.com/",
+    twitterLink: "https://twitter.com/"
+  },
+  {
+    name: "Dra. Camila Mendes",
+    description: "Especialista em Ginecologia",
+    image: "/images/unidades/img-8.jpg",
+    facebookLink: "https://www.facebook.com/",
+    instagramLink: "https://www.instagram.com/",
+    twitterLink: "https://twitter.com/"
+  },
+  {
+    name: "Dra. Renata Pires",
+    description: "Especialista em Endocrinologia",
+    image: "/images/unidades/img-9.jpg",
+    facebookLink: "https://www.facebook.com/",
+    instagramLink: "https://www.instagram.com/",
+    twitterLink: "https://twitter.com/"
   },
 ];
 
@@ -56,12 +98,7 @@ const Unidades = () => {
           title="Especialistas"
           subtitle="Conheça Nossa Equipe"
         />
-        <RealEstateAdcopy2 />
-        {/* <section className={styles.bannerSection}>
-          <div className={styles.bannerContainer}>
-            <img src="/images/convenios/banner.jpg" className={styles.banner} alt="Banner" />
-          </div>
-        </section> */}
+        <ClinicServices />
       </main>
     </>
   );

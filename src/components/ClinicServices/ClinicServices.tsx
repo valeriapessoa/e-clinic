@@ -1,14 +1,12 @@
 import React from 'react';
 import { FaStethoscope, FaHospital, FaUserMd, FaShieldAlt } from 'react-icons/fa';
-import styles from './ClinicAd.module.css';
+import TertiaryTitle from '../TertiaryTitle/TertiaryTitle';
+import styles from './ClinicServices.module.css';
 
-const ClinicAd = () => {
+const ClinicServices = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <h1 className={styles.mainTitle}>CUIDADO MÉDICO</h1>
-        <h2 className={styles.subTitle}>ATENDIMENTO DE QUALIDADE</h2>
-      </div>
+      <TertiaryTitle primary="CUIDADO MÉDICO" secondary="ATENDIMENTO DE QUALIDADE" />
       <div className={styles.content}>
         <img
           className={styles.image}
@@ -52,4 +50,4 @@ const ClinicAd = () => {
   );
 };
 
-export default ClinicAd;
+export default ClinicServices;

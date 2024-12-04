@@ -1,5 +1,3 @@
-/* ************************ About ******************************** */
-
 .container {
     margin: 75px auto;
     max-width: 1200px;
@@ -13,14 +11,14 @@
     border-radius: 10px;
 }
 
-.about-img {
+.aboutImg {
     position: relative;
     overflow: hidden;
     height: 100%;
     border-radius: 10px;
 }
 
-.about-img-inner {
+.aboutImgInner {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -30,13 +28,13 @@
     border-radius: 50%;
 }
 
-.inner-img {
+.innerImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.about-experience {
+.aboutExperience {
     position: absolute;
     top: 236px;
     left: -125px;
@@ -48,34 +46,16 @@
     letter-spacing: 4px;
 }
 
-.primary-title {
-    font-weight: bold;
-    font-size: 1.9rem;
-    color: #103182;
-}
-
-.secondary-title {
-    font-size: 3.3rem;
-    font-weight: bold;
-    color: #103182;
-
-}
-
-.highlight {
-    color: #316fd8;
-    font-weight: 900;
-}
-
-.custom-button {
+.customButton {
     background-color: #316fd8;
     border-color: #316fd8;
 }
 
-.custom-button:hover {
+.customButton:hover {
     background-color: #0056b3;
     border-color: #0056b3;
 }
 
-.custom-icon {
+.customIcon {
     color: #0075cd;
 }

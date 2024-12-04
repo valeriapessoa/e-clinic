@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./UnitList.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import SecondaryTitle from "../SecondaryTitle/SecondaryTitle";
 
 interface Unit {
   name: string;
@@ -63,8 +64,7 @@ const UnitList = () => {
   return (
     <section className={`${styles.unitsList} container mt-5 pt-5`}>
       <div className="section-title text-center mb-5">
-        <h4 className={`${styles['primary-title']} pe-3 mb-0`}>Conheça as Unidades</h4>
-        <h1 className={`${styles['secondary-title']} mb-4`}>Visite Nossas <span className={styles.highlight}>Unidades</span></h1>
+        <SecondaryTitle primary="Conheça as Unidades" secondary="Visite Nossas" highlight="Unidades" />
         <p className={`mb-4 ${styles.description}`}>
           Estamos presentes em várias localidades para melhor atender você e sua família, sempre com o compromisso de oferecer atendimento de qualidade e personalizado. Conheça as nossas unidades e encontre a mais próxima de você:
         </p>
@@ -76,7 +76,7 @@ const UnitList = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.divImage}>
-            <img src="./images/unidades/sumare-img.jpg" alt="Real Estate" className={styles.image} />
+            <img src="./images/unidades/sumare.jpg" alt="Real Estate" className={styles.image} />
           </div>
           <div className={styles.infoSection}>
             <ul className={styles.list}>
@@ -92,6 +92,7 @@ const UnitList = () => {
                   <div>
                     <strong>{unit.name}</strong>
                     <p>{unit.address}</p>
+                    <hr />
                   </div>
                 </li>
               ))}

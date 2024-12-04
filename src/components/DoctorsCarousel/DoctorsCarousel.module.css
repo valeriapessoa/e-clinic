@@ -1,24 +1,5 @@
-/* ************************ Doctors Carousel ******************************** */
-
 .carouselContainer {
-    margin: 200px 0 70px 0;
-}
-
-.primary-title {
-  font-size: 1.9rem;
-  font-weight: bold;
-  color: #103182;
-}
-
-.secondary-title {
-    font-size: 3.3rem;
-    font-weight: bold;
-    color: #103182;
-}
-
-.highlight {
-    color: #316fd8;
-    font-weight: 900;
+  margin: 200px 0 70px 0;
 }
 
 .customCarousel .carousel-inner {

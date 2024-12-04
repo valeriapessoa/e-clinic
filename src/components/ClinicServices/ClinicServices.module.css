@@ -1,4 +1,3 @@
-/* Container principal */
 .container {
   max-width: 1200px;
   margin: 10rem auto;
@@ -8,33 +7,12 @@
   gap: 1.5rem;
 }
 
-/* Cabeçalho com título */
-.header {
-  text-align: center;
-}
-
-.mainTitle {
-  font-size: 2.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.subTitle {
-  font-size: 1.8rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  margin: 0.5rem 0 1rem;
-}
-
-/* Conteúdo principal */
 .content {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
 }
 
-/* Imagem com bordas arredondadas */
 .image {
   width: 50%;
   border-radius: 16px;
@@ -42,7 +20,6 @@
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Lista de informações */
 .infoSection {
   flex: 1;
 }
@@ -53,7 +30,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 3.5rem
+  gap: 3.5rem;
 }
 
 .listItem {

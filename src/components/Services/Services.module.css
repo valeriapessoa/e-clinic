@@ -1,21 +1,3 @@
-/* ************************ Services ******************************** */
-
-.primary-title {
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: #103182;
-}
-
-.secondary-title {
-    font-size: 3.3rem;
-    font-weight: bold;
-    color: #103182;
-}
-
-.highlight {
-    color: #316fd8;
-    font-weight: 900;
-}
 
 .services {
     position: relative;
@@ -24,7 +6,7 @@
     border-radius: 10px;
 }
 
-.service-item {
+.serviceItem {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -34,11 +16,11 @@
     justify-content: space-between;
 }
 
-.service-item:hover {
+.serviceItem:hover {
     transform: translateY(-10px);
 }
 
-.icon-circle {
+.iconCircle {
     background-color: #103182;
     border-radius: 50%;
     width: 80px;
@@ -49,7 +31,7 @@
     margin: 0 auto 20px;
 }
 
-.service-icon {
+.serviceIcon {
     font-size: 40px;
     color: #FFF;
 }

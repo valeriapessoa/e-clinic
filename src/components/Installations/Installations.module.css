@@ -1,24 +1,5 @@
-/* ************************ Installations ******************************** */
-
-.wave-style {
-    width:100%;
-}
-
-.primary-title {
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: #103182;
-}
-
-.secondary-title {
-    font-size: 3.3rem;
-    font-weight: bold;
-    color: #103182;
-}
-
-.highlight {
-    color: #316fd8;
-    font-weight: 900;
+.waveStyle {
+    width: 100%;
 }
 
 .installations {
@@ -28,13 +9,13 @@
     border-radius: 10px;
 }
 
-.small-img {
+.smallImg {
     height: 250px;
     object-fit: cover;
     margin: 0 10px;
 }
 
-.large-img {
+.largeImg {
     height: 350px;
     object-fit: cover;
     margin: 0 10px;
@@ -50,7 +31,7 @@
 
 .carousel-indicators {
     bottom: -30px;
-}
+    }
 
 .carousel-indicators li {
     background-color: blue;

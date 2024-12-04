@@ -1,0 +1,13 @@
+.primaryTitle {
+    font-size: 1.9rem;
+    color: #316fd8;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .secondaryTitle {
+    font-size: 3.3rem;
+    font-weight: bold;
+    color: #103182;
+    text-transform: uppercase;
+  }
