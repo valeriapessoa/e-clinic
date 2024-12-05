@@ -3,9 +3,9 @@ import styles from '../../components/Banner/banner.module.css';
 
 const Banner = () => {
     return (
-        <Container className={`mt-5 ${styles.container}`}>
-            <Row>
-                <Col md={6} className="d-flex flex-column justify-content-center">
+        <div className={styles.bannerContainer}>
+            <Row className="align-items-center">
+                <Col md={6} className={`d-flex flex-column justify-content-center ${styles.textContainer}`}>
                     <h5 className={styles.title}>Bem-vindo à E-Clinic</h5>
                     <h1 className={styles.subtitle}>
                         Marque sua consulta <span className={styles.highlight}>agora</span>
@@ -19,10 +19,10 @@ const Banner = () => {
                     </div>
                 </Col>
                 <Col md={6} className={styles.imageContainer}>
-                    <img src="images/home/banner.jpg" alt="Doctor" className={`${styles.bannerImage}`} />
+                    <img src="images/home/banner.jpeg" alt="Doctor" className={`${styles.bannerImage}`} />
                 </Col>
             </Row>
-        </Container>
+        </div>
     );
 };
 

@@ -90,18 +90,35 @@ const testimonialsData = [
 const Home = () => {
   return (
     <main>
-          <Banner/>
-          <About/>
-          <Installations/>
-          <Services
-            services={services}
-            primaryTitle="Nossos Serviços"
-            secondaryTitle="O Que Oferecemos"
-            sectionDescription="Na E-Clinic, oferecemos uma ampla gama de serviços para atender às suas necessidades de saúde com excelência e dedicação."
-          />
-          <Testimonials
-            testimonials={testimonialsData}
-          />
+      <Banner/>
+      <About/>
+      <Installations/>
+      <div className={styles.container}>
+        <div className={styles.fullWidthImage}>
+          <img src="/images/home/banner-1.jpg" alt="Banner" />
+          <div className={styles.overlayLeft}>
+              <h2 className={styles.bannerTitleLeft}>ATENDIMENTO EM CASA</h2>
+              <h2 className={styles.bannerSubtitleLeft}>Suas coletas de exames<br/>laboratoriais sem<br/>sair de casa!</h2>
+          </div>
+        </div>
+      </div>
+      <Services
+        services={services}
+        primaryTitle="Nossos Serviços"
+        secondaryTitle="O Que Oferecemos"
+        sectionDescription="Na E-Clinic, oferecemos uma ampla gama de serviços para atender às suas necessidades de saúde com excelência e dedicação."
+      />
+      <div className={styles.container}>
+        <div className={styles.fullWidthImage}>
+          <img src="/images/home/banner-2.png" alt="Banner" />
+          <div className={styles.overlay}>
+              <h2 className={styles.title}>Sua Saúde, Nossa Missão</h2>
+          </div>
+        </div>
+      </div>
+      <Testimonials
+        testimonials={testimonialsData}
+      />
     </main>
   );
 };

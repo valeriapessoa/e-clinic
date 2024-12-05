@@ -1,7 +1,12 @@
-.container {
-    margin: 75px auto;
-    max-width: 1200px;
-    padding: 0 20px;
+.bannerContainer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.textContainer {
+    padding: 4% 3% 0 6%;
 }
 
 .title {
@@ -66,4 +71,27 @@
     background-color: #0056b3;
     border-color: #0056b3;
     color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .textContainer {
+        padding: 4% 3% 0 3%;
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+        margin-bottom: 35px;
+    }
+
+    .buttonGroup {
+        text-align: center;
+    }
+
+    .bannerImage {
+        margin-top: 20px;
+    }
 }
