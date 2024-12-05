@@ -9,7 +9,6 @@
   border-radius: 10px;
   max-width: 1200px;
   margin: 2rem auto;
-  font-family: Arial, sans-serif;
 }
 
 .header {
@@ -48,4 +47,10 @@
 
 .image {
   width: 60%;
+}
+
+.listItem {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
 }

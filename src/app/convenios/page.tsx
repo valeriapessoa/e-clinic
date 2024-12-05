@@ -32,7 +32,6 @@ const Convenios = () => {
         <title>Convênios</title>
       </Head>
       <main>
-        {/* Banner */}
         <section className={styles.bannerSection}>
           <img
             src="/images/convenios/banner.jpg"
@@ -54,7 +53,6 @@ const Convenios = () => {
           </div>
         </section>
 
-        {/* Seção de Convênios */}
         <section
           id="convenios"
           className={`${styles.healthPlanSection} ${styles.container}`}
@@ -71,7 +69,6 @@ const Convenios = () => {
           </p>
         </section>
 
-        {/* Lista de Convênios */}
         <div className={`row ${styles.imageRow} ${styles.container}`}>
           {images.map((src, index) => (
             <div key={index} className="col-6 col-md-4 col-lg-3">
@@ -87,6 +84,7 @@ const Convenios = () => {
         </div>
 
         <ConvenioBenefits />
+        
         <NewsCarousel />
       </main>
     </>

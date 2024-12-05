@@ -1,12 +1,7 @@
 /* ******************* HOME ******************* */
-.primary-title {
-  font-size: 1.9rem;
-  color: #103182;
-}
 
-.secondary-title {
-  font-size: 3.3rem;
-  color: #103182;
+.container {
+  margin-bottom: 2%
 }
 
 .fullWidthImage {
@@ -17,10 +12,6 @@
 .fullWidthImage img {
   width: 100%;
   height: auto;
-}
-
-.container {
-  margin: 10% 0;
 }
 
 .overlay {

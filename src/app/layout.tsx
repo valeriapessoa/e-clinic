@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <SessionWrapper>
-      <html lang="en">
+      <html lang="pt-BR">
         <body className={font.className}>
           <Header />
           {children}

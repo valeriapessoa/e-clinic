@@ -4,6 +4,10 @@
   padding: 0 20px;
 }
 
+.imageRow {
+  margin-bottom: 15%;
+}
+
 .bannerSection {
   position: relative;
   height: 600px;
@@ -81,25 +85,11 @@
   color: #103182;
 }
 
-.primaryTitle {
-  font-size: 1.9rem;
-}
-
-.secondaryTitle {
-  font-size: 3.3rem;
-  margin-bottom: 20px;
-}
-
-.highlight {
-  color: #316fd8;
-  font-weight: 900;
-}
-
 .paragraph {
   text-align: justify;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #737680;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: #666;
 }
 
 .block {

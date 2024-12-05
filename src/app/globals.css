@@ -273,6 +273,40 @@ footer .wrapper {
   color: #fff;
 }
 
+.installations .carousel-indicators {
+  margin-bottom: -2rem!important;
+}
+
+.installations .carousel-indicators [data-bs-target] {
+  background-color: #0075cd!important;
+}
+
+
+.testimonial .carousel-indicators {
+  margin-bottom: -3.2rem!important;
+}
+
+.testimonial .carousel-indicators [data-bs-target] {
+  background-color: #0075cd!important;
+}
+
+.doctors .carousel-indicators {
+  margin-bottom: -36px!important;
+}
+
+.doctors .carousel-indicators [data-bs-target] {
+  background-color: #0075cd!important;
+}
+
+.healthTipsCarousel .react-multi-carousel-item {
+  padding: 10px!important;
+  padding-bottom: 30px!important;
+}
+
+.newsCarousel .react-multi-carousel-item {
+  padding-bottom: 40px!important;
+}
+
 @media (min-width: 1240px) {
   .wrapper {
     width: 1210px;
@@ -297,42 +331,6 @@ footer .wrapper {
     text-align: left;
   }
 }
-
-.installations .carousel-indicators {
-  margin-bottom: -2rem!important;
-}
-
-.installations .carousel-indicators [data-bs-target] {
-  background-color: #0075cd!important;
-}
-
-
-.testimonial .carousel-indicators {
-  margin-bottom: -1.2rem!important;
-}
-
-.testimonial .carousel-indicators [data-bs-target] {
-  background-color: #0075cd!important;
-}
-
-.doctors .carousel-indicators {
-  margin-bottom: -36px!important;
-}
-
-.doctors .carousel-indicators [data-bs-target] {
-  background-color: #0075cd!important;
-}
-
-.healthTipsCarousel .react-multi-carousel-item {
-  padding: 10px!important;
-  padding-bottom: 30px!important;
-}
-
-.newsCarousel .react-multi-carousel-item {
-  padding-bottom: 40px!important;
-}
-
-
 
 @media (min-width: 1400px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {

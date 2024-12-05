@@ -28,7 +28,7 @@ const Services: React.FC<ServicesProps> = ({ services, primaryTitle, secondaryTi
         <p className="mb-4">
           {sectionDescription || 'Na E-Clinic, oferecemos uma ampla gama de serviços para atender às suas necessidades de saúde com excelência e dedicação.'}
         </p>
-        <div className="row g-4">
+        <div className={`row g-4 ${styles.containerItem}`}>
           {services.map((service, index) => (
             <div key={index} className="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div className={`service-item ${styles.serviceItem} text-center p-4`}>

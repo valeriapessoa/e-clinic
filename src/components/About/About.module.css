@@ -4,6 +4,11 @@
     padding: 0 20px;
 }
 
+.containerAbout {
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+
 .about {
     position: relative;
     overflow: hidden;
@@ -22,8 +27,8 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
     border: 10px solid var(--bs-white);
     border-radius: 50%;
 }
@@ -36,7 +41,7 @@
 
 .aboutExperience {
     position: absolute;
-    top: 236px;
+    top: 193px;
     left: -125px;
     transform: rotate(-90deg);
     background: transparent;
@@ -58,4 +63,9 @@
 
 .customIcon {
     color: #0075cd;
+}
+
+.text-secondary {
+    font-size: 1rem;
+    color: red;
 }

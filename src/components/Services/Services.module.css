@@ -1,4 +1,8 @@
 
+.containerItem {
+    margin-bottom: 15%;
+}
+
 .services {
     position: relative;
     overflow: hidden;

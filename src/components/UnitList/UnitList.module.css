@@ -1,39 +1,38 @@
-.description {
-  text-align: justify;
-  font-size: 18px;
-  color: #737680;
-  margin-bottom: 30px;
-}
-
 .container {
   max-width: 1200px;
-  margin-top: 12rem;
-  margin-bottom: -2rem;
+  margin-top: 13rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   position: relative;
 }
 
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: justify;
+}
+
 .header {
   position: absolute;
-  top: -126px;
-  left: 32%;
+  top: -153px;
+  left: 27%;
   transform: translateX(-50%);
   text-align: left;
-  color: black;
+  color: #103182;
   z-index: 10;
 }
 
 .mainTitle {
-  font-size: 3.9rem;
+  font-size: 3.3rem;
   font-weight: 900;
   text-transform: uppercase;
   margin: 0;
 }
 
 .subTitle {
-  font-size: 3.9rem;
+  font-size: 3.3rem;
   font-weight: 300;
   text-transform: uppercase;
   margin: 0;
@@ -42,7 +41,6 @@
 .content {
   display: flex;
   gap: 2rem;
-  margin-bottom: 33px;
 }
 
 
@@ -51,7 +49,7 @@
 }
 
 .image {
-  height: 90%;
+  height: 93%;
   border-radius: 10px;
 }
 
@@ -65,7 +63,7 @@
   margin-left: 224px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.1rem;
 }
 
 .listItem {
@@ -82,13 +80,13 @@
 
 .listItem strong {
   font-size: 1.6rem;
-  color: #333;
+  color: #103182;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .listItem p {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: #666;
   margin: 0;
 }

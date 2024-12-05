@@ -32,10 +32,10 @@ const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, primaryTitle,
           primary={primaryTitle || 'Depoimentos'}
           secondary={secondaryTitle || 'O Que Nossos Pacientes Dizem'}
         />
-        <p>
+        <p className={`${styles.text}`}>
           {sectionDescription || 'Estamos orgulhosos de ter ajudado mais de 15.000 pacientes a alcançar uma melhor qualidade de vida. Veja o que alguns deles têm a dizer sobre a experiência em nossa clínica:'}
         </p>
-        <Carousel aria-live="polite" indicators interval={3000} controls={true} pause="hover" wrap={true}>
+        <Carousel className={`${styles.containerCarousel}`} aria-live="polite" indicators interval={3000} controls={true} pause="hover" wrap={true}>
           {chunkedTestimonials.map((pair, index) => (
             <Carousel.Item key={index}>
               <div className="row">
@@ -44,7 +44,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, primaryTitle,
                     <div className={`${styles.testimonialBlock} d-flex p-4 m-2`}>
                       <div className="mb-3">
                         <Image
-                          src={testimonial.image || '/images/default-avatar.png'}
+                          src={testimonial.image}
                           alt={testimonial.name}
                           width={60}
                           height={60}
