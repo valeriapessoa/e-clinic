@@ -1,0 +1,228 @@
+.bannerContainer {
+    width: 100%;
+    height: calc(90vh - 60px); /* Ajusta a altura do menu de navegação aqui */
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textContainer {
+    padding: 4% 3% 0 6%;
+}
+
+.title {
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    color: #103182;
+}
+
+.subtitle {
+    margin: 25px 0;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #103182;
+}
+
+.highlight {
+    color: #316fd8;
+    font-weight: 900;
+}
+
+.text {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 55px;
+}
+
+.buttonGroup {
+    text-align: left;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.bannerImage {
+    width: 100%;
+    height: calc(90vh - 60px); /* Ajusta a altura do menu de navegação aqui */
+    object-fit: cover;
+    position: relative;
+}
+
+.btnPrimary {
+    background-color: #316fd8;
+    border-color: #316fd8;
+}
+
+.btnPrimary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btnSecondary {
+    border: 3px solid #316fd8;
+    color: #316fd8;
+}
+
+.btnSecondary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+    .textContainer {
+        padding: 4% 3% 0 5%;
+    }
+
+    .subtitle {
+        font-size: 3.5rem;
+    }
+
+    .text {
+        font-size: 1rem;
+        margin-bottom: 45px;
+    }
+
+    .buttonGroup {
+        text-align: center;
+    }
+
+    .bannerImage {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .textContainer {
+        padding: 4% 3% 0 4%;
+    }
+
+    .subtitle {
+        font-size: 3rem;
+    }
+
+    .text {
+        font-size: 0.95rem;
+        margin-bottom: 40px;
+    }
+
+    .buttonGroup {
+        text-align: center;
+    }
+
+    .bannerImage {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .textContainer {
+        padding: 4% 3% 0 3%;
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+        margin-bottom: 35px;
+    }
+
+    .buttonGroup {
+        text-align: center;
+    }
+
+    .bannerImage {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .textContainer {
+        padding: 4% 2% 0 2%;
+        order: 2; /* Define a ordem do contêiner de texto para aparecer depois */
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 0.85rem;
+        margin-bottom: 30px;
+    }
+
+    .buttonGroup {
+        text-align: center;
+    }
+
+    .bannerImage {
+        margin-top: 20px;
+    }
+
+    .imageContainer {
+        order: 1; /* Define a ordem do contêiner de imagem para aparecer primeiro */
+    }
+}
+
+@media (max-width: 480px) {
+    .textContainer {
+        padding: 4% 1% 0 1%;
+        order: 2; /* Define a ordem do contêiner de texto para aparecer depois */
+    }
+
+    .subtitle {
+        font-size: 1.8rem;
+    }
+
+    .text {
+        font-size: 0.8rem;
+        margin-bottom: 25px;
+    }
+
+    .buttonGroup {
+        text-align: center;
+    }
+
+    .bannerImage {
+        margin-top: 20px;
+    }
+
+    .imageContainer {
+        order: 1; /* Define a ordem do contêiner de imagem para aparecer primeiro */
+    }
+}
+
+@media (min-width: 1600px) {
+    .textContainer {
+        padding: 4% 5% 0 7%;
+    }
+
+    .subtitle {
+        font-size: 4.5rem;
+    }
+
+    .text {
+        font-size: 1.1rem;
+        margin-bottom: 60px;
+    }
+
+    .buttonGroup {
+        text-align: left;
+    }
+
+    .bannerImage {
+        margin-top: 0;
+    }
+}

@@ -1,10 +1,10 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import styles from '../../components/Banner/banner.module.css';
+import styles from './HighlightBanner.module.css';
 
-const Banner = () => {
+const HighlightBanner = () => {
     return (
         <div className={styles.bannerContainer}>
-            <Row className="align-items-center">
+            <Row className="align-items-center h-100">
                 <Col md={6} className={`d-flex flex-column justify-content-center ${styles.textContainer}`}>
                     <h5 className={styles.title}>Bem-vindo à E-Clinic</h5>
                     <h1 className={styles.subtitle}>
@@ -26,4 +26,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default HighlightBanner;

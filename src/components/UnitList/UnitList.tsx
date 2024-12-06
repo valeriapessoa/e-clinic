@@ -66,8 +66,9 @@ const UnitList = () => {
       <div className="section-title text-center mb-5">
         <SecondaryTitle primary="Conheça as Unidades" secondary="Visite Nossas" highlight="Unidades" />
         <p className={`mb-4 ${styles.description}`}>
-          Estamos presentes em várias localidades para melhor atender você e sua família, sempre com o compromisso de oferecer atendimento de qualidade e personalizado. Conheça as nossas unidades e encontre a mais próxima de você:
+          Estamos presentes em várias localidades para melhor atender você e sua família, sempre com o compromisso de oferecer atendimento de qualidade e personalizado. Nossas unidades são estrategicamente localizadas para garantir acesso fácil e rápido aos nossos serviços. Conheça as nossas unidades e encontre a mais próxima de você. Na E-Clinic, sua saúde é nossa prioridade.
         </p>
+
       </div>
       <div className={styles.container}>
         <div className={styles.header}>

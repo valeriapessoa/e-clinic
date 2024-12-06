@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./page.module.css";
 import About from "../components/About/About";
 import Installations from "../components/Installations/Installations";
-import Banner from "../components/Banner";
+import Banner from "../components/HighlightBanner/HighlightBanner";
 import Services, { Service } from '../components/Services/Services';
 import { faStethoscope, faXRay, faHeartbeat, faSyringe, faUserMd, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons';
 import Testimonials from "../components/Testimonials/Testimonials";
