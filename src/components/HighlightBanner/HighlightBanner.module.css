@@ -128,11 +128,13 @@
 
 @media (max-width: 992px) {
     .textContainer {
-        padding: 4% 3% 0 4%;
+        padding: 4% 5% 0 5%;
+        order: 2; /* Define a ordem do contêiner de texto para aparecer depois */
     }
 
     .subtitle {
         font-size: 3.5rem;
+        max-width: 85%;
     }
 
     .text {
@@ -146,7 +148,12 @@
 
     .bannerImage {
         margin-top: 0px;
-        height: calc(96vh - 60px);
+        width: 100%;
+        height: auto;
+    }
+
+    .imageContainer {
+        order: 1; /* Define a ordem do contêiner de imagem para aparecer primeiro */
     }
 }
 
