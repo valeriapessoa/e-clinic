@@ -122,6 +122,12 @@
       width: 156px;
       height: 156px;
   }
+
+  .textAbout {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
 }
 
 @media (max-width: 576px) {
@@ -144,7 +150,7 @@
   }
 
   .textAbout {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #666;
     line-height: 1.5;
   }
