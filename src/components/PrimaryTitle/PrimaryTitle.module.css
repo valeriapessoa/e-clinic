@@ -1,3 +1,7 @@
+.sectionTitle {
+  padding: 0 1rem;
+}
+
 .primaryTitle {
   font-size: 1.9rem;
   font-weight: bold;
@@ -15,4 +19,70 @@
 .highlight {
   color: #316fd8;
   font-weight: 900;
+}
+
+@media (max-width: 1200px) {
+  .primaryTitle {
+    font-size: 1.7rem;
+  }
+
+  .secondaryTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .sectionTitle {
+    padding: 0 0;
+  }
+
+  .primaryTitle {
+    font-size: 1.5rem;
+  }
+
+  .secondaryTitle {
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    padding: 0 0;
+  }
+
+  .primaryTitle {
+    font-size: 1.3rem;
+  }
+
+  .secondaryTitle {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sectionTitle {
+    padding: 0 0;
+  }
+
+  .primaryTitle {
+    font-size: 1.1rem;
+  }
+
+  .secondaryTitle {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .sectionTitle {
+    padding: 0 0;
+  }
+
+  .primaryTitle {
+    font-size: 0.9rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.8rem;
+  }
 }

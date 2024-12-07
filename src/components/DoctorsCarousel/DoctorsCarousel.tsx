@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaTwitter } from "react-icons/fa"; // Usando FaTwitter
+import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import TertiaryTitle from "../TertiaryTitle/TertiaryTitle";
 import styles from "./DoctorsCarousel.module.css";
@@ -11,7 +11,7 @@ interface CarouselItem {
   image: string;
   facebookLink: string;
   instagramLink: string;
-  twitterLink: string; // Link para o X (antigo Twitter)
+  twitterLink: string;
 }
 
 interface DoctorsCarouselProps {

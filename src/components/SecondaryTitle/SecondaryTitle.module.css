@@ -1,18 +1,72 @@
+.sectionTitle {
+  padding: 0 1rem;
+}
+
 .primaryTitle {
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: #103182;
-    text-transform: uppercase;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #103182;
+  text-transform: uppercase;
+}
+
+.secondaryTitle {
+  font-size: 3.3rem;
+  font-weight: bold;
+  color: #103182;
+  text-transform: uppercase;
+}
+
+.highlight {
+  color: #316fd8;
+  font-weight: 900;
+}
+
+@media (max-width: 1200px) {
+  .primaryTitle {
+    font-size: 1.7rem;
   }
 
   .secondaryTitle {
-    font-size: 3.3rem;
-    font-weight: bold;
-    color: #103182;
-    text-transform: uppercase;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .primaryTitle {
+    font-size: 1.5rem;
   }
 
-  .highlight {
-    color: #316fd8;
-    font-weight: 900;
+  .secondaryTitle {
+    font-size: 2.7rem;
   }
+}
+
+@media (max-width: 768px) {
+  .primaryTitle {
+    font-size: 1rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .primaryTitle {
+    font-size: 1rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .primaryTitle {
+    font-size: 0.9rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.2rem;
+  }
+}

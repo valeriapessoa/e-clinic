@@ -2,15 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Link from "next/link";
 import styles from './ParallaxSection.module.css';
 
-interface ParallaxSectionProps {
-  imageUrl: string;
-  title: string;
-  text: string;
-  buttonText: string;
-  buttonLink: string;
-}
-
-const ParallaxSection = ({ imageUrl, title, text, buttonText, buttonLink }: ParallaxSectionProps) => {
+const ParallaxSection: React.FC = () => {
   const parallaxImageRef = useRef<HTMLImageElement | null>(null);
   const parallaxContainerRef = useRef<HTMLElement | null>(null);
 
@@ -37,7 +29,7 @@ const ParallaxSection = ({ imageUrl, title, text, buttonText, buttonLink }: Para
     >
       <div className={`${styles.materialParallax} parallax`}>
         <img
-          src={imageUrl}
+          src="images/unidades/banner.jpg"
           alt=""
           className={styles.parallaxImage}
           ref={parallaxImageRef}
@@ -47,11 +39,11 @@ const ParallaxSection = ({ imageUrl, title, text, buttonText, buttonLink }: Para
         <div className="container text-start">
           <div className="row justify-content-sm-center justify-content-lg-start">
             <div className="col-md-10 col-lg-8 col-xl-5">
-              <h2 className={styles.title}>{title}</h2>
-              <p className={`offset-top-30 text-white ${styles.text}`}>{text}</p>
+              <h2 className={styles.title}>Todos os tipos<br className="d-none d-xl-inline-block" />de Diagnóstico</h2>
+              <p className={`offset-top-30 text-white ${styles.text}`}>E-clinic oferece a gama mais abrangente de serviços de diagnóstico da região, desde ressonância magnética a raio-X.</p>
               <div className="offset-top-30">
-                <Link href={buttonLink} className={`${styles['btn-ellipse']} ${styles['btn-white']} btn`}>
-                  {buttonText}
+                <Link href="consultas/form-agendar-consulta" className={`${styles['btn-ellipse']} ${styles['btn-white']} btn`}>
+                    Explorar Serviços
                 </Link>
               </div>
             </div>

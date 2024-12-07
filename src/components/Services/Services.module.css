@@ -1,3 +1,4 @@
+
 .containerItem {
     margin-bottom: 15%;
 }
@@ -37,10 +38,4 @@
 .serviceIcon {
     font-size: 40px;
     color: #FFF;
-}
-
-.textDescription {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.5;
 }
