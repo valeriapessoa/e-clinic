@@ -14,8 +14,8 @@ const HighlightBanner = () => {
                         Na E-Clinic, oferecemos atendimento médico de qualidade com profissionais altamente capacitados. Nossa missão é cuidar da sua saúde com dedicação e excelência. Agende sua consulta e experimente um atendimento personalizado e humanizado.
                     </p>
                     <div className={styles.buttonGroup}>
-                        <Button className={`rounded-pill text-white py-3 px-5 me-2 me-md-3 ${styles.btnPrimary}`}>Agendar</Button>
-                        <Button variant="light" className={`rounded-pill py-3 px-5 me-2 me-md-3 ${styles.btnSecondary}`}>Serviços</Button>
+                        <Button className={`rounded-pill text-white py-sm-4 px-sm-4 me-2 me-md-3 py-3 px-5 ${styles.btnPrimary}`}>Agendar</Button>
+                        <Button variant="light" className={`rounded-pill py-sm-4 px-sm-4 me-2 me-md-3 py-3 px-5 ${styles.btnSecondary}`}>Serviços</Button>
                     </div>
                 </Col>
                 <Col md={6} className={styles.imageContainer}>

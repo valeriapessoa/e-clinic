@@ -79,6 +79,29 @@
     color: #ffffff;
 }
 
+@media (min-width: 1600px) {
+    .textContainer {
+        padding: 4% 5% 0 7%;
+    }
+
+    .subtitle {
+        font-size: 4.5rem;
+    }
+
+    .text {
+        font-size: 1.1rem;
+        margin-bottom: 60px;
+    }
+
+    .buttonGroup {
+        text-align: left;
+    }
+
+    .bannerImage {
+        margin-top: 0;
+    }
+}
+
 @media (max-width: 1200px) {
     .textContainer {
         padding: 4% 3% 0 5%;
@@ -214,25 +237,3 @@
     }
 }
 
-@media (min-width: 1600px) {
-    .textContainer {
-        padding: 4% 5% 0 7%;
-    }
-
-    .subtitle {
-        font-size: 4.5rem;
-    }
-
-    .text {
-        font-size: 1.1rem;
-        margin-bottom: 60px;
-    }
-
-    .buttonGroup {
-        text-align: left;
-    }
-
-    .bannerImage {
-        margin-top: 0;
-    }
-}
