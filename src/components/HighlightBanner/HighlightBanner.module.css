@@ -144,19 +144,19 @@
     }
 
     .bannerImage {
-        margin-top: 15px;
+        margin-top: 0px;
         order: 1;
     }
 }
 
 @media (max-width: 768px) {
     .textContainer {
-        padding: 4% 15% 0 15%;
+        padding: 4% 8% 0 8%;
         order: 2;
     }
 
     .subtitle {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     .text {
@@ -170,10 +170,12 @@
 
     .bannerImage {
         margin-top: 0px;
+        width: 100%;
+        height: auto;
     }
 
     .imageContainer {
-        order: 1; /* Define a ordem do contêiner de imagem para aparecer primeiro */
+        order: 1;
     }
 }
 
@@ -214,7 +216,7 @@
     }
 
     .subtitle {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
     }
 
     .text {

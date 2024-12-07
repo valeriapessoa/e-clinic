@@ -64,6 +64,12 @@
   line-height: 1.5;
 }
 
+@media (max-width: 1600px) {
+  .aboutExperience {
+    top: 175px;
+  }
+}
+
 @media (max-width: 1200px) {
   .containerAbout {
     margin-top: 8%;
