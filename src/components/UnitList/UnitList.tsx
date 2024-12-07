@@ -34,7 +34,7 @@ const UnitList = () => {
       image: "./images/unidades/paulista.jpeg",
     },
     {
-      name: "Pompeia",
+      name: "Pompéia",
       address: "Av. Pompéia, 1422 - Pompeia, SP",
       phone: "(11) 3240-6631",
       mapsLink: "https://maps.google.com/?q=Av.%20Pompéia,%201422",
