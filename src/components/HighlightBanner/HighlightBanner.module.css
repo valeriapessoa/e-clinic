@@ -152,7 +152,9 @@
 
 @media (max-width: 768px) {
     .textContainer {
-        padding: 4% 8% 0 8%;    }
+        padding: 4% 8% 0 8%;
+        order: 2; /* Define a ordem do contêiner de texto para aparecer depois */
+    }
 
     .subtitle {
         font-size: 3.5rem;
@@ -171,12 +173,15 @@
         margin-top: 0px;
         height: calc(96vh - 60px);
     }
+
+    .imageContainer {
+        order: 1; /* Define a ordem do contêiner de imagem para aparecer primeiro */
+    }
 }
 
 @media (max-width: 576px) {
     .textContainer {
         padding: 4% 8% 0 8%;
-        order: 2; /* Define a ordem do contêiner de texto para aparecer depois */
     }
 
     .subtitle {
@@ -197,16 +202,11 @@
         width: 100%;
         height: auto;
     }
-
-    .imageContainer {
-        order: 1; /* Define a ordem do contêiner de imagem para aparecer primeiro */
-    }
 }
 
 @media (max-width: 480px) {
     .textContainer {
         padding: 4% 10% 0 10%;
-        order: 2; /* Define a ordem do contêiner de texto para aparecer depois */
     }
 
     .subtitle {
