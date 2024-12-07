@@ -53,7 +53,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, primaryTitle,
                       </div>
                       <div className="ms-2">
                         <h4 className={`${styles.testimonialTitle}`}>{testimonial.title}</h4>
-                        <span className={`${styles.testimonialName}`}>{testimonial.name}</span>
+                        <span className={`d-flex ms-3 ${styles.testimonialName}`}>{testimonial.name}</span>
                         <p className={`${styles.feedbackText}`}>{testimonial.feedback}</p>
                       </div>
                       <FaQuoteRight className={`${styles.quoteIcon}`} />
