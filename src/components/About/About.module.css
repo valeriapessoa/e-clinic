@@ -1,9 +1,3 @@
-.container {
-    margin: 75px auto;
-    max-width: 1200px;
-    padding: 0 20px;
-}
-
 .containerAbout {
     margin-bottom: 5%;
     margin-top: 10%;
@@ -21,6 +15,10 @@
     overflow: hidden;
     height: 100%;
     border-radius: 10px;
+}
+
+.coverImage {
+    object-fit: cover;
 }
 
 .aboutImgInner {
@@ -65,7 +63,44 @@
     color: #0075cd;
 }
 
-.text-secondary {
-    font-size: 1rem;
-    color: red;
+.text {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+    .aboutImg {
+        margin-top: 45%;
+    }
+}
+
+@media (max-width: 992px) {
+    .aboutImg {
+        margin-top: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutImg {
+        margin-top: 110%;
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutImg {
+        margin-top: 110%;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutImg {
+        margin-top: 110%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .aboutImg {
+        margin-top: 110%;
+    }
 }

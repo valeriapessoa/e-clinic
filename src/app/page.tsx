@@ -2,12 +2,24 @@
 
 import React from "react";
 import styles from "./page.module.css";
+import HighlightBanner from "../components/HighlightBanner/HighlightBanner";
 import About from "../components/About/About";
-import Installations from "../components/Installations/Installations";
-import Banner from "../components/HighlightBanner/HighlightBanner";
+import Installations from '../components/Installations/Installations';
 import Services, { Service } from '../components/Services/Services';
 import { faStethoscope, faXRay, faHeartbeat, faSyringe, faUserMd, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons';
 import Testimonials from "../components/Testimonials/Testimonials";
+
+const images = [
+  "/images/home/img-1.jpg",
+  "/images/home/img-2.jpg",
+  "/images/home/img-3.jpg",
+  "/images/home/img-4.jpg",
+  "/images/home/img-5.jpg",
+  "/images/home/img-6.jpg",
+  "/images/home/img-7.jpg",
+  "/images/home/img-8.jpg",
+  "/images/home/img-9.jpg",
+];
 
 const services: Service[] = [
   {
@@ -90,9 +102,40 @@ const testimonialsData = [
 const Home = () => {
   return (
     <main>
-      <Banner/>
-      <About/>
-      <Installations/>
+      <HighlightBanner
+        title="Bem-vindo à E-Clinic"
+        subtitle="Marque sua consulta"
+        highlightText="agora"
+        text="Na E-Clinic, oferecemos atendimento médico de qualidade com profissionais altamente capacitados. Nossa missão é cuidar da sua saúde com dedicação e excelência. Agende sua consulta e experimente um atendimento personalizado e humanizado."
+        primaryButtonText="Agendar"
+        secondaryButtonText="Serviços"
+        imageUrl="images/home/banner.jpeg"
+      />
+
+      <About
+        primaryTitle="Sobre Nós"
+        secondaryTitle="Comprometidos com a Sua"
+        highlight="Saúde e Bem-estar"
+        description="Na E-Clinic, dedicamo-nos a oferecer o melhor atendimento possível. Com 15 anos de experiência, nossa equipe está preparada para cuidar de você com excelência e dedicação. Nossa missão é proporcionar tratamentos personalizados que atendam às suas necessidades específicas."
+        experienceYears={15}
+        image1="/images/home/about-1.jpg"
+        image2="/images/home/about-2.jpg"
+        features={[
+          "Atendimento personalizado e humanizado.",
+          "Profissionais qualificados e experientes.",
+          "Tecnologia de ponta para seu conforto e segurança."
+        ]}
+        buttonText="Descubra Mais"
+      />
+
+      <Installations
+        images={images}
+        primaryTitle="Nossas Instalações"
+        secondaryTitle="Conheça"
+        highlight="Nossa Estrutura"
+        description="A E-Clinic disponibiliza instalações modernas para prestar atendimento de qualidade a seus pacientes. Humanização, cuidado, atenção e respeito são palavras que orientam há anos todas as atividades das equipes."
+      />
+
       <div className={styles.container}>
         <div className={styles.fullWidthImage}>
           <img src="/images/home/banner-1.jpg" alt="Banner" />
@@ -102,12 +145,14 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <Services
         services={services}
         primaryTitle="Nossos Serviços"
         secondaryTitle="O Que Oferecemos"
         sectionDescription="Na E-Clinic, oferecemos uma ampla gama de serviços para atender às suas necessidades de saúde com excelência e dedicação."
       />
+
       <div className={styles.container}>
         <div className={styles.fullWidthImage}>
           <img src="/images/home/banner-2.png" alt="Banner" />
@@ -116,8 +161,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <Testimonials
         testimonials={testimonialsData}
+        primaryTitle="Depoimentos"
+        secondaryTitle="O Que Nossos Pacientes Dizem"
+        sectionDescription="Estamos orgulhosos de ter ajudado mais de 15.000 pacientes a alcançar uma melhor qualidade de vida. Veja o que alguns deles têm a dizer sobre a experiência em nossa clínica:"
       />
     </main>
   );

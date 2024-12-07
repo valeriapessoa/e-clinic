@@ -32,7 +32,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, primaryTitle,
           primary={primaryTitle || 'Depoimentos'}
           secondary={secondaryTitle || 'O Que Nossos Pacientes Dizem'}
         />
-        <p className={`${styles.text}`}>
+        <p>
           {sectionDescription || 'Estamos orgulhosos de ter ajudado mais de 15.000 pacientes a alcançar uma melhor qualidade de vida. Veja o que alguns deles têm a dizer sobre a experiência em nossa clínica:'}
         </p>
         <Carousel className={`${styles.containerCarousel}`} aria-live="polite" indicators interval={3000} controls={true} pause="hover" wrap={true}>

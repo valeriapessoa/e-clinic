@@ -2,18 +2,6 @@
     margin-bottom: 25%;
   }
 
- .primaryTitle {
-    font-size: 1.9rem;
-    color: #316fd8;
-    font-weight: 900;
-  }
-
-  .secondaryTitle {
-    font-size: 3.3rem;
-    font-weight: bold;
-    color: #103182;
-  }
-
   .testimonialSection {
     padding: 60px 0;
   }
@@ -34,14 +22,11 @@
   }
 
   .testimonialSection p {
-    font-size: 1rem;
-    color: #7f8c8d;
-    max-width: 600px;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+    max-width: 700px;
     margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  .testimonialSection .text {
     margin-bottom: 5%;
   }
 
@@ -70,13 +55,14 @@
 
   .testimonialName {
     font-size: 0.875rem;
-    color: #6c757d;
+    color: #666;
     text-align: left;
   }
 
   .testimonialSection .feedbackText {
-    color: #6c757d;
-    font-size: 0.9rem;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
     margin-top: 50px;
     text-align: justify;
   }

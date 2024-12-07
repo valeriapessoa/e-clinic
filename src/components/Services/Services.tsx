@@ -25,7 +25,7 @@ const Services: React.FC<ServicesProps> = ({ services, primaryTitle, secondaryTi
           primary={primaryTitle || 'Nossos Serviços'}
           secondary={secondaryTitle || 'O Que Oferecemos'}
         />
-        <p className="mb-4">
+        <p className={`mb-4 ${styles.textDescription}`}>
           {sectionDescription || 'Na E-Clinic, oferecemos uma ampla gama de serviços para atender às suas necessidades de saúde com excelência e dedicação.'}
         </p>
         <div className={`row g-4 ${styles.containerItem}`}>
@@ -36,7 +36,7 @@ const Services: React.FC<ServicesProps> = ({ services, primaryTitle, secondaryTi
                   <FontAwesomeIcon icon={service.icon} className={styles.serviceIcon} />
                 </div>
                 <h5 className="mb-3">{service.title}</h5>
-                <p>{service.description}</p>
+                <p className={styles.textDescription}>{service.description}</p>
               </div>
             </div>
           ))}

@@ -3,9 +3,10 @@
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FaStethoscope, FaHospital, FaUserMd, FaShieldAlt } from 'react-icons/fa';
 import styles from '../styles/unidades.module.css';
 import DoctorsCarousel from '../../components/DoctorsCarousel/DoctorsCarousel';
-import ParallaxSection from "../../components/paralaxSection/ParallaxSection";
+import ParallaxSection from "../../components/ParallaxSection/ParallaxSection";
 import UnitList from '../../components/UnitList/UnitList';
 import ClinicServices from '../../components/ClinicServices/ClinicServices';
 
@@ -84,6 +85,29 @@ const doctors = [
   },
 ];
 
+const services = [
+  {
+    icon: <FaStethoscope />,
+    title: "ATENDIMENTO ESPECIALIZADO",
+    description: "Receba cuidados de saúde com médicos experientes e dedicados."
+  },
+  {
+    icon: <FaHospital />,
+    title: "AMPLAS INSTALAÇÕES",
+    description: "Conheça nossas unidades modernas e bem equipadas."
+  },
+  {
+    icon: <FaUserMd />,
+    title: "SOLUÇÕES PERSONALIZADAS",
+    description: "Recomendações de tratamento personalizadas para cada paciente."
+  },
+  {
+    icon: <FaShieldAlt />,
+    title: "SEGURO E TRANSPARENTE",
+    description: "Transações e processos médicos seguros e sem complicações."
+  }
+];
+
 const Unidades = () => {
   return (
     <>
@@ -91,14 +115,28 @@ const Unidades = () => {
         <title>Unidades</title>
       </Head>
       <main>
-        <ParallaxSection />
+        <ParallaxSection
+          imageUrl="images/unidades/banner.jpg"
+          title="Todos os tipos de Diagnóstico"
+          text="E-clinic oferece a gama mais abrangente de serviços de diagnóstico da região, desde ressonância magnética a raio-X."
+          buttonText="Explorar Serviços"
+          buttonLink="consultas/form-agendar-consulta"
+        />
+
         <UnitList/>
+
         <DoctorsCarousel
           items={doctors}
           title="Especialistas"
           subtitle="Conheça Nossa Equipe"
         />
-        <ClinicServices />
+        
+        <ClinicServices
+          primaryTitle="CUIDADO MÉDICO"
+          secondaryTitle="ATENDIMENTO DE QUALIDADE"
+          imageUrl="./images/unidades/medico.jpg"
+          services={services}
+        />
       </main>
     </>
   );

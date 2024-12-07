@@ -2,7 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import Link from "next/link";
 import styles from './ParallaxSection.module.css';
 
-const ParallaxSection: React.FC = () => {
+interface ParallaxSectionProps {
+  imageUrl: string;
+  title: string;
+  text: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+const ParallaxSection = ({ imageUrl, title, text, buttonText, buttonLink }: ParallaxSectionProps) => {
   const parallaxImageRef = useRef<HTMLImageElement | null>(null);
   const parallaxContainerRef = useRef<HTMLElement | null>(null);
 
@@ -29,7 +37,7 @@ const ParallaxSection: React.FC = () => {
     >
       <div className={`${styles.materialParallax} parallax`}>
         <img
-          src="images/unidades/banner.jpg"
+          src={imageUrl}
           alt=""
           className={styles.parallaxImage}
           ref={parallaxImageRef}
@@ -39,11 +47,11 @@ const ParallaxSection: React.FC = () => {
         <div className="container text-start">
           <div className="row justify-content-sm-center justify-content-lg-start">
             <div className="col-md-10 col-lg-8 col-xl-5">
-              <h2 className={styles.title}>Todos os tipos<br className="d-none d-xl-inline-block" />de Diagnóstico</h2>
-              <p className={`offset-top-30 text-white ${styles.text}`}>E-clinic oferece a gama mais abrangente de serviços de diagnóstico da região, desde ressonância magnética a raio-X.</p>
+              <h2 className={styles.title}>{title}</h2>
+              <p className={`offset-top-30 text-white ${styles.text}`}>{text}</p>
               <div className="offset-top-30">
-                <Link href="consultas/form-agendar-consulta" className={`${styles['btn-ellipse']} ${styles['btn-white']} btn`}>
-                    Explorar Serviços
+                <Link href={buttonLink} className={`${styles['btn-ellipse']} ${styles['btn-white']} btn`}>
+                  {buttonText}
                 </Link>
               </div>
             </div>
