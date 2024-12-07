@@ -35,7 +35,7 @@
 .aboutExperience {
   position: absolute;
   top: 200px;
-  left: -120px;
+  left: -135px;
   transform: rotate(-90deg);
   background: transparent;
   color: #316fd8;
@@ -74,7 +74,7 @@
 
   .aboutExperience {
     top: 160px;
-    left: -100px;
+    left: -120px;
     font-size: 18px;
   }
 
