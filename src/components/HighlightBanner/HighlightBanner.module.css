@@ -171,7 +171,8 @@
 
     .bannerImage {
         margin-top: 0px;
-        height: calc(96vh - 60px);
+        width: 100%;
+        height: auto;
     }
 
     .imageContainer {
