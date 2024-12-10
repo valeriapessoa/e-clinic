@@ -110,7 +110,7 @@
   }
 }
 
-@media screen and (max-width: 844px) and (orientation: landscape) {
+@media screen and (max-width: 845px) and (orientation: landscape) {
   .containerAbout {
     margin-top: 55%;
   }
