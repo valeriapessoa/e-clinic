@@ -5,7 +5,7 @@ const HighlightBanner = () => {
     return (
         <div className={styles.bannerContainer}>
             <Row className="align-items-center h-100">
-                <Col md={6} className={`d-flex flex-column justify-content-center ${styles.textContainer}`}>
+                <Col sm={12} md={12} className={`d-flex flex-column justify-content-center ${styles.textContainer}`}>
                     <h5 className={styles.title}>Bem-vindo à E-Clinic</h5>
                     <h1 className={styles.subtitle}>
                         Marque sua consulta <span className={styles.highlight}>agora</span>
@@ -18,7 +18,7 @@ const HighlightBanner = () => {
                         <Button variant="light" className={`rounded-pill py-3 col-5 col-md-3 ${styles.btnSecondary}`}>Serviços</Button>
                     </div>
                 </Col>
-                <Col md={6} className={styles.imageContainer}>
+                <Col sm={12} md={12} className={styles.imageContainer}>
                     <img src="images/home/banner.jpeg" alt="Doctor" className={`${styles.bannerImage}`} />
                 </Col>
             </Row>
