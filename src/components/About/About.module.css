@@ -92,7 +92,7 @@
 
 @media (max-width: 992px) {
   .containerAbout {
-      margin-top: 25%;
+      margin-top: 15%;
       margin-bottom: 15%;
       padding-left: 7%;
       padding-right: 7%;
@@ -107,6 +107,21 @@
   .aboutImgInner {
     width: 120px;
     height: 120px;
+  }
+}
+
+@media screen and (max-width: 844px) and (orientation: landscape) {
+  .containerAbout {
+    margin-top: 55%;
+  }
+
+  .aboutExperience {
+    top: 135px;
+    left: -80px;
+    font-size: 14px;
+  }
+  .secondaryTitle {
+    font-size: 2.5rem;
   }
 }
 
