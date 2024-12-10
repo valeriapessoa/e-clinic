@@ -153,16 +153,16 @@
 
 @media (max-width: 576px) {
   .containerAbout {
-      margin-top: 113%;
+      margin-top: 75%;
       margin-bottom: 15%;
       padding-left: 7%;
       padding-right: 7%;
   }
 
   .aboutExperience {
-    top: 106px;
-    left: -64px;
-    font-size: 0.6rem;
+    top: 217px;
+    left: -155px;
+    font-size: 1.7rem;
   }
 
   .aboutImgInner {
