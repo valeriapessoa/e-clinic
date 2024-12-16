@@ -336,8 +336,6 @@
     }
 }
 
-
-
 @media only screen and (max-width: 480px) and (orientation: portrait) {
     .textContainer {
         padding: 4% 10% 0 10%;

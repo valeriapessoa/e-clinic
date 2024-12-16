@@ -70,7 +70,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .containerAbout {
     margin-top: 8%;
     margin-bottom: 10%;
@@ -90,27 +90,7 @@
   }
 }
 
-@media (max-width: 992px) {
-  .containerAbout {
-      margin-top: 15%;
-      margin-bottom: 15%;
-      padding-left: 7%;
-      padding-right: 7%;
-  }
-
-  .aboutExperience {
-    top: 140px;
-    left: -80px;
-    font-size: 16px;
-  }
-
-  .aboutImgInner {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-@media screen and (max-width: 845px) and (orientation: landscape) {
+@media only screen and (max-width: 992px) and (orientation: landscape) {
   .containerAbout {
     margin-top: 55%;
   }
@@ -125,18 +105,43 @@
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 992px) and (orientation: portrait) {
   .containerAbout {
-      margin-top: 113%;
-      margin-bottom: 15%;
-      padding-left: 7%;
-      padding-right: 7%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    padding-left: 7%;
+    padding-right: 7%;
   }
 
   .aboutExperience {
-    top: 120px;
-    left: -70px;
-    font-size: 14px;
+    top: 140px;
+    left: -80px;
+    font-size: 16px;
+  }
+
+  .aboutImgInner {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .containerAbout {
+    margin-top: 60%;
+    margin-bottom: 15%;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .aboutExperience {
+    top: 228px;
+    left: -135px;
+    font-size: 1.4rem;
   }
 
   .aboutImgInner {
@@ -151,17 +156,25 @@
   }
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  .aboutExperience {
+    top: 204px;
+    left: -156px;
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 576px) and (orientation: portrait) {
   .containerAbout {
-      margin-top: 75%;
-      margin-bottom: 15%;
-      padding-left: 7%;
-      padding-right: 7%;
+    margin-top: 75%;
+    margin-bottom: 15%;
+    padding-left: 7%;
+    padding-right: 7%;
   }
 
   .aboutExperience {
     top: 217px;
-    left: -155px;
+    left: -161px;
     font-size: 1.7rem;
   }
 
@@ -177,10 +190,19 @@
   }
 }
 
-@media screen and (max-width: 481px) and (orientation: landscape) {
+@media only screen and (max-width: 480px) and (orientation: landscape) {
   .aboutExperience {
-    top: 102px;
-    left: -65px;
-    font-size: 0.7rem;
+    top: 162px;
+    left: -90px;
+    font-size: 0.9rem;
   }
 }
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  .aboutExperience {
+    top: 162px;
+    left: -90px;
+    font-size: 0.9rem;
+  }
+}
+
