@@ -127,7 +127,7 @@
     }
 }
 
-@media only screen and (max-width: 822px) and (orientation: landscape) {
+@media only screen and (max-width: 992px) and (orientation: landscape) {
     .textContainer {
         padding: 4% 3% 0 4%;
         order: 2;
@@ -148,7 +148,7 @@
 
     .bannerImage {
         margin-top: 0px;
-        height: calc(96vh - 60px);
+        height: calc(154vh - 39px);
     }
 
     .imageContainer {
