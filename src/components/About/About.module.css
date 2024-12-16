@@ -78,12 +78,6 @@
     padding-right: 15px;
   }
 
-  .aboutExperience {
-    top: 160px;
-    left: -120px;
-    font-size: 18px;
-  }
-
   .aboutImgInner {
     width: 150px;
     height: 150px;
@@ -92,7 +86,7 @@
 
 @media only screen and (max-width: 992px) and (orientation: landscape) {
   .containerAbout {
-    margin-top: 92%;
+    margin-top: 110%;
   }
 
   .aboutExperience {
