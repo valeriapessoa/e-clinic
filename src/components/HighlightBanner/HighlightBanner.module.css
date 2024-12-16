@@ -127,7 +127,7 @@
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) and (orientation: landscape) {
     .textContainer {
         padding: 4% 3% 0 4%;
     }
@@ -151,14 +151,39 @@
     }
 }
 
-@media only screen and (max-width: 844px) {
+@media only screen and (max-width: 992px) and (orientation: portrait) {
     .textContainer {
-        padding: 4% 8% 0 8%;
-        order: 2; /* Define a ordem do contêiner de texto para aparecer depois */
+        padding: 4% 3% 0 4%;
     }
 
     .subtitle {
         font-size: 3.5rem;
+    }
+
+    .text {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    .buttonGroup {
+        text-align: center;
+    }
+
+    .bannerImage {
+        margin-top: 0px;
+        height: calc(96vh - 60px);
+    }
+}
+
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .textContainer {
+        padding: 4% 8% 0 8%;
+        order: 2;
+    }
+
+    .subtitle {
+        font-size: 4.5rem;
     }
 
     .text {
@@ -177,11 +202,11 @@
     }
 
     .imageContainer {
-        order: 1; /* Define a ordem do contêiner de imagem para aparecer primeiro */
+        order: 1;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (orientation: portrait) {
     .textContainer {
         padding: 4% 8% 0 8%;
         order: 2;
@@ -211,14 +236,15 @@
     }
 }
 
-@media only screen and (max-width: 616px) {
+@media only screen and (max-width: 576px) and (orientation: landscape) {
     .textContainer {
         padding: 4% 10% 0 10%;
         order: 2;
     }
 
     .subtitle {
-        font-size: 2.5rem;
+        font-size: 3.3rem;
+        color: green;
     }
 
     .text {
@@ -241,19 +267,19 @@
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) and (orientation: portrait) {
     .textContainer {
-        padding: 4% 8% 0 8%;
+        padding: 4% 10% 0 10%;
         order: 2;
     }
 
     .subtitle {
-        font-size: 2rem;
+        font-size: 3.3rem;
     }
 
     .text {
-        font-size: 0.85rem;
-        margin-bottom: 30px;
+        font-size: 1rem;
+        margin-bottom: 25px;
     }
 
     .buttonGroup {
@@ -271,7 +297,7 @@
     }
 }
 
-@media only screen and (max-width: 616px) and (orientation: landscape) {
+@media only screen and (max-width: 480px) and (orientation: landscape) {
     .textContainer {
         padding: 4% 10% 0 10%;
         order: 2;
