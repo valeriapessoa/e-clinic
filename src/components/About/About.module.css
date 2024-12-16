@@ -95,11 +95,7 @@
     margin-top: 55%;
   }
 
-  .aboutExperience {
-    top: 135px;
-    left: -80px;
-    font-size: 14px;
-  }
+
   .secondaryTitle {
     font-size: 2.5rem;
   }
@@ -112,13 +108,7 @@
     padding-left: 7%;
     padding-right: 7%;
   }
-
-  .aboutExperience {
-    top: 140px;
-    left: -80px;
-    font-size: 16px;
-  }
-
+  
   .aboutImgInner {
     width: 120px;
     height: 120px;
@@ -139,9 +129,9 @@
   }
 
   .aboutExperience {
-    top: 228px;
-    left: -135px;
-    font-size: 1.4rem;
+    top: 217px;
+    left: -170px;
+    font-size: 1.7rem;
   }
 
   .aboutImgInner {
@@ -158,9 +148,9 @@
 
 @media only screen and (max-width: 576px) and (orientation: landscape) {
   .aboutExperience {
-    top: 204px;
-    left: -156px;
-    font-size: 1.6rem;
+    top: 182px;
+    left: -100px;
+    font-size: 1rem;
   }
 }
 
@@ -174,7 +164,7 @@
 
   .aboutExperience {
     top: 217px;
-    left: -161px;
+    left: -170px;
     font-size: 1.7rem;
   }
 
@@ -200,9 +190,9 @@
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   .aboutExperience {
-    top: 162px;
-    left: -90px;
-    font-size: 0.9rem;
+    top: 109px;
+    left: -65px;
+    font-size: 0.7rem;
   }
 }
 
