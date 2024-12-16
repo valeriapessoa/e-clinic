@@ -271,7 +271,7 @@
     }
 }
 
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 616px) and (orientation: landscape) {
     .textContainer {
         padding: 4% 10% 0 10%;
         order: 2;
@@ -303,7 +303,7 @@
 
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
     .textContainer {
         padding: 4% 10% 0 10%;
         order: 2;
