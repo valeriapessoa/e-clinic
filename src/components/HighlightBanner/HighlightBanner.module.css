@@ -181,7 +181,6 @@
     }
 }
 
-/* Estilos para dispositivos médios (tablets) */
 @media only screen and (max-width: 768px) {
     .textContainer {
         padding: 4% 8% 0 8%;
@@ -211,7 +210,6 @@
         order: 1;
     }
 }
-
 
 @media only screen and (max-width: 616px) {
     .textContainer {
@@ -243,8 +241,6 @@
     }
 }
 
-
-/* Estilos para dispositivos pequenos (celulares) */
 @media only screen and (max-width: 576px) {
     .textContainer {
         padding: 4% 8% 0 8%;
@@ -274,6 +270,37 @@
         order: 1;
     }
 }
+
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+    .textContainer {
+        padding: 4% 10% 0 10%;
+        order: 2;
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+    }
+
+    .text {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .buttonGroup {
+        text-align: center;
+    }
+
+    .bannerImage {
+        margin-top: 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    .imageContainer {
+        order: 1;
+    }
+}
+
 
 
 @media only screen and (max-width: 480px) {
