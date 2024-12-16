@@ -154,6 +154,7 @@
 @media only screen and (max-width: 992px) and (orientation: portrait) {
     .textContainer {
         padding: 4% 3% 0 4%;
+        order: 2;
     }
 
     .subtitle {
@@ -172,6 +173,10 @@
     .bannerImage {
         margin-top: 0px;
         height: calc(96vh - 60px);
+    }
+
+    .imageContainer {
+        order: 1;
     }
 }
 
