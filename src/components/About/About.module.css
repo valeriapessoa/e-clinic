@@ -191,7 +191,7 @@
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   .aboutExperience {
     top: 109px;
-    left: -65px;
+    left: -70px;
     font-size: 0.7rem;
   }
 }
