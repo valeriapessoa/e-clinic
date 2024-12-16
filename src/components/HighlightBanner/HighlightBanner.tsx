@@ -4,7 +4,7 @@ import styles from './HighlightBanner.module.css';
 const HighlightBanner = () => {
     return (
         <div className={styles.bannerContainer}>
-            <Row className="align-items-center h-100">
+            <Row className={`align-items-center h-100 ${styles.sectionContainer}`}>
                 <Col sm={12} md={12} lg={6} className={`d-flex flex-column justify-content-center ${styles.textContainer}`}>
                     <h5 className={styles.title}>Bem-vindo à E-Clinic</h5>
                     <h1 className={styles.subtitle}>
