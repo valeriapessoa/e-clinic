@@ -129,12 +129,12 @@
 
 @media only screen and (max-width: 992px) and (orientation: landscape) {
     .textContainer {
-        padding: 4% 3% 0 4%;
+        padding: 4% 5% 0 5%;
         order: 2;
     }
 
     .subtitle {
-        font-size: 3.5rem;
+        font-size: 3.3rem;
     }
 
     .text {
@@ -254,7 +254,6 @@
 
     .subtitle {
         font-size: 3.3rem;
-        color: green;
     }
 
     .text {
