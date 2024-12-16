@@ -78,6 +78,12 @@
     padding-right: 15px;
   }
 
+  .aboutExperience {
+    top: 142px;
+    left: -93px;
+    font-size: 0.9rem;
+  }
+
   .aboutImgInner {
     width: 150px;
     height: 150px;
@@ -90,9 +96,9 @@
   }
 
   .aboutExperience {
-    top: 142px;
-    left: -93px;
-    font-size: 0.9rem;
+    top: 124px;
+    left: -88px;
+    font-size: 0.8rem;
   }
 
   .secondaryTitle {
