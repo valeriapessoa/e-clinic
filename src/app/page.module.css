@@ -81,6 +81,16 @@
 
 /* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
+  .bannerTitleLeft {
+    font-size: 2.6rem;
+    margin-left: 32px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 2.6rem;
+    margin-left: 32px;
+  }
+
   .title {
     font-size: 2.5rem;
     padding-right: 5%;
@@ -89,6 +99,16 @@
 
 /* Celular na horizotal e Tablet com tela grande */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
+  .bannerTitleLeft {
+    font-size: 2.2rem;
+    margin-left: 32px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 2.2rem;
+    margin-left: 32px;
+  }
+
   .title {
     font-size: 2.3rem;
     padding-right: 5%;
@@ -96,6 +116,16 @@
 }
 
 @media only screen and (max-width: 992px) and (orientation: portrait) {
+  .bannerTitleLeft {
+    font-size: 2.2rem;
+    margin-left: 26px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 2.2rem;
+    margin-left: 26px;
+  }
+
   .title {
     font-size: 2.3rem;
     padding-right: 5%;
@@ -104,6 +134,16 @@
 
 /* Tablet */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
+  .bannerTitleLeft {
+    font-size: 1.8rem;
+    margin-left: 20px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 1.8rem;
+    margin-left: 20px;
+  }
+
   .title {
     font-size: 1.5rem;
     padding-right: 5%;
@@ -111,6 +151,16 @@
 }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
+  .bannerTitleLeft {
+    font-size: 1.8rem;
+    margin-left: 20px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 1.8rem;
+    margin-left: 20px;
+  }
+
   .title {
     font-size: 1.5rem;
     padding-right: 5%;
@@ -119,6 +169,16 @@
 
 /* Celular */
 @media only screen and (max-width: 576px) and (orientation: landscape) {
+  .bannerTitleLeft {
+    font-size: 1.4rem;
+    margin-left: 6px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 1.4rem;
+    margin-left: 6px;
+  }
+
   .title {
     font-size: 1.4rem;
     padding-right: 0%;
@@ -126,6 +186,16 @@
 }
 
 @media only screen and (max-width: 576px) and (orientation: portrait) {
+  .bannerTitleLeft {
+    font-size: 1.4rem;
+    margin-left: 6px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 1.4rem;
+    margin-left: 6px;
+  }
+
   .title {
     font-size: 1.4rem;
     padding-right: 0%;
@@ -133,6 +203,16 @@
 }
 
 @media only screen and (max-width: 480px) and (orientation: landscape) {
+  .bannerTitleLeft {
+    font-size: 0.8rem;
+    margin-left: 4px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 0.8rem;
+    margin-left: 4px;
+  }
+
   .title {
     font-size: 0.8rem;
     padding-right: 0%;
@@ -140,6 +220,16 @@
 }
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
+  .bannerTitleLeft {
+    font-size: 0.8rem;
+    margin-left: 4px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 0.8rem;
+    margin-left: 4px;
+  }
+
   .title {
     font-size: 0.8rem;
     padding-right: 0%;
