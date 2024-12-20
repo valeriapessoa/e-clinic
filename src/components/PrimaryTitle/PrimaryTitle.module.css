@@ -17,6 +17,17 @@
   font-weight: 900;
 }
 
+/* Telas extra grande como tvs */
+@media (max-width: 1600px) {
+  .primaryTitle {
+    font-size: 1.8rem;
+  }
+
+  .secondaryTitle {
+    font-size: 3.5rem;
+  }
+}
+
 /* Telas grande computador/notebook */
 @media (max-width: 1200px) {
   .primaryTitle {

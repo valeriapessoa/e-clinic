@@ -79,6 +79,14 @@
   padding-right: 5%;
 }
 
+/* Telas grande computador/notebook */
+@media only screen and (max-width: 1200px) {
+  .title {
+    font-size: 2.5rem;
+    padding-right: 5%;
+  }
+}
+
 /* Celular na horizotal e Tablet com tela grande */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
   .title {
