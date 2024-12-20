@@ -21,6 +21,7 @@
   font-weight: 900;
 }
 
+/* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
   .primaryTitle {
     font-size: 1.7rem;
@@ -31,6 +32,7 @@
   }
 }
 
+/* Celular na horizotal e Tablet com tela grande */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
   .primaryTitle {
     font-size: 1.5rem;
@@ -51,6 +53,7 @@
   }
 }
 
+/* Tablet */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   .primaryTitle {
     font-size: 1rem;
@@ -71,6 +74,7 @@
   }
 }
 
+/* Celular */
 @media only screen and (max-width: 576px) and (orientation: landscape) {
   .primaryTitle {
     font-size: 1rem;

@@ -79,6 +79,7 @@
     color: #ffffff;
 }
 
+/* Telas extra grande como tvs */
 @media screen and (min-width: 1600px) {
     .textContainer {
         padding: 4% 5% 0 7%;
@@ -102,7 +103,7 @@
     }
 }
 
-
+/* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
     .textContainer {
         padding: 4% 3% 0 5%;
@@ -127,6 +128,7 @@
     }
 }
 
+/* Celular na horizotal e Tablet com tela grande */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
     .textContainer {
         padding: 4% 5% 0 5%;
@@ -185,7 +187,7 @@
     }
 }
 
-
+/* Tablet */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
     .textContainer {
         padding: 4% 8% 0 8%;
@@ -246,6 +248,7 @@
     }
 }
 
+/* Celular */
 @media only screen and (max-width: 576px) and (orientation: landscape) {
     .textContainer {
         padding: 4% 10% 0 10%;

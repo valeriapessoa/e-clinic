@@ -17,33 +17,21 @@
   font-weight: 900;
 }
 
+/* Telas grande computador/notebook */
 @media (max-width: 1200px) {
   .primaryTitle {
     font-size: 1.7rem;
   }
 
   .secondaryTitle {
-    font-size: 3rem;
+    font-size: 2.9rem;
   }
 }
 
-@media (max-width: 992px) {
-  .sectionTitle {
-    padding: 0 0;
-  }
-
-  .primaryTitle {
-    font-size: 1.5rem;
-  }
-
-  .secondaryTitle {
-    font-size: 2.7rem;
-  }
-}
-
+/* Celular na horizotal e Tablet com tela grande */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
   .primaryTitle {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .secondaryTitle {
@@ -53,7 +41,7 @@
 
 @media only screen and (max-width: 992px) and (orientation: portrait) {
   .primaryTitle {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .secondaryTitle {
@@ -61,6 +49,7 @@
   }
 }
 
+/* Tablet */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   .sectionTitle {
     padding: 0 0;
@@ -89,6 +78,7 @@
   }
 }
 
+/* Celular */
 @media only screen and (max-width: 576px) and (orientation: landscape) {
   .sectionTitle {
     padding: 0 0;
