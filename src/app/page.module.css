@@ -82,12 +82,12 @@
 /* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
   .bannerTitleLeft {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-left: 32px;
   }
 
   .bannerSubtitleLeft {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-left: 32px;
   }
 
@@ -100,12 +100,12 @@
 /* Celular na horizotal e Tablet com tela grande */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
   .bannerTitleLeft {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-left: 32px;
   }
 
   .bannerSubtitleLeft {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-left: 32px;
   }
 
@@ -117,12 +117,12 @@
 
 @media only screen and (max-width: 992px) and (orientation: portrait) {
   .bannerTitleLeft {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-left: 32px;
   }
 
   .bannerSubtitleLeft {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-left: 32px;
   }
 
