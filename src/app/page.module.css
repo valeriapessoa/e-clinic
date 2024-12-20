@@ -82,48 +82,13 @@
 /* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
   .bannerTitleLeft {
-    font-size: 2.6rem;
+    font-size: 2rem;
     margin-left: 32px;
   }
 
   .bannerSubtitleLeft {
-    font-size: 2.6rem;
+    font-size: 2rem;
     margin-left: 32px;
-  }
-
-  .title {
-    font-size: 2.5rem;
-    padding-right: 5%;
-  }
-}
-
-/* Celular na horizotal e Tablet com tela grande */
-@media only screen and (max-width: 992px) and (orientation: landscape) {
-  .bannerTitleLeft {
-    font-size: 2.2rem;
-    margin-left: 32px;
-  }
-
-  .bannerSubtitleLeft {
-    font-size: 2.2rem;
-    margin-left: 32px;
-  }
-
-  .title {
-    font-size: 2.3rem;
-    padding-right: 5%;
-  }
-}
-
-@media only screen and (max-width: 992px) and (orientation: portrait) {
-  .bannerTitleLeft {
-    font-size: 2.2rem;
-    margin-left: 26px;
-  }
-
-  .bannerSubtitleLeft {
-    font-size: 2.2rem;
-    margin-left: 26px;
   }
 
   .title {
@@ -132,15 +97,50 @@
   }
 }
 
+/* Celular na horizotal e Tablet com tela grande */
+@media only screen and (max-width: 992px) and (orientation: landscape) {
+  .bannerTitleLeft {
+    font-size: 1.8rem;
+    margin-left: 32px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 1.8rem;
+    margin-left: 32px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 992px) and (orientation: portrait) {
+  .bannerTitleLeft {
+    font-size: 1.8rem;
+    margin-left: 32px;
+  }
+
+  .bannerSubtitleLeft {
+    font-size: 1.8rem;
+    margin-left: 32px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    padding-right: 5%;
+  }
+}
+
 /* Tablet */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   .bannerTitleLeft {
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-left: 20px;
   }
 
   .bannerSubtitleLeft {
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-left: 20px;
   }
 
