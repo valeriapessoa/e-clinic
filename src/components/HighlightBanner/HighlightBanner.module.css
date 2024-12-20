@@ -129,7 +129,7 @@
 }
 
 /* Celular na horizotal e Tablet com tela grande */
-@media only screen and (max-width: 991px) and (orientation: landscape) {
+@media only screen and (max-width: 992px) and (orientation: landscape) {
     .textContainer {
         padding: 4% 5% 0 5%;
         order: 2;
