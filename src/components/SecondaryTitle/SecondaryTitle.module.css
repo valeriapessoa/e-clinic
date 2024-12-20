@@ -21,7 +21,7 @@
   font-weight: 900;
 }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .primaryTitle {
     font-size: 1.7rem;
   }
@@ -31,29 +31,9 @@
   }
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) and (orientation: landscape) {
   .primaryTitle {
     font-size: 1.5rem;
-  }
-
-  .secondaryTitle {
-    font-size: 2.7rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .primaryTitle {
-    font-size: 1rem;
-  }
-
-  .secondaryTitle {
-    font-size: 1.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .primaryTitle {
-    font-size: 1rem;
   }
 
   .secondaryTitle {
@@ -61,12 +41,72 @@
   }
 }
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 992px) and (orientation: portrait) {
+  .primaryTitle {
+    font-size: 1.5rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
   .primaryTitle {
     font-size: 1rem;
   }
 
   .secondaryTitle {
-    font-size: 1.9rem;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .primaryTitle {
+    font-size: 1rem;
+  }
+
+  .secondaryTitle {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  .primaryTitle {
+    font-size: 1rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  .primaryTitle {
+    font-size: 1rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  .primaryTitle {
+    font-size: 1rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  .primaryTitle {
+    font-size: 1rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.5rem;
   }
 }
