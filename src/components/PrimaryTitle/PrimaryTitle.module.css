@@ -17,19 +17,19 @@
   font-weight: 900;
 }
 
-/* Telas extra grande como tvs */
-@media (max-width: 1600px) {
+
+/* Telas grande computador/notebook */
+@media (max-width: 1200px) and (orientation: landscape) {
   .primaryTitle {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .secondaryTitle {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 }
 
-/* Telas grande computador/notebook */
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (orientation: portrait) {
   .primaryTitle {
     font-size: 1.7rem;
   }
