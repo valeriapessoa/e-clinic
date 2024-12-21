@@ -46,11 +46,11 @@
 }
 
 .image {
-  width: 60%;
+  width: 50%;
 }
 
 .listItem {
   font-size: 1.1rem;
   color: #666;
-  line-height: 1.8;
+  line-height: 1.5;
 }

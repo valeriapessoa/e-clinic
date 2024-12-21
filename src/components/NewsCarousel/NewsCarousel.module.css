@@ -39,7 +39,7 @@
   font-weight: bold;
   color: #103182;
   margin-bottom: 10px;
-  text-align: justify;
+  text-align: start;
 }
 
 .newsSummary {
@@ -47,14 +47,14 @@
   color: #666;
   line-height: 1.5;
   margin-bottom: 10px;
-  text-align: justify;
+  text-align: start;
 }
 
 .newsDate {
   font-size: 0.9rem;
   color: #666;
   line-height: 1.5;
-  text-align: justify;
+  text-align: start;
   margin-bottom: 10px;
 }
 
