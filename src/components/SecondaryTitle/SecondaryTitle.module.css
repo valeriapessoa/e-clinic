@@ -35,7 +35,7 @@
 /* Celular na horizotal e Tablet com tela grande */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
   .primaryTitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .secondaryTitle {
@@ -45,7 +45,7 @@
 
 @media only screen and (max-width: 992px) and (orientation: portrait) {
   .primaryTitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .secondaryTitle {
