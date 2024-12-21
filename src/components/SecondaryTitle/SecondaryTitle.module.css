@@ -81,7 +81,7 @@
   }
 
   .secondaryTitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -91,26 +91,26 @@
   }
 
   .secondaryTitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
 @media only screen and (max-width: 480px) and (orientation: landscape) {
   .primaryTitle {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .secondaryTitle {
-    font-size: 1.3rem;
+    font-size: 1.79rem;
   }
 }
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   .primaryTitle {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .secondaryTitle {
-    font-size: 1.3rem;
+    font-size: 1.79rem;
   }
 }
