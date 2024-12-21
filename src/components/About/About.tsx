@@ -72,7 +72,7 @@ const About = () => {
             </div>
             <a
               href="#"
-              className={`btn ${styles.customButton} rounded-pill text-white py-3 px-5`}
+              className={`btn ${styles.customButton} rounded-pill text-white py-3 px-5 ${styles.customButtonResponsive}`}
             >
               Descubra Mais
             </a>
