@@ -35,21 +35,21 @@
 /* Celular na horizotal e Tablet com tela grande */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
   .primaryTitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .secondaryTitle {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 
 @media only screen and (max-width: 992px) and (orientation: portrait) {
   .primaryTitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .secondaryTitle {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 
