@@ -110,7 +110,7 @@ const Home = () => {
         services={services}
         primaryTitle="Nossos Serviços"
         secondaryTitle="O Que Oferecemos"
-        sectionDescription="Na E-Clinic, oferecemos uma ampla gama de serviços para atender às suas necessidades de saúde com excelência e dedicação."
+        sectionDescription="Na E-Clinic, oferecemos uma ampla gama de serviços para atender às suas necessidades de saúde com excelência e dedicação. Nossa equipe de profissionais altamente qualificados está comprometida em proporcionar um atendimento humanizado e personalizado, garantindo que cada paciente receba o cuidado e a atenção que merece."
       />
 
       <div className={styles.container}>
@@ -121,7 +121,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
+
       <Testimonials
         testimonials={testimonialsData}
       />

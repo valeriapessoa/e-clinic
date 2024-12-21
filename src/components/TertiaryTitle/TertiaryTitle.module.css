@@ -1,13 +1,107 @@
 .primaryTitle {
-    font-size: 1.9rem;
-    color: #316fd8;
-    font-weight: 900;
-    text-transform: uppercase;
+  font-size: 1.9rem;
+  color: #316fd8;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.secondaryTitle {
+  font-size: 3.3rem;
+  font-weight: bold;
+  color: #103182;
+  text-transform: uppercase;
+}
+
+/* Telas grande computador/notebook */
+@media only screen and (max-width: 1200px) {
+  .primaryTitle {
+    font-size: 1.7rem;
   }
 
   .secondaryTitle {
-    font-size: 3.3rem;
-    font-weight: bold;
-    color: #103182;
-    text-transform: uppercase;
+    font-size: 3rem;
   }
+}
+
+/* Celular na horizotal e Tablet com tela grande */
+@media only screen and (max-width: 992px) and (orientation: landscape) {
+  .primaryTitle {
+    font-size: 1.5rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 992px) and (orientation: portrait) {
+  .primaryTitle {
+    font-size: 1.5rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .primaryTitle {
+    font-size: 1rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .primaryTitle {
+    font-size: 1.05rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.9rem;
+  }
+}
+
+/* Celular */
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  .primaryTitle {
+    font-size: 0.9rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  .primaryTitle {
+    font-size: 0.9rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  .primaryTitle {
+    font-size: 0.8rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  .primaryTitle {
+    font-size: 0.8rem;
+  }
+
+  .secondaryTitle {
+    font-size: 1.3rem;
+  }
+}

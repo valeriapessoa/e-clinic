@@ -34,11 +34,11 @@
   }
 
   .testimonialSection p {
-    font-size: 1rem;
-    color: #7f8c8d;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
     max-width: 600px;
     margin: 0 auto;
-    line-height: 1.6;
   }
 
   .testimonialSection .text {
@@ -71,14 +71,17 @@
   .testimonialName {
     font-size: 0.875rem;
     color: #6c757d;
+    font-size: 1rem;
+    color: #666;
     text-align: left;
   }
 
   .testimonialSection .feedbackText {
-    color: #6c757d;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
     margin-top: 50px;
-    text-align: justify;
+    text-align: start;
   }
 
   .quoteIcon {

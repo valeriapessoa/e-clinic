@@ -25,8 +25,8 @@ const Services: React.FC<ServicesProps> = ({ services, primaryTitle, secondaryTi
           primary={primaryTitle || 'Nossos Serviços'}
           secondary={secondaryTitle || 'O Que Oferecemos'}
         />
-        <p className="mb-4">
-          {sectionDescription || 'Na E-Clinic, oferecemos uma ampla gama de serviços para atender às suas necessidades de saúde com excelência e dedicação.'}
+         <p className={`mb-4 ${styles.textServices}`}>
+          {sectionDescription || 'Na E-Clinic, oferecemos uma ampla gama de serviços para atender às suas necessidades de saúde com excelência e dedicação. Nossa equipe de profissionais altamente qualificados está comprometida em proporcionar um atendimento humanizado e personalizado, garantindo que cada paciente receba o cuidado e a atenção que merece.'}
         </p>
         <div className={`row g-4 ${styles.containerItem}`}>
           {services.map((service, index) => (
@@ -36,7 +36,7 @@ const Services: React.FC<ServicesProps> = ({ services, primaryTitle, secondaryTi
                   <FontAwesomeIcon icon={service.icon} className={styles.serviceIcon} />
                 </div>
                 <h5 className="mb-3">{service.title}</h5>
-                <p>{service.description}</p>
+                <p className={styles.textServices}>{service.description}</p>
               </div>
             </div>
           ))}

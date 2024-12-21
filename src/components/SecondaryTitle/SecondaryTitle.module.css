@@ -60,7 +60,7 @@
   }
 
   .secondaryTitle {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -70,47 +70,47 @@
   }
 
   .secondaryTitle {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 }
 
 /* Celular */
 @media only screen and (max-width: 576px) and (orientation: landscape) {
   .primaryTitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .secondaryTitle {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 576px) and (orientation: portrait) {
   .primaryTitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .secondaryTitle {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 480px) and (orientation: landscape) {
   .primaryTitle {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .secondaryTitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   .primaryTitle {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .secondaryTitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
