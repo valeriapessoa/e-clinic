@@ -106,27 +106,49 @@
 
 /* Tablet */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
+    .bannerImage {
+        top: 0;
+        left: -38%;
+        width: 142%;
+    }
     .bannerSection {
-      height: 400px;
+        height: 400px;
+    }
+    .bannerContent {
+        margin: 0 10px;
+        margin-left: -23%;
+        text-align: start;
     }
     .bannerTitle {
-      font-size: 1.8rem;
+        font-size: 1.8rem;
+        margin-top: 38%;
     }
     .bannerSubtitle {
-      font-size: 0.9rem;
+        font-size: 0.9rem;
     }
     .bannerButton {
-      font-size: 0.8rem;
-      padding: 6px 15px;
+        font-size: 0.8rem;
+        padding: 6px 15px;
     }
 }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
+    .bannerImage {
+        top: 0;
+        left: -38%;
+        width: 142%;
+    }
     .bannerSection {
         height: 400px;
     }
+    .bannerContent {
+        margin: 0 10px;
+        margin-left: -23%;
+        text-align: start;
+    }
     .bannerTitle {
         font-size: 1.8rem;
+        margin-top: 38%;
     }
     .bannerSubtitle {
         font-size: 0.9rem;
@@ -139,11 +161,22 @@
 
 /* Celular */
 @media only screen and (max-width: 576px) and (orientation: landscape) {
+    .bannerImage {
+        top: 0;
+        left: -38%;
+        width: 140%;
+    }
     .bannerSection {
         height: 300px;
     }
+    .bannerContent {
+        margin: 0 10px;
+        margin-left: -18%;
+        text-align: start;
+    }
     .bannerTitle {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        margin-top: 30%;
     }
     .bannerSubtitle {
         font-size: 0.8rem;
@@ -155,11 +188,22 @@
 }
 
 @media only screen and (max-width: 576px) and (orientation: portrait) {
+    .bannerImage {
+        top: 0;
+        left: -38%;
+        width: 140%;
+    }
     .bannerSection {
         height: 300px;
     }
+    .bannerContent {
+        margin: 0 10px;
+        margin-left: -18%;
+        text-align: start;
+    }
     .bannerTitle {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        margin-top: 30%;
     }
     .bannerSubtitle {
         font-size: 0.8rem;
@@ -170,23 +214,39 @@
     }
 }
 
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 480px) {
+    .bannerImage {
+        top: 0;
+        width: 273%;
+        left: -133%;
+    }
     .bannerSection {
-        height: 250px;
+        height: 356px;
+    }
+    .bannerOverlay {
+        top: 0;
+        padding: 20px 0;
+    }
+    .bannerContent {
+        margin: 0 10px;
+        text-align: start;
     }
     .bannerTitle {
         font-size: 1.2rem;
+        margin-bottom: 10px;
+        margin-top: 41%;
     }
     .bannerSubtitle {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
     }
     .bannerButton {
-        font-size: 0.6rem;
-        padding: 4px 8px;
+        font-size: 0.8rem;
+        padding: 8px 16px;
     }
 }
 
-@media only screen and (max-width: 480px) and (orientation: portrait) {
+@media only screen and (max-width: 395px) {
     .bannerImage {
         top: 0;
         width: 273%;
@@ -204,7 +264,7 @@
         text-align: start;
     }
     .bannerTitle {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-bottom: 10px;
         margin-top: 56%;
     }
