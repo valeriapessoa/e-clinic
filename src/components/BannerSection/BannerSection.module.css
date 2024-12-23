@@ -26,7 +26,6 @@
     height: 100%;
     background: rgb(0 0 0 / 34%);
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
@@ -37,7 +36,6 @@
 
 .bannerContent {
     max-width: 977px;
-    margin-right: 26%;
     padding: 0px 20px;
     box-sizing: border-box;
 }
@@ -281,5 +279,19 @@
     .bannerButton {
         font-size: 0.8rem;
         padding: 8px 16px;
+    }
+}
+
+
+@media only screen and (min-width: 480px) {
+    .bannerImage {
+        object-fit: cover;
+    }
+}
+
+
+@media only screen and (min-width: 1600px) {
+    .bannerOverlay {
+        padding-left: 10%;
     }
 }
