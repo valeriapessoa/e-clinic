@@ -70,6 +70,16 @@
     transform: scale(1.05);
 }
 
+
+
+/* Telas tvs */
+@media (max-width: 1400px) {
+    .bannerImage {
+        left: -424px;
+        width: 131%;
+    }
+}
+
 /* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
     .bannerImage {
@@ -97,18 +107,19 @@
 @media only screen and (max-width: 992px) and (orientation: landscape) {
     .bannerImage {
         top: 0;
-        left: -38%;
+        left: -50%;
         width: 158%;
     }
     .bannerSection {
         height: 450px;
     }
     .bannerContent {
-        margin-left: -23%;
+        margin-left: -16%;
         text-align: start;
     }
     .bannerTitle {
         font-size: 2rem;
+        margin-top: 17%;
     }
     .bannerSubtitle {
         font-size: 1rem;
@@ -123,8 +134,8 @@
 @media only screen and (max-width: 768px) and (orientation: landscape) {
     .bannerImage {
         top: 0;
-        left: -38%;
-        width: 142%;
+        left: -48%;
+        width: 153%;
     }
     .bannerSection {
         height: 400px;
@@ -135,7 +146,7 @@
     }
     .bannerTitle {
         font-size: 1.8rem;
-        margin-top: 17%;
+        margin-top: 36%;
     }
     .bannerSubtitle {
         font-size: 0.9rem;
@@ -149,8 +160,8 @@
 @media only screen and (max-width: 768px) and (orientation: portrait) {
     .bannerImage {
         top: 0;
-        left: -38%;
-        width: 142%;
+        left: -48%;
+        width: 153%;
     }
     .bannerSection {
         height: 400px;
@@ -161,7 +172,7 @@
     }
     .bannerTitle {
         font-size: 1.8rem;
-        margin-top: 17%;
+        margin-top: 36%;
     }
     .bannerSubtitle {
         font-size: 0.9rem;
