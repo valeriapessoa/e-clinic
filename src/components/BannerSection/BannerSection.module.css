@@ -1,6 +1,6 @@
 .bannerSection {
     position: relative;
-    height: 600px;
+    height: 100vh; /* Ajusta a altura para ocupar a altura total da tela */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,9 +36,9 @@
 }
 
 .bannerContent {
-    max-width: 800px;
+    max-width: 977px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px 20px;
     box-sizing: border-box;
 }
 
@@ -188,29 +188,32 @@
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
     .bannerImage {
-        top: -60px;
+        top: 0;
+        width: 273%;
+        left: -165%;
     }
     .bannerSection {
-        height: 250px;
+        height: 356px;
     }
     .bannerOverlay {
-        top: -121px;
-        padding: 117px 0 0 0;
+        top: 0;
+        padding: 20px 0;
     }
     .bannerContent {
-        margin: 0px 92px 0px 0%;
-        text-align: left;
+        margin: 0 10px;
+        text-align: start;
     }
     .bannerTitle {
-        font-size: 0.8rem;
-        margin-bottom: 11px;
+        font-size: 1.10rem;
+        margin-bottom: 10px;
+        margin-top: 66%;
     }
     .bannerSubtitle {
-        font-size: 0.6rem;
-        margin-bottom: 3px;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
     }
     .bannerButton {
-        font-size: 0.4rem;
-        padding: 4px 8px;
+        font-size: 0.8rem;
+        padding: 8px 16px;
     }
 }
