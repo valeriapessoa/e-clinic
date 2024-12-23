@@ -46,11 +46,19 @@
     .container {
         margin: 75px 65px;
     }
+
+    .insuranceImage {
+        max-width: 80%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .container {
         margin: 75px 45px;
+    }
+
+    .insuranceImage {
+        max-width: 75%;
     }
 }
 
@@ -58,10 +66,18 @@
     .container {
         margin: 55px 35px;
     }
+
+    .insuranceImage {
+        max-width: 70%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
     .container {
         margin: 75px 35px;
+    }
+
+    .insuranceImage {
+        max-width: 90%;
     }
 }
