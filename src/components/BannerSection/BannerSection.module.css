@@ -72,8 +72,14 @@
 
 /* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
+    .bannerImage {
+        left: -105px;
+        width: 109%;
+    }
     .bannerContent {
       margin: 0 10%;
+      margin-left: -18%;
+      text-align: start;
     }
     .bannerTitle {
       font-size: 2.5rem;
@@ -88,9 +94,18 @@
 }
 
 /* Celular na horizontal e Tablet com tela grande */
-@media only screen and (max-width: 992px) and (min-width: 769px) and (orientation: landscape) {
+@media only screen and (max-width: 992px) and (orientation: landscape) {
+    .bannerImage {
+        top: 0;
+        left: -38%;
+        width: 158%;
+    }
     .bannerSection {
         height: 450px;
+    }
+    .bannerContent {
+        margin-left: -23%;
+        text-align: start;
     }
     .bannerTitle {
         font-size: 2rem;
@@ -115,13 +130,12 @@
         height: 400px;
     }
     .bannerContent {
-        margin: 0 10px;
-        margin-left: -23%;
+        margin-left: -14%;
         text-align: start;
     }
     .bannerTitle {
         font-size: 1.8rem;
-        margin-top: 38%;
+        margin-top: 17%;
     }
     .bannerSubtitle {
         font-size: 0.9rem;
@@ -142,13 +156,12 @@
         height: 400px;
     }
     .bannerContent {
-        margin: 0 10px;
-        margin-left: -23%;
+        margin-left: -14%;
         text-align: start;
     }
     .bannerTitle {
         font-size: 1.8rem;
-        margin-top: 38%;
+        margin-top: 17%;
     }
     .bannerSubtitle {
         font-size: 0.9rem;
@@ -170,8 +183,7 @@
         height: 300px;
     }
     .bannerContent {
-        margin: 0 10px;
-        margin-left: -18%;
+        margin-left: -2%;
         text-align: start;
     }
     .bannerTitle {
@@ -197,8 +209,7 @@
         height: 300px;
     }
     .bannerContent {
-        margin: 0 10px;
-        margin-left: -18%;
+        margin-left: -2%;
         text-align: start;
     }
     .bannerTitle {
