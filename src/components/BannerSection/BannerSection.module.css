@@ -1,6 +1,6 @@
 .bannerSection {
     position: relative;
-    height: 100vh; /* Ajusta a altura para ocupar a altura total da tela */
+    height: calc(92vh - 64px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,7 @@
 
 .bannerContent {
     max-width: 977px;
-    margin: 0 auto;
+    margin-right: 26%;
     padding: 0px 20px;
     box-sizing: border-box;
 }
@@ -190,7 +190,7 @@
     .bannerImage {
         top: 0;
         width: 273%;
-        left: -165%;
+        left: -153%;
     }
     .bannerSection {
         height: 356px;
@@ -204,9 +204,9 @@
         text-align: start;
     }
     .bannerTitle {
-        font-size: 1.10rem;
+        font-size: 1.4rem;
         margin-bottom: 10px;
-        margin-top: 66%;
+        margin-top: 56%;
     }
     .bannerSubtitle {
         font-size: 0.8rem;
