@@ -72,18 +72,11 @@
 
 
 
-/* Telas tvs */
-@media (max-width: 1400px) {
-    .bannerImage {
-        left: -424px;
-        width: 131%;
-    }
-}
 
 /* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
     .bannerImage {
-        left: -37%;
+        left: -28%;
         width: 135%;
     }
     .bannerContent {
@@ -107,7 +100,7 @@
 @media only screen and (max-width: 992px) and (orientation: landscape) {
     .bannerImage {
         top: 0;
-        left: -37%;
+        left: -50%;
         width: 158%;
     }
     .bannerSection {
