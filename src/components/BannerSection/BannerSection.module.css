@@ -107,7 +107,6 @@
     }
     .bannerTitle {
         font-size: 2rem;
-        margin-top: 17%;
     }
     .bannerSubtitle {
         font-size: 1rem;
@@ -158,7 +157,6 @@
     }
     .bannerTitle {
         font-size: 1.8rem;
-        margin-top: 36%;
     }
     .bannerSubtitle {
         font-size: 0.9rem;
@@ -209,7 +207,6 @@
     }
     .bannerTitle {
         font-size: 1.3rem;
-        margin-top: 30%;
     }
     .bannerSubtitle {
         font-size: 0.8rem;
@@ -239,7 +236,7 @@
     .bannerTitle {
         font-size: 1.2rem;
         margin-bottom: 10px;
-        margin-top: 41%;
+        margin-top: 36%;
     }
     .bannerSubtitle {
         font-size: 0.9rem;
@@ -288,6 +285,14 @@
         object-fit: cover;
     }
 }
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+    .bannerContent {
+        max-width: 58%;
+    }
+}
+
+
 
 
 @media only screen and (min-width: 1600px) {
