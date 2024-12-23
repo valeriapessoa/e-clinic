@@ -83,8 +83,8 @@
 /* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
     .bannerImage {
-        left: -105px;
-        width: 109%;
+        left: -342px;
+        width: 135%;
     }
     .bannerContent {
       margin: 0 10%;
