@@ -69,7 +69,11 @@
 }
 
 
-
+@media only screen and (min-width: 1600px) {
+    .bannerOverlay {
+        padding-left: 10%;
+    }
+}
 
 /* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
@@ -295,8 +299,3 @@
 
 
 
-@media only screen and (min-width: 1600px) {
-    .bannerOverlay {
-        padding-left: 10%;
-    }
-}
