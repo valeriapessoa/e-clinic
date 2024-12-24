@@ -1,55 +1,10 @@
-/* agendar-consulta.module.css */
-
-.heroSection {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 0;
-}
-
-.heroContent {
-  max-width: 50%;
-}
-
-.heroTitle {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.heroDescription {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-
-.heroButton {
-  padding: 0.8rem 1.5rem;
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.heroButton:hover {
-  background-color: #0056b3;
-}
-
-.heroImage img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Card Section */
-.container {
+.cardContainer {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .card {
@@ -78,17 +33,7 @@
 }
 
 @media (max-width: 768px) {
-  .heroSection {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .heroContent {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .container {
+  .cardContainer {
     flex-direction: column;
   }
 

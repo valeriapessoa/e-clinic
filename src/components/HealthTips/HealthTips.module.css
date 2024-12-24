@@ -1,19 +1,21 @@
 .healthTips {
-    margin-top: 3rem;
-  }
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 10px;
+}
 
-  .healthTip {
-    text-align: center;
-  }
+.healthTip {
+  text-align: center;
+}
 
-  .healthTipImage {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-  }
+.healthTipImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
 
-  .healthTipText {
-    font-size: 1rem;
-    color: #666;
-  }
+.healthTipText {
+  font-size: 1rem;
+  color: #666;
+}

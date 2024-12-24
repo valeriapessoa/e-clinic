@@ -11,7 +11,7 @@ interface FaqProps {
   faqs: FaqItem[];
 }
 
-const Faq: React.FC<FaqProps> = ({ faqs }) => {
+const Faq = ({ faqs }: FaqProps) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -19,7 +19,7 @@ const Faq: React.FC<FaqProps> = ({ faqs }) => {
   };
 
   return (
-    <section className={styles.faq}>
+    <section className={`container ${styles.faq}`}>
       <h2 className={styles.faqTitle}>
         <FaQuestionCircle className={styles.faqIcon} /> Perguntas Frequentes
       </h2>

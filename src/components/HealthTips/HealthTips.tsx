@@ -13,7 +13,7 @@ interface HealthTipsProps {
   healthTips: HealthTip[];
 }
 
-const HealthTips: React.FC<HealthTipsProps> = ({ healthTips }) => {
+const HealthTips = ({ healthTips }: HealthTipsProps) => {
   const responsive = {
     superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 3 },
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
@@ -22,7 +22,7 @@ const HealthTips: React.FC<HealthTipsProps> = ({ healthTips }) => {
   };
 
   return (
-    <section className={styles.healthTips}>
+    <section className={`container ${styles.healthTips}`}>
       <SecondaryTitle
         primary="Dicas de Saúde"
         secondary="para uma"
