@@ -151,15 +151,17 @@
 
 /* Celular na horizontal e Tablet com tela grande */
 @media only screen and (max-width: 992px) {
-  .container {
-    flex-direction: column;
-    padding: 1.5rem;
-  }
   .header {
-    top: -80px;
-    left: 29%;
+    top: -84px;
+    left: 18%;
     text-align: left;
     padding-right: 0;
+  }
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+  .subTitle {
+    font-size: 1.8rem;
   }
   .content {
     flex-direction: column;
