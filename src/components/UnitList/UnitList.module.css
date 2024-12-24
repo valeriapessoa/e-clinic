@@ -180,11 +180,18 @@
   .container {
     padding: 1rem;
   }
+  .header {
+    top: -71px;
+    left: 35%;
+  }
   .mainTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .subTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .listItem strong {
+    font-size: 1rem;
   }
   .image {
     height: auto;
@@ -203,7 +210,7 @@
   .subTitle {
     font-size: 2rem;
   }
-  .listItem {
+  .listItem strong {
     font-size: 1rem;
   }
   .image {
@@ -226,8 +233,8 @@
   .subTitle {
     font-size: 1.1rem;
   }
-  .listItem {
-    font-size: 0.9rem;
+  .listItem strong {
+    font-size: 1rem;
   }
   .description {
     margin: 0px 35px;

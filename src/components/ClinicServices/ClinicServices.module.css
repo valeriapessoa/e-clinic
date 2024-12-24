@@ -61,7 +61,7 @@
 /* Celular na horizontal e Tablet com tela grande */
 @media only screen and (max-width: 992px) {
   .container {
-    padding: 1.5rem;
+    padding: 1.8rem;
   }
   .content {
     flex-direction: column;
@@ -77,7 +77,7 @@
 /* Tablet */
 @media only screen and (max-width: 768px) {
   .container {
-    padding: 1.5rem;
+    padding: 1.8rem;
   }
   .content {
     gap: 1.5rem;
@@ -91,7 +91,7 @@
 /* Celular */
 @media only screen and (max-width: 576px) {
   .container {
-    padding: 1.5rem;
+    padding: 1.8rem;
   }
   .content {
     gap: 1.5rem;
@@ -104,7 +104,7 @@
 
 @media only screen and (max-width: 480px) {
   .container {
-    padding: 1.5rem;
+    padding: 1.8rem;
   }
   .content {
     gap: 1.5rem;
