@@ -92,15 +92,13 @@ const Unidades = () => {
       </Head>
       <main>
         <ParallaxSection />
-
         <UnitList/>
-
         <DoctorsCarousel
           items={doctors}
           title="Especialistas"
           subtitle="Conheça Nossa Equipe"
         />
-        
+
         <ClinicServices />
       </main>
     </>
