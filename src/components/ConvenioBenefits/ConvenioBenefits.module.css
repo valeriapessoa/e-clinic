@@ -49,8 +49,85 @@
   width: 50%;
 }
 
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+
 .listItem {
   font-size: 1.1rem;
   color: #666;
   line-height: 1.5;
+}
+
+/* Telas grande computador/notebook */
+@media only screen and (max-width: 1200px) {
+  /* Sem alterações para telas grandes */
+}
+
+/* Celular na horizontal e Tablet com tela grande */
+@media only screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 8%;
+  }
+  .header {
+    text-align: center;
+    padding-right: 0;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image, .list {
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .mainTitle {
+    font-size: 1.9rem;
+  }
+  .highlight {
+    font-size: 1.7rem;
+  }
+}
+
+/* Celular */
+@media only screen and (max-width: 576px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .mainTitle {
+    font-size: 1.9rem;
+  }
+  .highlight {
+    font-size: 1.7rem;
+  }
+  .listItem {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .mainTitle {
+    font-size: 1.9rem;
+  }
+  .highlight {
+    font-size: 1.7rem;
+  }
+  .listItem {
+    font-size: 1.1rem;
+  }
 }

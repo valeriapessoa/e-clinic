@@ -16,7 +16,7 @@ const Convenios = () => {
       <main>
         <BannerSection />
         <HealthPlanSection />
-        {/* <ConvenioBenefits /> */}
+        <ConvenioBenefits />
         <NewsCarousel />
       </main>
     </>
