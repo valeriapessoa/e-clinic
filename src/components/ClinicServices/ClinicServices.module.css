@@ -7,12 +7,11 @@
   gap: 1.5rem;
 }
 
-
 .content {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  margin: 0  0 25% 0;
+  margin: 0 0 25% 0;
 }
 
 .image {
@@ -56,4 +55,62 @@
   color: #666;
   line-height: 1.5;
   margin: 0;
+  text-align: start;
+}
+
+/* Celular na horizontal e Tablet com tela grande */
+@media only screen and (max-width: 992px) {
+  .container {
+    padding: 1.5rem;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  .content {
+    gap: 1.5rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Celular */
+@media only screen and (max-width: 576px) {
+  .container {
+    padding: 1.5rem;
+  }
+  .content {
+    gap: 1.5rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+  .content {
+    gap: 1.5rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
 }

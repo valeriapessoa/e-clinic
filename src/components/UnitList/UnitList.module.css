@@ -11,7 +11,7 @@
   font-size: 1.1rem;
   color: #666;
   line-height: 1.5;
-  text-align: justify;
+  text-align: start;
 }
 
 .header {
@@ -42,7 +42,6 @@
   display: flex;
   gap: 2rem;
 }
-
 
 .divImage {
   width: 38%;
@@ -150,3 +149,91 @@
   transform: scale(1.05);
 }
 
+/* Celular na horizontal e Tablet com tela grande */
+@media only screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .header {
+    top: -80px;
+    left: 29%;
+    text-align: left;
+    padding-right: 0;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .divImage, .list {
+    width: 100%;
+    margin-left: 0;
+  }
+  .image {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .mainTitle {
+    font-size: 2rem;
+  }
+  .subTitle {
+    font-size: 2rem;
+  }
+  .image {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* Celular */
+@media only screen and (max-width: 576px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .mainTitle {
+    font-size: 2rem;
+  }
+  .subTitle {
+    font-size: 2rem;
+  }
+  .listItem {
+    font-size: 1rem;
+  }
+  .image {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .header {
+    top: -60px;
+    left: 32%;
+  }
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+  .subTitle {
+    font-size: 1.1rem;
+  }
+  .listItem {
+    font-size: 0.9rem;
+  }
+  .description {
+    margin: 0px 35px;
+  }
+  .image {
+    height: auto;
+    width: 100%;
+  }
+}
