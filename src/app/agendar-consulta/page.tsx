@@ -5,6 +5,7 @@ import styles from "../styles/agendar-consulta.module.css";
 import Link from "next/link";
 import Faq from "../../components/Faq/Faq";
 import HealthTips from "../../components/HealthTips/HealthTips";
+import HighlightBanner from "../../components/HighlightBanner/HighlightBanner";
 import BookingBanner from "../../components/BookingBanner/BookingBanner";
 
 const AgendarConsulta = () => {
@@ -45,9 +46,7 @@ const AgendarConsulta = () => {
       <Head>
         <title>Agendar Consulta</title>
       </Head>
-
       <BookingBanner />
-
       <section className={`container ${styles.cardContainer}`}>
         <div className={styles.card}>
           <img src="/images/agendar-consulta/img-2.png" className={styles.icons} alt="Localização" />
@@ -62,9 +61,7 @@ const AgendarConsulta = () => {
           <p className={styles.text}>Prático e seguro</p>
         </div>
       </section>
-
       <HealthTips healthTips={healthTips} />
-
       <Faq faqs={faqs} />
     </main>
   );

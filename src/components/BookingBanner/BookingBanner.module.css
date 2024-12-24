@@ -1,55 +1,56 @@
 .heroSection {
-    position: relative;
-    background-image: url('/images/agendar-consulta/img-1.png');
-    background-size: cover;
-    background-position: center;
-    height: 600px; /* Aumenta a altura */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem; /* Adiciona margem inferior */
-  }
+  position: relative;
+  background-image: url('/images/agendar-consulta/img-1.png');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
 
-  .heroOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(0 0 0 / 34%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 48%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .heroContent {
-    text-align: center;
-    color: white;
-    padding: 2rem;
-  }
+.heroContent {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
 
-  .heroTitle {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 
-  .heroDescription {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
+.heroDescription {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
 
-  .heroButton {
-    padding: 0.8rem 1.5rem;
-    background-color: #007bff;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
+.heroButton {
+  padding: 0.8rem 6.5rem;
+  background-color: #316fd8;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
 
-  .heroButton:hover {
-    background-color: #0056b3;
-  }
+.heroButton:hover {
+  background-color: #0056b3;
+}
