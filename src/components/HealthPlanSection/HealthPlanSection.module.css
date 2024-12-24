@@ -68,7 +68,7 @@
     }
 
     .insuranceImage {
-        max-width: 70%;
+        max-width: 90%;
     }
 }
 
@@ -78,6 +78,6 @@
     }
 
     .insuranceImage {
-        max-width: 90%;
+        max-width: 100%;
     }
 }
