@@ -204,7 +204,7 @@
 /* Celular */
 @media only screen and (max-width: 576px) {
   .container {
-    padding: 0.5rem;
+    padding: 0.8rem;
   }
   .mainTitle {
     font-size: 2rem;
@@ -223,11 +223,11 @@
 
 @media only screen and (max-width: 480px) {
   .container {
-    padding: 0.5rem;
+    padding: 0.8rem;
   }
   .header {
-    top: -60px;
-    left: 32%;
+    top: -50px;
+    left: 35%;
   }
   .mainTitle {
     font-size: 1.5rem;
