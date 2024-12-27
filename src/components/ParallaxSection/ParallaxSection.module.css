@@ -1,71 +1,71 @@
 .parallaxContainer {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .materialParallax {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 0;
 }
 
 .parallaxImage {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  min-width: 100%;
-  min-height: 100%;
+display: block;
+position: absolute;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+min-width: 100%;
+min-height: 100%;
 }
 
 .parallaxContent {
-  position: relative;
-  z-index: 1;
+position: relative;
+z-index: 1;
 }
 
 .title {
-  margin: 25px 0;
-  font-size: 3.7rem;
-  font-weight: bold;
-  text-align: left;
-  color: #fff;
+margin: 25px 0;
+font-size: 3.7rem;
+font-weight: bold;
+text-align: left;
+color: #fff;
 }
 
 .text {
-  font-size: 1.1rem;
+font-size: 1.1rem;
 }
 
 
 .offset-top-30 {
-  margin-top: 30px;
+margin-top: 30px;
 }
 
 .btn-white {
-  color: #27272;
-  font-weight: 900px;
-  text-transform: uppercase;
-  background-color: #fff;
-  border-color: #fff;
+color: #27272;
+font-weight: 900px;
+text-transform: uppercase;
+background-color: #fff;
+border-color: #fff;
 }
 
 .btn-ellipse {
-  border-radius: 23px;
+border-radius: 23px;
 }
 
 .btn-white:focus,
 .btn-white:hover {
-  color: #fff;
-  background-color: #316fd8;
-  border-color: #316fd8;
+color: #fff;
+background-color: #316fd8;
+border-color: #316fd8;
 }
 
 @media (min-width: 768px) {
-  .section-sm-110 {
-    padding-top: 110px;
-    padding-bottom: 110px;
-  }
+.section-sm-110 {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
 }

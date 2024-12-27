@@ -42,3 +42,17 @@
   .faqItem.active .faqQuestion {
     color: #007bff;
   }
+
+@media only screen and (max-width: 576px) {
+  .faqTitle {
+    font-size: 1.3rem;
+  }
+  .faqQuestion {
+    font-size: 1.1rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+}
+

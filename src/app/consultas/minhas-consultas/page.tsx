@@ -18,7 +18,7 @@ const ConsultasAgendadas = () => {
   const [consultas, setConsultas] = useState<Consulta[]>([]);
   const [showModal, setShowModal] = useState(false);
   const [showConfirmDeleteModal, setShowConfirmDeleteModal] = useState(false);
-  const [showSuccessModal, setShowSuccessModal] = useState(false); 
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [selectedConsulta, setSelectedConsulta] = useState<Consulta | null>(null);
   const [formData, setFormData] = useState({ consultaDataHora: "" });
@@ -114,7 +114,7 @@ const ConsultasAgendadas = () => {
       <Table striped bordered hover responsive>
         <thead>
           <tr>
-            <th>Nome do Paciente</th>
+            <th>Paciente</th>
             <th>Unidade</th>
             <th>Especialidade</th>
             <th>Data/Hora</th>
