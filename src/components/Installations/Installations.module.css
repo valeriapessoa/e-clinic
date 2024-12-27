@@ -6,7 +6,7 @@
     position: relative;
     overflow: hidden;
     height: 100%;
-    border-radius: 100px;
+    border-radius: 10px;
     margin-bottom: 15%;
 }
 
@@ -16,14 +16,51 @@
     margin: 0 10px;
 }
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-indicators {
+    bottom: -30px;
+}
+
+.carousel-indicators li {
+    background-color: blue;
+}
+
+.carousel-indicators .active {
+    background-color: darkblue;
+}
+
 .text {
     font-size: 1.1rem;
     color: #666;
     line-height: 1.5;
 }
 
-@media (min-width: 768px) {
+.container-fluid.installations {
+    padding: 0 15px;
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
     .carouselImg {
-      height: 350px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    .carouselImg {
+        height: 390px;
+    }
+}
+
+@media (min-width: 992px) {
+    .carouselImg {
+        height: 196px;
+        width: auto;
     }
 }

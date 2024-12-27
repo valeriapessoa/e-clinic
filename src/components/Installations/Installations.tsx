@@ -52,8 +52,7 @@ const Installations: React.FC = () => {
         />
         <p className={`mb-4 ${styles.text}`}>A E-Clinic disponibiliza instalações modernas para prestar atendimento de qualidade a seus pacientes. Humanização, cuidado, atenção e respeito são palavras que orientam há anos todas as atividades das equipes.</p>
         <p className={`mb-4 ${styles.text}`}>Centro cirúrgico completo, com 17 salas preparadas para realizar quaisquer tipos de procedimentos, dos mais simples aos de alta complexidade, incluindo cirurgias por videolaparoscopia, tornando os procedimentos menos incisivos e minimizando o período de internação.</p>
-      </div>
-          <Carousel indicators={true} nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />} prevIcon={<span aria-hidden="true" className="carousel-control-prev-icon" />}>
+        <Carousel indicators={true} nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />} prevIcon={<span aria-hidden="true" className="carousel-control-prev-icon" />}>
           {Array.from({ length: slides }).map((_, slideIndex) => (
             <Carousel.Item key={slideIndex}>
               <div className="d-flex justify-content-center align-items-center">
@@ -64,6 +63,7 @@ const Installations: React.FC = () => {
             </Carousel.Item>
           ))}
         </Carousel>
+      </div>
       <img src="/images/home/img-00.png" className={`${styles.waveStyle}`} alt="Instalação" />
     </div>
   );
