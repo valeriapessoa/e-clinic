@@ -24,7 +24,7 @@
 
 @media only screen and (max-width: 992px) {
     .carouselImg {
-        height: 200px;
+        height: 157px;
     }
 }
 
@@ -37,5 +37,11 @@
 @media only screen and (max-width: 768px) and (orientation: portrait) {
     .carouselImg {
         height: 390px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .carouselImg {
+        height: 233px;
     }
 }
