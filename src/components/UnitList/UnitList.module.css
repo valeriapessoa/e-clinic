@@ -149,7 +149,15 @@
   transform: scale(1.05);
 }
 
-/* Celular na horizontal e Tablet com tela grande */
+@media only screen and (max-width: 1200px) {
+  .header {
+    left: 31%;
+  }
+  .subTitle {
+    font-size: 3rem;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   .header {
     top: -84px;
