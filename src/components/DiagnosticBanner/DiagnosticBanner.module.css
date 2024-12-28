@@ -62,8 +62,7 @@
     border-color: #316fd8;
   }
 
- 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1200px) {
     .bannerImage {
       height: 83vh;
     }
