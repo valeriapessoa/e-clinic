@@ -64,11 +64,40 @@
 
   @media only screen and (max-width: 1200px) {
     .bannerImage {
+        height: 55vh;
+      }
+
+      .bannerContent {
+        padding: 0 0px 14px 95px;
+      }
+
+      .textContainer {
+        max-width: 207px;
+      }
+
+      .title {
+        font-size: 1.3rem;
+        margin: 14px 0;
+        text-align: start;
+      }
+
+      .text {
+        font-size: 0.8rem;
+        text-align: start;
+      }
+
+      .spacingTop {
+        margin-top: 19px;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .bannerImage {
       height: 83vh;
     }
 
     .bannerContent {
-        padding: 0 452px 14px 74px;
+        padding: 0 452px 14px 0;
     }
 
     .textContainer {
