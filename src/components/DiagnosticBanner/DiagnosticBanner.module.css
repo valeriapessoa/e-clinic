@@ -62,68 +62,10 @@
     border-color: #316fd8;
   }
 
-  @media (max-width: 1600px) {
-    .bannerImage {
-      height: 55vh;
-    }
-
-    .bannerContent {
-      padding: 0 0px 14px 24px;
-    }
-
-    .textContainer {
-      max-width: 207px;
-    }
-
-    .title {
-      font-size: 1.3rem;
-      margin: 14px 0;
-      text-align: start;
-    }
-
-    .text {
-      font-size: 0.8rem;
-      text-align: start;
-    }
-
-    .btnWhite {
-      font-size: 0.8rem;
-      margin: 0px 9px;
-    }
-
-    .spacingTop {
-        margin-top: 19px;
-    }
-  }
-
-  @media only screen and (max-width: 1200px) {
-    .bannerImage {
-        height: 55vh;
-      }
-
-      .bannerContent {
-        padding: 0 0px 14px 95px;
-      }
-
-      .textContainer {
-        max-width: 207px;
-      }
-
-      .title {
-        font-size: 1.3rem;
-        margin: 14px 0;
-        text-align: start;
-      }
-
-      .text {
-        font-size: 0.8rem;
-        text-align: start;
-      }
-  }
-
+ 
   @media only screen and (max-width: 992px) {
     .bannerImage {
-      height: 73vh;
+      height: 83vh;
     }
 
     .bannerContent {
