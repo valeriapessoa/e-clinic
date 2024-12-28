@@ -4,8 +4,8 @@ import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/unidades.module.css';
+import DiagnosticBanner from '../../components/DiagnosticBanner/DiagnosticBanner';
 import DoctorsCarousel from '../../components/DoctorsCarousel/DoctorsCarousel';
-import ParallaxSection from "../../components/ParallaxSection/ParallaxSection";
 import UnitList from '../../components/UnitList/UnitList';
 import ClinicServices from '../../components/ClinicServices/ClinicServices';
 
@@ -91,7 +91,7 @@ const Unidades = () => {
         <title>Unidades</title>
       </Head>
       <main>
-        <ParallaxSection />
+        <DiagnosticBanner />
         <UnitList/>
         <DoctorsCarousel
           items={doctors}
