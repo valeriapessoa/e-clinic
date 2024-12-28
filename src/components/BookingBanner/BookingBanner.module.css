@@ -61,7 +61,7 @@
   }
 
   .heroContent {
-    padding: 9rem;
+    padding: 6rem;
   }
 
   .heroTitle {
@@ -107,6 +107,11 @@
   .heroDescription {
     font-size: 0.9rem;
   }
+
+  .heroButton {
+    padding: 0.6rem 0.6rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -115,7 +120,7 @@
   }
 
   .heroContent {
-    padding: 3rem;
+    padding: 5rem;
   }
 
   .heroTitle {
@@ -124,5 +129,9 @@
 
   .heroDescription {
     font-size: 0.9rem;
+  }
+
+  .heroButton {
+    padding: 0.5rem 0.5rem;
   }
 }
