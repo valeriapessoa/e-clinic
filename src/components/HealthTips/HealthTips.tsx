@@ -28,7 +28,15 @@ const HealthTips = ({ healthTips }: HealthTipsProps) => {
         secondary="para uma"
         highlight="Vida Melhor"
       />
-      <Carousel responsive={responsive} className="healthTipsCarousel" infinite autoPlay autoPlaySpeed={3000} showDots>
+      <Carousel
+        responsive={responsive}
+        className="healthTipsCarousel"
+        infinite
+        autoPlay
+        autoPlaySpeed={3000}
+        showDots
+        arrows={false} // Remove as setas laterais
+      >
         {healthTips.map((tip, index) => (
           <div key={index} className={styles.healthTip}>
             <img src={tip.image} alt={`Dica ${index + 1}`} className={styles.healthTipImage} />
