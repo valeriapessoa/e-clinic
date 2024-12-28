@@ -84,6 +84,7 @@ const NewsCarousel = () => {
         itemClass={styles.carouselItem}
         dotListClass={styles.customDotList}
         className='newsCarousel'
+        arrows={false} // Remove as setas laterais
       >
         {news.map((article, index) => (
           <div key={index} className={styles.newsItem}>

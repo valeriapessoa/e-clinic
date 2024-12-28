@@ -1,81 +1,80 @@
 .container {
-  margin: 75px auto;
-  max-width: 1200px;
-  padding: 0 20px; /* Adicionando padding */
-}
+   margin: 75px auto;
+   max-width: 1200px;
+   padding: 0 20px; /* Adicionando padding */
+ }
 
-.newsSection {
-  margin-top: 15%;
-}
+ .newsSection {
+   margin-top: 15%;
+ }
 
-.newsItem {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  margin: 0 10px;
-}
-
-.newsImage {
-   width: 100%;
-   height: auto;
-   margin-bottom: 15px;
+ .newsItem {
+   background-color: #f9f9f9;
+   padding: 20px;
    border-radius: 8px;
-}
-
-.newsContent {
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   text-align: center;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   height: calc(100% - 40px);
-}
+   height: 100%;
+   margin: 0 10px;
+ }
 
-.newsHeadline {
-   font-weight: bold;
-   color: #103182;
-   margin-bottom: .5rem;
-   text-align: start;
-}
+ .newsImage {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+ }
 
-.newsSummary {
-   font-size: 1.1rem;
-   color: #666;
-   line-height: 1.5;
-   margin-bottom: .5rem;
-   text-align: start;
-}
+ .newsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 40px);
+ }
 
-.newsDate {
-   font-size: 0.9rem;
-   color: #666;
-   line-height: 2.7;
-   text-align: start;
-   margin-bottom: 0.9rem;
-}
+ .newsHeadline {
+    font-weight: bold;
+    color: #103182;
+    margin-bottom: .5rem;
+    text-align: start;
+ }
 
-.readMore {
-   font-size: 1rem;
-   color: #316fd8;
-   text-decoration: none;
-}
-
-.readMore:hover {
-   text-decoration: underline;
-}
-
-
-@media (max-width :768px) {
- .newsItem {
-     margin-bottom: 20px;
-     height: auto;
+ .newsSummary {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    text-align: start;
  }
 
  .newsDate {
-  line-height: 3.7;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 2.7;
+    text-align: start;
+    margin-bottom: 0.9rem;
+ }
+
+ .readMore {
+    font-size: 1rem;
+    color: #316fd8;
+    text-decoration: none;
+ }
+
+ .readMore:hover {
+    text-decoration: underline;
+ }
+
+ @media (max-width :768px) {
+  .newsItem {
+      margin-bottom: 20px;
+      height: auto;
   }
-}
+
+  .newsDate {
+   line-height: 3.7;
+   }
+ }
