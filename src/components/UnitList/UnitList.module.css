@@ -15,13 +15,7 @@
 }
 
 .header {
-  position: absolute;
-  top: -153px;
-  left: 27%;
-  transform: translateX(-50%);
-  text-align: left;
   color: #103182;
-  z-index: 10;
 }
 
 .mainTitle {
@@ -48,7 +42,7 @@
 }
 
 .image {
-  height: 93%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -58,8 +52,6 @@
 
 .list {
   list-style: none;
-  padding-top: 55px;
-  margin-left: 224px;
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
@@ -178,6 +170,7 @@
   .divImage, .list {
     width: 100%;
     margin-left: 0;
+    padding: 0;
   }
   .image {
     height: auto;

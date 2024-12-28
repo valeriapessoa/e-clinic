@@ -75,10 +75,10 @@ const UnitList = () => {
           <h2 className={styles.subTitle}>DE CONFIANÇA NA SAÚDE</h2>
         </div>
         <div className={styles.content}>
-          <div className={styles.divImage}>
+          <div className="col-12 col-lg-7">
             <img src="./images/unidades/sumare.jpg" alt="Real Estate" className={styles.image} />
           </div>
-          <div className={styles.infoSection}>
+          <div className="col-12 col-lg-3">
             <ul className={styles.list}>
               {units.map((unit) => (
                 <li

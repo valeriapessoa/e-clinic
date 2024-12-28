@@ -145,6 +145,7 @@ main {
     opacity: 1;
     transform: translateY(0);
     margin-top: 18px;
+    z-index: 50;
 }
 
 .user-menu-dropdown a {
