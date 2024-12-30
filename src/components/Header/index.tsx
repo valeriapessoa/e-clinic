@@ -36,7 +36,7 @@ const Header = () => {
           />
         </Navbar.Brand>
         {isMobile && (
-          <UserMenu />
+          <Nav.Link as={Link} href="/login" className="login-button">Login</Nav.Link>
         )}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="header-nav">
@@ -50,6 +50,9 @@ const Header = () => {
               <FaPhoneAlt /> +55 11 2240-3434
             </Nav.Link>
           </Nav>
+          {!isMobile && (
+            <Nav.Link as={Link} href="/login" className="login-button">Login</Nav.Link>
+          )}
           {!isMobile && (
             <UserMenu />
           )}
