@@ -5,11 +5,11 @@ import { usePathname } from 'next/navigation';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaPhoneAlt, FaCaretDown, FaUserCircle } from 'react-icons/fa';
-import { MdOutlineLibraryBooks, MdCalendarMonth } from "react-icons/md";
-import { SlLogout } from "react-icons/sl";
+import { FaPhoneAlt } from 'react-icons/fa';
 import { useState, useLayoutEffect } from 'react';
-import { useSession, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import UserMenu from '../../components/UserMenu/UserMenu';
+import { Session } from '../../../types/next-auth';
 
 const Header = () => {
   const { data: session } = useSession();
@@ -17,26 +17,21 @@ const Header = () => {
   const isActive = (path: string) => pathname === path;
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-    useLayoutEffect(() => {
-      const updateIsMobile = () => {
-        if (window.innerWidth < 768) {
-          setIsMobile(true);
-        } else {
-          setIsMobile(false);
-        }
-      };
+  useLayoutEffect(() => {
+    const updateIsMobile = () => {
+      if (window.innerWidth < 768) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
 
-      // Chama a função no primeiro render
-      updateIsMobile();
-
-      // Adiciona um listener para redimensionamento da janela
-      window.addEventListener("resize", updateIsMobile);
-
-      // Limpa o listener ao desmontar o componente
-      return () => window.removeEventListener("resize", updateIsMobile);
-    }, []);
+    updateIsMobile();
+    window.addEventListener("resize", updateIsMobile);
+    return () => window.removeEventListener("resize", updateIsMobile);
+  }, []);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -53,51 +48,9 @@ const Header = () => {
             className="header-logo"
           />
         </Navbar.Brand>
-        {isMobile && (<div className="user-menu">
-          {session && (
-            <>
-              {session.user.image ? (
-                <img
-                  src={session.user.image}
-                  alt="Usuário"
-                  className="user-image"
-                />
-              ) : (
-                <FaUserCircle className="user-icon" />
-              )}
-              <FaCaretDown
-                className="caret-icon"
-                onClick={toggleDropdown}
-                aria-haspopup="true"
-                aria-expanded={dropdownOpen}
-              />
-              <div className={`user-menu-dropdown ${dropdownOpen ? 'show' : ''}`}>
-                <div className="flex flex-column border-bottom py-2 mb-2">
-                  <div className="ps-3 user-info">
-                    {session.user.name && (
-                      <>
-                        <FaUserCircle className="user-name-icon" />
-                        <span className="user-name text-capitalize">{session.user.name}</span>
-                      </>
-                    )}
-                  </div>
-                  {session.user.email && (
-                    <div className="ps-3 user-email text-secondary fw-light">{session.user.email}</div>
-                  )}
-                </div>
-                <Link href="/consultas/minhas-consultas"><MdOutlineLibraryBooks className="me-1" /> Minhas Consultas</Link>
-                <Link href="/consultas/form-agendar-consulta"><MdCalendarMonth className="me-1" /> Agendar Consulta</Link>
-                <button
-                  onClick={() => signOut()}
-                  className='logout'
-                  aria-label="Sair"
-                >
-                  <SlLogout className='me-1'/> Sair
-                </button>
-              </div>
-            </>
-          )}
-        </div>)}
+        {isMobile && (
+          <UserMenu session={session as Session} toggleDropdown={toggleDropdown} dropdownOpen={dropdownOpen} />
+        )}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="header-nav">
             <Nav.Link as={Link} href="/" active={isActive('/')}>Home</Nav.Link>
@@ -110,51 +63,9 @@ const Header = () => {
               <FaPhoneAlt /> +55 11 2240-3434
             </Nav.Link>
           </Nav>
-          {!isMobile && (<div className="user-menu">
-          {session && (
-            <>
-              {session.user.image ? (
-                <img
-                  src={session.user.image}
-                  alt="Usuário"
-                  className="user-image"
-                />
-              ) : (
-                <FaUserCircle className="user-icon" />
-              )}
-              <FaCaretDown
-                className="caret-icon"
-                onClick={toggleDropdown}
-                aria-haspopup="true"
-                aria-expanded={dropdownOpen}
-              />
-              <div className={`user-menu-dropdown ${dropdownOpen ? 'show' : ''}`}>
-                <div className="flex flex-column border-bottom py-2 mb-2">
-                  <div className="ps-3 user-info">
-                    {session.user.name && (
-                      <>
-                        <FaUserCircle className="user-name-icon" />
-                        <span className="user-name text-capitalize">{session.user.name}</span>
-                      </>
-                    )}
-                  </div>
-                  {session.user.email && (
-                    <div className="ps-3 user-email text-secondary fw-light">{session.user.email}</div>
-                  )}
-                </div>
-                <Link href="/consultas/minhas-consultas"><MdOutlineLibraryBooks className="me-1" /> Minhas Consultas</Link>
-                <Link href="/consultas/form-agendar-consulta"><MdCalendarMonth className="me-1" /> Agendar Consulta</Link>
-                <button
-                  onClick={() => signOut()}
-                  className='logout'
-                  aria-label="Sair"
-                >
-                  <SlLogout className='me-1'/> Sair
-                </button>
-              </div>
-            </>
+          {!isMobile && (
+            <UserMenu session={session as Session} toggleDropdown={toggleDropdown} dropdownOpen={dropdownOpen} />
           )}
-        </div>)}
         </Navbar.Collapse>
       </Container>
     </Navbar>
