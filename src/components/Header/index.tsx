@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FaPhoneAlt, FaCaretDown, FaUserCircle } from 'react-icons/fa';
 import { MdOutlineLibraryBooks, MdCalendarMonth } from "react-icons/md";
 import { SlLogout } from "react-icons/sl";
-import { useState } from 'react';
+import { useState, useLayoutEffect } from 'react';
 import { useSession, signOut } from "next-auth/react";
 
 const Header = () => {
@@ -17,6 +17,27 @@ const Header = () => {
   const isActive = (path: string) => pathname === path;
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useLayoutEffect(() => {
+      const updateIsMobile = () => {
+        if (window.innerWidth < 768) {
+          setIsMobile(true);
+        } else {
+          setIsMobile(false);
+        }
+      };
+
+      // Chama a função no primeiro render
+      updateIsMobile();
+
+      // Adiciona um listener para redimensionamento da janela
+      window.addEventListener("resize", updateIsMobile);
+
+      // Limpa o listener ao desmontar o componente
+      return () => window.removeEventListener("resize", updateIsMobile);
+    }, []);
+
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
@@ -24,6 +45,7 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="custom-navbar">
       <Container>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" className='navbar-toggler' />
         <Navbar.Brand as={Link} href="/" className='logo-container' aria-label="Página Inicial">
           <img
             src="/logo-white.png"
@@ -31,21 +53,9 @@ const Header = () => {
             className="header-logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" className='navbar-toggler' />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="header-nav">
-            <Nav.Link as={Link} href="/" active={isActive('/')}>Home</Nav.Link>
-            <Nav.Link as={Link} href="/convenios" active={isActive('/convenios')}>Convênios</Nav.Link>
-            <Nav.Link as={Link} href="/unidades" active={isActive('/unidades')}>Unidades</Nav.Link>
-            <Nav.Link as={Link} href="/agendar-consulta" active={isActive('/agendar-consulta')}>Agendar Consulta</Nav.Link>
-          </Nav>
-          <Nav className='header-phone'>
-            <Nav.Link href="tel:1122403434" aria-label="Ligar para +55 11 2240-3434">
-              <FaPhoneAlt /> +55 11 2240-3434
-            </Nav.Link>
-          </Nav>
+        {isMobile && (<div className="user-menu">
           {session && (
-            <div className="user-menu">
+            <>
               {session.user.image ? (
                 <img
                   src={session.user.image}
@@ -85,8 +95,66 @@ const Header = () => {
                   <SlLogout className='me-1'/> Sair
                 </button>
               </div>
-            </div>
+            </>
           )}
+        </div>)}
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="header-nav">
+            <Nav.Link as={Link} href="/" active={isActive('/')}>Home</Nav.Link>
+            <Nav.Link as={Link} href="/convenios" active={isActive('/convenios')}>Convênios</Nav.Link>
+            <Nav.Link as={Link} href="/unidades" active={isActive('/unidades')}>Unidades</Nav.Link>
+            <Nav.Link as={Link} href="/agendar-consulta" active={isActive('/agendar-consulta')}>Agendar Consulta</Nav.Link>
+          </Nav>
+          <Nav className='header-phone'>
+            <Nav.Link href="tel:1122403434" aria-label="Ligar para +55 11 2240-3434">
+              <FaPhoneAlt /> +55 11 2240-3434
+            </Nav.Link>
+          </Nav>
+          {!isMobile && (<div className="user-menu">
+          {session && (
+            <>
+              {session.user.image ? (
+                <img
+                  src={session.user.image}
+                  alt="Usuário"
+                  className="user-image"
+                />
+              ) : (
+                <FaUserCircle className="user-icon" />
+              )}
+              <FaCaretDown
+                className="caret-icon"
+                onClick={toggleDropdown}
+                aria-haspopup="true"
+                aria-expanded={dropdownOpen}
+              />
+              <div className={`user-menu-dropdown ${dropdownOpen ? 'show' : ''}`}>
+                <div className="flex flex-column border-bottom py-2 mb-2">
+                  <div className="ps-3 user-info">
+                    {session.user.name && (
+                      <>
+                        <FaUserCircle className="user-name-icon" />
+                        <span className="user-name text-capitalize">{session.user.name}</span>
+                      </>
+                    )}
+                  </div>
+                  {session.user.email && (
+                    <div className="ps-3 user-email text-secondary fw-light">{session.user.email}</div>
+                  )}
+                </div>
+                <Link href="/consultas/minhas-consultas"><MdOutlineLibraryBooks className="me-1" /> Minhas Consultas</Link>
+                <Link href="/consultas/form-agendar-consulta"><MdCalendarMonth className="me-1" /> Agendar Consulta</Link>
+                <button
+                  onClick={() => signOut()}
+                  className='logout'
+                  aria-label="Sair"
+                >
+                  <SlLogout className='me-1'/> Sair
+                </button>
+              </div>
+            </>
+          )}
+        </div>)}
         </Navbar.Collapse>
       </Container>
     </Navbar>

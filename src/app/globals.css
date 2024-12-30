@@ -182,8 +182,7 @@ main {
 
   .header-logo {
     padding: 16px 0;
-}
-
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -209,6 +208,39 @@ main {
 @media (max-width: 799px) {
   .custom-navbar .nav-link {
       margin-right: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-toggler {
+    order: 1;
+  }
+
+  .logo-container {
+    order: 2;
+    margin: 0 auto;
+  }
+
+  .user-menu {
+    order: 3;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-phone {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
 
@@ -316,7 +348,6 @@ footer .wrapper {
   background-color: #0075cd!important;
 }
 
-
 .testimonial .carousel-indicators {
   margin-bottom: -3.2rem!important;
 }
@@ -372,4 +403,3 @@ footer .wrapper {
       max-width: 1200px;
   }
 }
-
