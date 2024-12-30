@@ -7,35 +7,22 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { useState, useLayoutEffect } from 'react';
-import { useSession } from "next-auth/react";
 import UserMenu from '../../components/UserMenu/UserMenu';
-import { Session } from '../../../types/next-auth';
 
 const Header = () => {
-  const { data: session } = useSession();
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
   const [isMobile, setIsMobile] = useState(false);
 
   useLayoutEffect(() => {
     const updateIsMobile = () => {
-      if (window.innerWidth < 768) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
+      setIsMobile(window.innerWidth < 768);
     };
 
     updateIsMobile();
     window.addEventListener("resize", updateIsMobile);
     return () => window.removeEventListener("resize", updateIsMobile);
   }, []);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
 
   return (
     <Navbar collapseOnSelect expand="lg" className="custom-navbar">
@@ -49,7 +36,7 @@ const Header = () => {
           />
         </Navbar.Brand>
         {isMobile && (
-          <UserMenu session={session as Session} toggleDropdown={toggleDropdown} dropdownOpen={dropdownOpen} />
+          <UserMenu />
         )}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="header-nav">
@@ -64,7 +51,7 @@ const Header = () => {
             </Nav.Link>
           </Nav>
           {!isMobile && (
-            <UserMenu session={session as Session} toggleDropdown={toggleDropdown} dropdownOpen={dropdownOpen} />
+            <UserMenu />
           )}
         </Navbar.Collapse>
       </Container>

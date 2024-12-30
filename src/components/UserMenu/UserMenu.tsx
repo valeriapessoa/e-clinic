@@ -1,18 +1,18 @@
-// UserMenu.tsx
 import Link from 'next/link';
 import { FaUserCircle, FaCaretDown } from 'react-icons/fa';
 import { MdOutlineLibraryBooks, MdCalendarMonth } from "react-icons/md";
 import { SlLogout } from "react-icons/sl";
-import { signOut } from "next-auth/react";
-import { Session } from '../../../types/next-auth';
+import { signOut, useSession } from "next-auth/react";
+import { useState } from 'react';
 
-interface UserMenuProps {
-  session: Session | null;
-  toggleDropdown: () => void;
-  dropdownOpen: boolean;
-}
+const UserMenu = () => {
+  const { data: session } = useSession();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-const UserMenu = ({ session, toggleDropdown, dropdownOpen }: UserMenuProps) => {
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   return (
     <div className="user-menu">
       {session && (
