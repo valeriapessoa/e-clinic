@@ -226,11 +226,13 @@ main {
 
 @media screen and (max-width: 1200px) {
   .header-logo {
-    width: 180px;
+    width: 145px;
   }
 
   .custom-navbar .nav-link {
     font-size: 0.8rem;
+    text-align: center;
+    margin-right: 0;
   }
 }
 
@@ -264,7 +266,8 @@ main {
   .header-phone {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 76%;
+    margin-bottom: 5%;
   }
 
   .header {
