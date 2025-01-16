@@ -359,9 +359,7 @@
     }
 
     .bannerImage {
-        margin-top: 0px;
-        width: 100%;
-        height: auto;
+        height: calc(71vh - 305px);
     }
 
     .imageContainer {

@@ -1,6 +1,10 @@
-.waveStyle {
+.waveUp, .waveDown {
     width: 100%;
-  }
+}
+
+.waveDown {
+    padding-top: 10%;
+}
 
 .installations {
     position: relative;
@@ -26,22 +30,40 @@
     .carouselImg {
         height: 153px;
     }
+
+    .waveDown {
+        padding-top: 15%;
+    }
+
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
     .carouselImg {
         height: 150px;
     }
+
+    .waveDown {
+        padding-top: 20%;
+    }
+
 }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
     .carouselImg {
         height: 390px;
     }
+
+    .waveDown {
+        padding-top: 20%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
     .carouselImg {
         height: 233px;
+    }
+
+    .waveDown {
+        padding-top: 25%;
     }
 }

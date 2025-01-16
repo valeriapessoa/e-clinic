@@ -39,7 +39,7 @@ const Installations = () => {
 
   return (
     <div className={`container-fluid installations py-5 ${styles.installations}`}>
-      <img src="/images/home/img-0.png" className={`${styles.waveStyle}`} alt="Instalação" />
+      <img src="/images/home/img-0.png" className={`${styles.waveUp}`} alt="Instalação" />
       <div className="container py-5">
         <SecondaryTitle
           primary="Nossas Instalações"
@@ -60,7 +60,7 @@ const Installations = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-      <img src="/images/home/img-00.png" className={`${styles.waveStyle}`} alt="Instalação" />
+      <img src="/images/home/img-00.png" className={`${styles.waveDown}`} alt="Instalação" />
     </div>
   );
 };
