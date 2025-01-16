@@ -7,16 +7,18 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { useState, useLayoutEffect } from 'react';
+import { useSession } from "next-auth/react";
 import UserMenu from '../../components/UserMenu/UserMenu';
 
 const Header = () => {
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
   const [isMobile, setIsMobile] = useState(false);
+  const { data: session } = useSession();
 
   useLayoutEffect(() => {
     const updateIsMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth <= 992);
     };
 
     updateIsMobile();
@@ -36,6 +38,9 @@ const Header = () => {
           />
         </Navbar.Brand>
         {isMobile && (
+            <UserMenu />
+        )}
+        {isMobile && !session && (
           <Nav.Link as={Link} href="/login" className="login-button">Login</Nav.Link>
         )}
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -50,7 +55,7 @@ const Header = () => {
               <FaPhoneAlt /> +55 11 2240-3434
             </Nav.Link>
           </Nav>
-          {!isMobile && (
+          {!isMobile && !session && (
             <Nav.Link as={Link} href="/login" className="login-button">Login</Nav.Link>
           )}
           {!isMobile && (

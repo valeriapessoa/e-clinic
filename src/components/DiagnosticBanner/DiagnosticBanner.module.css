@@ -94,6 +94,8 @@
   @media only screen and (max-width: 992px) {
     .bannerImage {
       height: 83vh;
+      object-fit: cover;
+      object-position: 80% top;
     }
 
     .bannerContent {
@@ -166,6 +168,7 @@
 
     .bannerContent {
       padding: 0 19px 14px 19px;
+      background: rgb(0 0 0 / 29%);
     }
 
     .textContainer {
