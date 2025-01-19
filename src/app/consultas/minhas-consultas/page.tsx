@@ -5,6 +5,8 @@ import { Container, Table, Image, Button, Modal, Form } from 'react-bootstrap';
 import styles from "../../styles/consultas/minhas-consultas.module.css";
 import { consultationSchema } from "@/models/consultationSchema";
 import { z } from 'zod';
+import { addDays, getDay } from "date-fns";
+import CustomDatePicker from "@/components/CustomDatePicker/CustomDatePicker";
 
 interface Consulta {
   _id: string;
@@ -68,10 +70,10 @@ const ConsultasAgendadas = () => {
     setShowModal(true);
   };
 
-  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setErrors(prev => ({ ...prev, [name]: "" }));
+  const handleDateTimeChange = (date: Date | null) => {
+    if (date) {
+      setFormData({ consultaDataHora: date.toISOString() });
+    }
   };
 
   const handleUpdateSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -105,6 +107,31 @@ const ConsultasAgendadas = () => {
         alert("Erro ao atualizar consulta");
       }
     }
+  };
+
+  // Função para definir horários permitidos
+  const filterPassedTime = (time: Date): boolean => {
+    const currentDate = new Date();
+    const selectedDate = new Date(time);
+
+    // Permite apenas horários entre 9:00 e 18:00
+    const hours = selectedDate.getHours();
+    return hours >= 9 && hours < 18;
+  };
+
+  // Função para definir datas permitidas
+  const filterPassedDate = (date: Date): boolean => {
+    const currentDate = new Date();
+    const selectedDate = new Date(date);
+
+    // Permite apenas datas a partir de hoje
+    if (selectedDate < currentDate) {
+      return false;
+    }
+
+    // Permite apenas de segunda a sábado
+    const day = getDay(selectedDate);
+    return day !== 0;
   };
 
   return (
@@ -153,13 +180,19 @@ const ConsultasAgendadas = () => {
             {/* Campo para Data/Hora da Consulta */}
             <Form.Group controlId="consultaDataHora">
               <Form.Label>Data/Hora da Consulta</Form.Label>
-              <Form.Control
-                type="datetime-local"
-                name="consultaDataHora"
-                value={formData.consultaDataHora}
-                onChange={handleFormChange}
-                required
+              <CustomDatePicker
+                selected={formData.consultaDataHora ? new Date(formData.consultaDataHora) : null}
+                onChange={handleDateTimeChange}
+                minDate={new Date()}
+                maxDate={addDays(new Date(), 30)}
+                filterDate={filterPassedDate}
+                filterTime={filterPassedTime}
+                showTimeSelect
+                dateFormat="Pp"
               />
+              <Form.Control.Feedback type="invalid">
+                {errors.consultaDataHora}
+              </Form.Control.Feedback>
             </Form.Group>
             {/* Botão de Submissão */}
             <Button variant="primary" type="submit" className="mt-3">Salvar Alterações</Button>
