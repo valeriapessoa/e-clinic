@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Container, Image, Modal, Button } from 'react-bootstrap';
+import Link from 'next/link';
 import styles from "../../styles/consultas/minhas-consultas.module.css";
 import useConsultas, { Consulta } from "@/hooks/useConsultas";
 import ConsultasTable from "@/components/ConsultasTable/ConsultasTable";
@@ -53,6 +54,11 @@ const ConsultasAgendadas = () => {
     <Container className={styles.container}>
       <Image src="/images/consultas/banner.jpg" fluid className={styles.bannerImage} alt="Banner de Consultas" />
       <h2 className={styles.title}>Consultas Agendadas</h2>
+      <Link href="/consultas/form-agendar-consulta" passHref>
+        <Button variant="primary" className='mb-4'>
+          Agendar Nova Consulta
+        </Button>
+      </Link>
       <ConsultasTable
         consultas={consultas}
         onEdit={handleEditClick}

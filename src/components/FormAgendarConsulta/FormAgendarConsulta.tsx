@@ -10,6 +10,7 @@ import FormDatePicker from "./FormDatePicker";
 import FormButton from "./FormButton";
 import useFormAgendarConsulta from "@/hooks/useFormAgendarConsulta";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 const FormAgendarConsulta = () => {
   const { data: session } = useSession();
@@ -58,6 +59,15 @@ const FormAgendarConsulta = () => {
         className={styles.banner}
         fluid
       />
+
+      <Link href="/consultas/minhas-consultas" passHref>
+        <FormButton
+          label="Minhas Consultas"
+          variant="primary"
+          className={`rounded-lg btn btn-primary px-5 py-1 mt-3 mb-5`}
+        />
+      </Link>
+
       <h2 className={styles.title}>Agendar Consulta</h2>
       <p className={styles.description}>
         Preencha o formulário abaixo para agendar uma consulta na E-Clinic.
@@ -178,13 +188,6 @@ const FormAgendarConsulta = () => {
           variant="primary"
           type="submit"
           className={styles.button}
-        />
-
-        <FormButton
-          label="Sair"
-          variant="danger"
-          onClick={() => signOut()}
-          className={`rounded-lg btn btn-danger px-5 py-1 mt-3`}
         />
       </Form>
     </Container>
