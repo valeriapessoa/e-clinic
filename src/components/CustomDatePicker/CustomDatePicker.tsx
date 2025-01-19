@@ -31,6 +31,8 @@ const CustomInput = forwardRef<HTMLInputElement, CustomInputProps>(({ value, onC
   </div>
 ));
 
+CustomInput.displayName = "CustomInput";
+
 // Tipagem para o componente CustomDatePicker
 interface CustomDatePickerProps extends Omit<React.ComponentProps<typeof DatePicker>, 'onChange'> {
   selected: Date | null;
@@ -56,5 +58,7 @@ const CustomDatePicker: React.FC<CustomDatePickerProps> = ({ selected, onChange,
     />
   </div>
 );
+
+CustomDatePicker.displayName = "CustomDatePicker";
 
 export default CustomDatePicker;
