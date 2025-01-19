@@ -1,43 +1,70 @@
 "use client";
 
 import { useSession, signOut } from "next-auth/react";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { Form, Button, Container, Image } from "react-bootstrap";
 import { consultationSchema } from "@/models/consultationSchema";
 import styles from "../../styles/consultas/form-agendar-consulta.module.css";
-import { z } from 'zod';
-import { useRouter } from 'next/navigation';
-import { redirect } from 'next/navigation'
+import { z } from "zod";
+import { useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
+import { addDays, getDay } from "date-fns";
+import CustomDatePicker from "@/components/CustomDatePicker/CustomDatePicker";
+
+interface FormData {
+  pacienteNome: string;
+  numeroCelular: string;
+  convenio: string;
+  carteirinhaNumero: string;
+  unidade: string;
+  especialidade: string;
+  consultaDataHora: string;
+}
+
+interface Errors {
+  [key: string]: string;
+}
 
 const FormAgendarConsulta = () => {
   const { data: session } = useSession();
   const router = useRouter();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     pacienteNome: "",
     numeroCelular: "",
     convenio: "SulAmérica",
     carteirinhaNumero: "",
     unidade: "Morumbi",
     especialidade: "Cardiologia",
-    consultaDataHora: ""
+    consultaDataHora: "",
   });
 
-  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [errors, setErrors] = useState<Errors>({});
 
-  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleFormChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     const { name, value } = e.target;
 
     // Filtra a entrada para permitir apenas dígitos
     if (name === "numeroCelular" || name === "carteirinhaNumero") {
-      const filteredValue = value.replace(/\D/g, '');
+      const filteredValue = value.replace(/\D/g, "");
 
       // Limita o número de caracteres
       if (name === "numeroCelular" && filteredValue.length > 11) {
-        setErrors((prev) => ({ ...prev, numeroCelular: "O número do celular deve ter no máximo 11 dígitos." }));
+        setErrors((prev) => ({
+          ...prev,
+          numeroCelular: "O número do celular deve ter no máximo 11 dígitos.",
+        }));
         return;
       }
       if (name === "carteirinhaNumero" && filteredValue.length > 10) {
-        setErrors((prev) => ({ ...prev, carteirinhaNumero: "O número da carteirinha deve ter no máximo 10 dígitos." }));
+        setErrors((prev) => ({
+          ...prev,
+          carteirinhaNumero:
+            "O número da carteirinha deve ter no máximo 10 dígitos.",
+        }));
         return;
       }
 
@@ -50,7 +77,13 @@ const FormAgendarConsulta = () => {
     setErrors((prev) => ({ ...prev, [name]: "" })); // Limpa os erros ao mudar o valor
   };
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleDateTimeChange = (date: Date | null) => {
+    if (date) {
+      setFormData({ ...formData, consultaDataHora: date.toISOString() });
+    }
+  };
+
+  const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!session) {
@@ -59,13 +92,14 @@ const FormAgendarConsulta = () => {
     }
 
     try {
+      console.log("Form data:", formData);
       // Valida os dados do formulário usando o Zod
       consultationSchema.parse({ ...formData, userId: session.user.id });
 
-      const response = await fetch('/api/consultations', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, userId: session.user.id }) // Envia os dados do formulário com o ID do usuário logado
+      const response = await fetch("/api/consultations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, userId: session.user.id }), // Envia os dados do formulário com o ID do usuário logado
       });
 
       if (response.ok) {
@@ -77,9 +111,9 @@ const FormAgendarConsulta = () => {
           carteirinhaNumero: "",
           unidade: "Morumbi",
           especialidade: "Cardiologia",
-          consultaDataHora: ""
+          consultaDataHora: "",
         });
-        router.push('/consultas/minhas-consultas'); // Redireciona para a página de consultas agendadas
+        router.push("/consultas/minhas-consultas"); // Redireciona para a página de consultas agendadas
       } else {
         alert("Erro ao agendar consulta");
       }
@@ -97,18 +131,49 @@ const FormAgendarConsulta = () => {
     }
   };
 
-  if(!session) {
-    return redirect(`/login`)
+  if (!session) {
+    return redirect(`/login`);
   }
+
+  // Função para definir horários permitidos
+  const filterPassedTime = (time: Date): boolean => {
+    const currentDate = new Date();
+    const selectedDate = new Date(time);
+
+    // Permite apenas horários entre 9:00 e 18:00
+    const hours = selectedDate.getHours();
+    return hours >= 9 && hours < 18;
+  };
+
+  // Função para definir datas permitidas
+  const filterPassedDate = (date: Date): boolean => {
+    const currentDate = new Date();
+    const selectedDate = new Date(date);
+
+    // Permite apenas datas a partir de hoje
+    if (selectedDate < currentDate) {
+      return false;
+    }
+
+    // Permite apenas de segunda a sábado
+    const day = getDay(selectedDate);
+    return day !== 0;
+  };
 
   return (
     <Container className={styles.formContainer}>
-      <Image src="/images/consultas/banner-clinica.png" alt="Banner de Consultas" className={styles.banner} fluid />
+      <Image
+        src="/images/consultas/banner-clinica.png"
+        alt="Banner de Consultas"
+        className={styles.banner}
+        fluid
+      />
       <h2 className={styles.title}>Agendar Consulta</h2>
-      <p className={styles.description}>Preencha o formulário abaixo para agendar uma consulta na E-Clinic.</p>
+      <p className={styles.description}>
+        Preencha o formulário abaixo para agendar uma consulta na E-Clinic.
+      </p>
 
       <Form onSubmit={handleFormSubmit}>
-
         <Form.Group controlId="pacienteNome" className={styles.formGroup}>
           <Form.Label className={styles.label}>Nome do Paciente</Form.Label>
           <Form.Control
@@ -120,7 +185,9 @@ const FormAgendarConsulta = () => {
             isInvalid={!!errors.pacienteNome}
             required
           />
-          <Form.Control.Feedback type="invalid">{errors.pacienteNome}</Form.Control.Feedback>
+          <Form.Control.Feedback type="invalid">
+            {errors.pacienteNome}
+          </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group controlId="numeroCelular" className={styles.formGroup}>
@@ -135,12 +202,20 @@ const FormAgendarConsulta = () => {
             required
             maxLength={11}
           />
-          <Form.Control.Feedback type="invalid">{errors.numeroCelular}</Form.Control.Feedback>
+          <Form.Control.Feedback type="invalid">
+            {errors.numeroCelular}
+          </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group controlId="convenio" className={styles.formGroup}>
           <Form.Label className={styles.label}>Convênio</Form.Label>
-          <Form.Control as="select" name="convenio" value={formData.convenio} onChange={handleFormChange} className={styles.select}>
+          <Form.Control
+            as="select"
+            name="convenio"
+            value={formData.convenio}
+            onChange={handleFormChange}
+            className={styles.select}
+          >
             <option value="SulAmérica">SulAmérica</option>
             <option value="Mediservice">Mediservice</option>
             <option value="Cassi">Cassi</option>
@@ -156,6 +231,9 @@ const FormAgendarConsulta = () => {
             <option value="Allianz Saúde">Allianz Saúde</option>
             <option value="Capep Saúde">Capep Saúde</option>
           </Form.Control>
+          <Form.Control.Feedback type="invalid">
+            {errors.convenio}
+          </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group controlId="carteirinhaNumero" className={styles.formGroup}>
@@ -170,25 +248,40 @@ const FormAgendarConsulta = () => {
             required
             maxLength={10}
           />
-          <Form.Control.Feedback type="invalid">{errors.carteirinhaNumero}</Form.Control.Feedback>
+          <Form.Control.Feedback type="invalid">
+            {errors.carteirinhaNumero}
+          </Form.Control.Feedback>
         </Form.Group>
 
-        {/* Campo para Unidade */}
         <Form.Group controlId="unidade" className={styles.formGroup}>
           <Form.Label className={styles.label}>Unidade</Form.Label>
-          <Form.Control as="select" name="unidade" value={formData.unidade} onChange={handleFormChange} className={styles.select}>
+          <Form.Control
+            as="select"
+            name="unidade"
+            value={formData.unidade}
+            onChange={handleFormChange}
+            className={styles.select}
+          >
             <option value="Morumbi">Morumbi</option>
             <option value="Centro">Centro</option>
             <option value="Vila Olímpia">Vila Olímpia</option>
             <option value="Pinheiros">Pinheiros</option>
             <option value="Brooklin">Brooklin</option>
           </Form.Control>
+          <Form.Control.Feedback type="invalid">
+            {errors.unidade}
+          </Form.Control.Feedback>
         </Form.Group>
 
-        {/* Campo para Especialidade */}
         <Form.Group controlId="especialidade" className={styles.formGroup}>
           <Form.Label className={styles.label}>Especialidade</Form.Label>
-          <Form.Control as="select" name="especialidade" value={formData.especialidade} onChange={handleFormChange} className={styles.select}>
+          <Form.Control
+            as="select"
+            name="especialidade"
+            value={formData.especialidade}
+            onChange={handleFormChange}
+            className={styles.select}
+          >
             <option value="Cardiologia">Cardiologia</option>
             <option value="Dermatologia">Dermatologia</option>
             <option value="Endocrinologia">Endocrinologia</option>
@@ -198,19 +291,26 @@ const FormAgendarConsulta = () => {
             <option value="Pediatria">Pediatria</option>
             <option value="Psiquiatria">Psiquiatria</option>
           </Form.Control>
+          <Form.Control.Feedback type="invalid">
+            {errors.especialidade}
+          </Form.Control.Feedback>
         </Form.Group>
 
-        {/* Campo para Data/Hora da Consulta */}
         <Form.Group controlId="consultaDataHora" className={styles.formGroup}>
           <Form.Label className={styles.label}>Data/Hora da Consulta</Form.Label>
-          <Form.Control
-            className={styles.input}
-            type="datetime-local"
-            name="consultaDataHora"
-            value={formData.consultaDataHora}
-            onChange={(e) => setFormData({ ...formData, consultaDataHora: e.target.value })}
-            required
+          <CustomDatePicker
+            selected={formData.consultaDataHora ? new Date(formData.consultaDataHora) : null}
+            onChange={handleDateTimeChange}
+            minDate={new Date()}
+            maxDate={addDays(new Date(), 30)}
+            filterDate={filterPassedDate}
+            filterTime={filterPassedTime}
+            showTimeSelect
+            dateFormat="Pp"
           />
+          <Form.Control.Feedback type="invalid">
+            {errors.consultaDataHora}
+          </Form.Control.Feedback>
         </Form.Group>
 
         <Button className={styles.button} variant="primary" type="submit">
@@ -219,11 +319,10 @@ const FormAgendarConsulta = () => {
 
         <button
           onClick={() => signOut()}
-          className="rounded-lg btn btn-danger px-5 py-1 mt-3"
+          className={`rounded-lg btn btn-danger px-5 py-1 mt-3`}
         >
           Sair
         </button>
-
       </Form>
     </Container>
   );

@@ -254,7 +254,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    order: 4; /* Adicionado para manter a ordem */
+    order: 4;
   }
 
   .header-nav {
@@ -285,12 +285,12 @@ main {
   }
 
   .login-button {
-    order: 2; /* Ajuste para manter a ordem */
+    order: 2;
   }
 
   .menu-icon {
-    display: block; /* Mostra o ícone de menu em telas menores */
-    order: 3; /* Ajuste para manter a ordem */
+    display: block;
+    order: 3;
   }
 }
 
@@ -422,6 +422,21 @@ footer .wrapper {
 
 .newsCarousel .react-multi-carousel-item {
   padding-bottom: 40px!important;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.react-datepicker-wrapper .input-group .input-group-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 0 5px 5px 0;
 }
 
 @media (min-width: 1240px) {
