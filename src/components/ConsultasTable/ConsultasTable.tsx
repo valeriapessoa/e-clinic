@@ -37,7 +37,7 @@ const ConsultasTable: React.FC<ConsultasTableProps> = ({ consultas, onEdit, onDe
               <td>{consulta.especialidade}</td>
               <td>{formatarDataHora(consulta.consultaDataHora)}</td>
               <td>
-                <Button className="btn btn-primary me-2" onClick={() => onEdit(consulta)}>Editar</Button>
+                <Button className="btn btn-primary me-2 my-2" onClick={() => onEdit(consulta)}>Editar</Button>
                 <Button className="btn btn-danger" onClick={() => onDelete(consulta)}>Cancelar</Button>
               </td>
             </tr>
