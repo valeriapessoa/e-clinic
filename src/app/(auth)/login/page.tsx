@@ -5,7 +5,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
-import { FaEye, FaEyeSlash, FaGoogle, FaGithub } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle, FaFacebook } from "react-icons/fa";
 import styles from "../../styles/auth/login.module.css";
 
 const Signin = () => {
@@ -93,13 +93,13 @@ const Signin = () => {
           </button>
 
           <button
-            className={`btn w-100 mt-2 ${styles.socialButton} ${styles.github}`}
+            className={`btn w-100 mt-2 ${styles.socialButton} ${styles.facebook}`}
             onClick={(e) => {
               e.preventDefault();
-              signIn("github");
+              signIn("facebook");
             }}
           >
-            <FaGithub className={`me-2 ${styles.icon}`} /> GitHub
+            <FaFacebook className={`me-2 ${styles.icon}`} /> Facebook
           </button>
         </div>
 
