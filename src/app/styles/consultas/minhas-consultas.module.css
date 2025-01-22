@@ -64,7 +64,21 @@
   background-color: #a32f3a;
 }
 
+@media (max-width: 1024px) {
+  .editButton,
+  .deleteButton {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .editButton,
+  .deleteButton {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
   .bannerImage {
     height: 150px;
   }
