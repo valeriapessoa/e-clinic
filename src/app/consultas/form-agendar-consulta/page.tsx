@@ -15,7 +15,7 @@ const Page = () => {
   return(
     <>
       <Head>
-        <title>Agendar Consulta</title>
+        <title>Formulário Agendar Consulta</title>
       </Head>
       <main>
         <FormAgendarConsulta />;
