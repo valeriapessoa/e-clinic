@@ -34,6 +34,23 @@ main {
   position: relative;
 }
 
+.custom-navbar .nav-link:not(.login-button)::after, {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #66cc66;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+
+.custom-navbar .header-phone .nav-link::after {
+  display: none;
+}
+
 .custom-navbar .nav-link::after {
   content: '';
   display: block;
@@ -197,18 +214,6 @@ main {
 .custom-navbar .login-button:hover {
   background-color: #f0f0f0;
   color: #316fd8;
-}
-
-.custom-navbar .nav-link:not(.login-button)::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #66cc66;
-  transition: width 0.3s;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
 }
 
 @media screen and (min-width: 1600px) {
