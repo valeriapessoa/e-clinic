@@ -1,8 +1,8 @@
 .container {
-   margin: 75px auto;
-   max-width: 1200px;
-   padding: 0 20px; /* Adicionando padding */
- }
+    margin: 75px auto 0;
+    max-width: 1200px;
+    padding: 0 20px;
+}
 
  .newsSection {
    margin-top: 15%;
