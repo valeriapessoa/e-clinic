@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Head from 'next/head';
 import { Container, Image, Modal, Button } from 'react-bootstrap';
 import Link from 'next/link';
 import styles from "../../styles/consultas/minhas-consultas.module.css";
@@ -51,55 +52,64 @@ const ConsultasAgendadas = () => {
   };
 
   return (
-    <Container className={styles.container}>
-      <Image src="/images/consultas/banner.jpg" fluid className={styles.bannerImage} alt="Banner de Consultas" />
-      <h2 className={styles.title}>Consultas Agendadas</h2>
-      <Link href="/consultas/form-agendar-consulta" passHref>
-        <Button variant="primary" className='mb-4'>
-          Agendar Nova Consulta
-        </Button>
-      </Link>
-      <ConsultasTable
-        consultas={consultas}
-        onEdit={handleEditClick}
-        onDelete={handleDelete}
-        formatarDataHora={formatarDataHora}
-      />
+    <>
+      <Head>
+        <title>Minhas Consultas</title>
+      </Head>
 
-      <EditConsultaModal
-        show={showModal}
-        onHide={() => setShowModal(false)}
-        consulta={selectedConsulta}
-        onUpdate={handleUpdate}
-      />
+      <main>
+        <Container className={styles.container}>
+        <Image src="/images/consultas/banner.jpg" fluid className={styles.bannerImage} alt="Banner de Consultas" />
+        <h2 className={styles.title}>Consultas Agendadas</h2>
+        <Link href="/consultas/form-agendar-consulta" passHref>
+          <Button variant="primary" className='mb-4'>
+            Agendar Nova Consulta
+          </Button>
+        </Link>
+        <ConsultasTable
+          consultas={consultas}
+          onEdit={handleEditClick}
+          onDelete={handleDelete}
+          formatarDataHora={formatarDataHora}
+        />
 
-      <Modal show={showConfirmDeleteModal} onHide={() => setShowConfirmDeleteModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Confirmar Cancelamento</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Você tem certeza que deseja cancelar esta consulta?</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowConfirmDeleteModal(false)}>
-            Cancelar
-          </Button>
-          <Button variant="danger" onClick={confirmDelete}>
-            Confirmar
-          </Button>
-        </Modal.Footer>
-      </Modal>
+        <EditConsultaModal
+          show={showModal}
+          onHide={() => setShowModal(false)}
+          consulta={selectedConsulta}
+          onUpdate={handleUpdate}
+        />
 
-      <Modal show={showSuccessModal} onHide={() => setShowSuccessModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Sucesso!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{successMessage}</Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={() => setShowSuccessModal(false)}>
-            Fechar
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </Container>
+        <Modal show={showConfirmDeleteModal} onHide={() => setShowConfirmDeleteModal(false)}>
+          <Modal.Header closeButton>
+            <Modal.Title>Confirmar Cancelamento</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Você tem certeza que deseja cancelar esta consulta?</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={() => setShowConfirmDeleteModal(false)}>
+              Cancelar
+            </Button>
+            <Button variant="danger" onClick={confirmDelete}>
+              Confirmar
+            </Button>
+          </Modal.Footer>
+        </Modal>
+
+        <Modal show={showSuccessModal} onHide={() => setShowSuccessModal(false)}>
+          <Modal.Header closeButton>
+            <Modal.Title>Sucesso!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{successMessage}</Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={() => setShowSuccessModal(false)}>
+              Fechar
+            </Button>
+          </Modal.Footer>
+        </Modal>
+        </Container>
+      </main>
+    </>
+
   );
 };
 

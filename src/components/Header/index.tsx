@@ -45,10 +45,10 @@ const Header = () => {
         )}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="header-nav">
-            <Nav.Link as={Link} href="/" active={isActive('/')}>Home</Nav.Link>
-            <Nav.Link as={Link} href="/convenios" active={isActive('/convenios')}>Convênios</Nav.Link>
-            <Nav.Link as={Link} href="/unidades" active={isActive('/unidades')}>Unidades</Nav.Link>
-            <Nav.Link as={Link} href="/agendar-consulta" active={isActive('/agendar-consulta')}>Agendar Consulta</Nav.Link>
+            <Nav.Link as={Link} href="/" active={isActive('/')} className="nav-link">Home</Nav.Link>
+            <Nav.Link as={Link} href="/convenios" active={isActive('/convenios')} className="nav-link">Convênios</Nav.Link>
+            <Nav.Link as={Link} href="/unidades" active={isActive('/unidades')} className="nav-link">Unidades</Nav.Link>
+            <Nav.Link as={Link} href="/agendar-consulta" active={isActive('/agendar-consulta')} className="nav-link">Agendar Consulta</Nav.Link>
           </Nav>
           <Nav className='header-phone'>
             <Nav.Link href="tel:1122403434" aria-label="Ligar para +55 11 2240-3434">

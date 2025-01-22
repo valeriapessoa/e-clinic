@@ -47,7 +47,7 @@ const UserMenu = () => {
               )}
             </div>
             <Link href="/consultas/minhas-consultas"><MdOutlineLibraryBooks className="me-1" /> Minhas Consultas</Link>
-            <Link href="/consultas/form-agendar-consulta"><MdCalendarMonth className="me-1" /> Agendar Consulta</Link>
+            <Link href="/consultas/agendar-consulta"><MdCalendarMonth className="me-1" /> Agendar Consulta</Link>
             <button
               onClick={() => signOut()}
               className='logout'

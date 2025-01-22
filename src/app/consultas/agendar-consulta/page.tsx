@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import FormAgendarConsulta from "@/components/FormAgendarConsulta/FormAgendarConsulta";
@@ -11,7 +12,17 @@ const Page = () => {
     return redirect(`/login`);
   }
 
-  return <FormAgendarConsulta />;
+  return(
+    <>
+      <Head>
+        <title>Agendar Consulta</title>
+      </Head>
+      <main>
+        <FormAgendarConsulta />;
+      </main>
+
+    </>
+  )
 };
 
 export default Page;
