@@ -1,4 +1,7 @@
-<h1 style="text-align: center;">E-Clinic 🏥</h1>
+<div align="center">
+  <h1>E-Clinic 🏥</h1>
+</div>
+
 
 <br>
 
