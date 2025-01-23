@@ -14,7 +14,7 @@ const font = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "E-Clinic 🩺",
+  title: "E-Clinic",
   description: "Bem-vindo à E-Clinic! Sua saúde é nossa prioridade. Cuidamos de você com dedicação e excelência. Descubra nossas unidades e serviços médicos personalizados para você e sua família.",
 };
 
@@ -26,6 +26,9 @@ export default function RootLayout({
   return (
     <SessionWrapper>
       <html lang="pt-BR">
+        <head>
+          <link rel="icon" href="/favicon.png" />
+        </head>
         <body className={font.className}>
           <Header />
           {children}
