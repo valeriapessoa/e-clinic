@@ -5,17 +5,17 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SessionWrapper from "../components/SessionWrapper";
 
-
 const font = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
   title: "E-Clinic",
-  description: "Bem-vindo à E-Clinic! Sua saúde é nossa prioridade. Cuidamos de você com dedicação e excelência. Descubra nossas unidades e serviços médicos personalizados para você e sua família.",
+  description:
+    "Bem-vindo à E-Clinic! Sua saúde é nossa prioridade. Cuidamos de você com dedicação e excelência. Descubra nossas unidades e serviços médicos personalizados para você e sua família.",
 };
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
         <body className={font.className}>
           <Header />
           {children}
-          <Footer  />
+          <Footer />
         </body>
       </html>
     </SessionWrapper>

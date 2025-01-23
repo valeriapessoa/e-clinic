@@ -171,7 +171,11 @@ const FormAgendarConsulta = () => {
 
         <FormDatePicker
           label="Data/Hora da Consulta"
-          selected={formData.consultaDataHora ? new Date(formData.consultaDataHora) : null}
+          selected={
+            formData.consultaDataHora
+              ? new Date(formData.consultaDataHora)
+              : null
+          }
           onChange={handleDateTimeChange}
           minDate={new Date()}
           maxDate={addDays(new Date(), 30)}

@@ -20,7 +20,11 @@ interface DoctorsCarouselProps {
   items: CarouselItem[];
 }
 
-const DoctorsCarousel: React.FC<DoctorsCarouselProps> = ({ title, subtitle, items }) => {
+const DoctorsCarousel: React.FC<DoctorsCarouselProps> = ({
+  title,
+  subtitle,
+  items,
+}) => {
   const [itemsPerSlide, setItemsPerSlide] = useState(3);
 
   useLayoutEffect(() => {
@@ -48,32 +52,58 @@ const DoctorsCarousel: React.FC<DoctorsCarouselProps> = ({ title, subtitle, item
   return (
     <div className={`${styles.carouselContainer}`}>
       <TertiaryTitle primary={title} secondary={subtitle} />
-      <Carousel indicators={true} controls={true} interval={5000} className={`carousel doctors ${styles.customCarousel}`}>
+      <Carousel
+        indicators={true}
+        controls={true}
+        interval={5000}
+        className={`carousel doctors ${styles.customCarousel}`}
+      >
         {Array.from({ length: slides }).map((_, slideIndex) => (
           <Carousel.Item key={slideIndex}>
             <div className="row justify-content-center">
-              {items.slice(slideIndex * itemsPerSlide, slideIndex * itemsPerSlide + itemsPerSlide).map((item, index) => (
-                <div key={index} className="col-12 col-sm-6 col-md-4">
-                  <div className="card text-center">
-                    <img src={item.image} alt={item.name} className="card-img-top" />
-                    <div className="card-body">
-                      <h5 className="card-title">{item.name}</h5>
-                      <p className="card-text">{item.description}</p>
-                      <div className="social-icons">
-                        <a href={item.instagramLink} target="_blank" rel="noopener noreferrer">
-                          <BiLogoInstagramAlt className="icon" size={24}/>
-                        </a>
-                        <a href={item.facebookLink} target="_blank" rel="noopener noreferrer">
-                          <FaFacebookF className="icon ms-3" size={24}/>
-                        </a>
-                        <a href={item.twitterLink} target="_blank" rel="noopener noreferrer">
-                          <FaTwitter className="icon ms-3" size={24}/>
-                        </a>
+              {items
+                .slice(
+                  slideIndex * itemsPerSlide,
+                  slideIndex * itemsPerSlide + itemsPerSlide,
+                )
+                .map((item, index) => (
+                  <div key={index} className="col-12 col-sm-6 col-md-4">
+                    <div className="card text-center">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="card-img-top"
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">{item.name}</h5>
+                        <p className="card-text">{item.description}</p>
+                        <div className="social-icons">
+                          <a
+                            href={item.instagramLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <BiLogoInstagramAlt className="icon" size={24} />
+                          </a>
+                          <a
+                            href={item.facebookLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaFacebookF className="icon ms-3" size={24} />
+                          </a>
+                          <a
+                            href={item.twitterLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaTwitter className="icon ms-3" size={24} />
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </Carousel.Item>
         ))}

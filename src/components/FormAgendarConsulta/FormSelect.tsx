@@ -2,7 +2,10 @@ import React from "react";
 import { Form } from "react-bootstrap";
 import styles from "./FormAgendarConsulta.module.css";
 
-type FormControlElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+type FormControlElement =
+  | HTMLInputElement
+  | HTMLSelectElement
+  | HTMLTextAreaElement;
 
 interface FormSelectProps {
   label: string;

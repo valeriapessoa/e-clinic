@@ -21,7 +21,7 @@
 }
 
 .testimonialSection h2::after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 4px;

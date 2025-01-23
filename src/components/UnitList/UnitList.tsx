@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./UnitList.module.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import SecondaryTitle from "../SecondaryTitle/SecondaryTitle";
 
 interface Unit {
@@ -53,20 +53,29 @@ const UnitList = () => {
 
   const openModal = (unit: Unit) => {
     setModalContent(unit);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setModalContent(null);
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
   };
 
   return (
     <section className={`${styles.unitsList} container mt-5 pt-5`}>
       <div className="section-title text-center mb-5">
-        <SecondaryTitle primary="Conheça as Unidades" secondary="Visite Nossas" highlight="Unidades" />
+        <SecondaryTitle
+          primary="Conheça as Unidades"
+          secondary="Visite Nossas"
+          highlight="Unidades"
+        />
         <p className={`mb-4 ${styles.description}`}>
-          Estamos presentes em várias localidades para melhor atender você e sua família, sempre com o compromisso de oferecer atendimento de qualidade e personalizado. Nossas unidades são estrategicamente localizadas para garantir acesso fácil e rápido aos nossos serviços. Conheça as nossas unidades e encontre a mais próxima de você. Na E-Clinic, sua saúde é nossa prioridade.
+          Estamos presentes em várias localidades para melhor atender você e sua
+          família, sempre com o compromisso de oferecer atendimento de qualidade
+          e personalizado. Nossas unidades são estrategicamente localizadas para
+          garantir acesso fácil e rápido aos nossos serviços. Conheça as nossas
+          unidades e encontre a mais próxima de você. Na E-Clinic, sua saúde é
+          nossa prioridade.
         </p>
       </div>
       <div className={styles.container}>
@@ -76,7 +85,11 @@ const UnitList = () => {
         </div>
         <div className={styles.content}>
           <div className="col-12 col-lg-7">
-            <img src="./images/unidades/sumare.jpg" alt="Real Estate" className={styles.image} />
+            <img
+              src="./images/unidades/sumare.jpg"
+              alt="Real Estate"
+              className={styles.image}
+            />
           </div>
           <div className="col-12 col-lg-3">
             <ul className={styles.list}>
@@ -107,7 +120,13 @@ const UnitList = () => {
               className={styles.modalContent}
               onClick={(e) => e.stopPropagation()}
             >
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
                 <h2>{modalContent.name}</h2>
                 <button className={styles.closeBtn} onClick={closeModal}>
                   ×
@@ -118,10 +137,25 @@ const UnitList = () => {
               <img
                 src={modalContent.image}
                 alt={`${modalContent.name}`}
-                style={{ width: "100%", borderRadius: "8px", marginBottom: "1rem" }}
+                style={{
+                  width: "100%",
+                  borderRadius: "8px",
+                  marginBottom: "1rem",
+                }}
               />
-              <div style={{ display: "flex", justifyContent: "space-around", marginTop: "1rem" }}>
-                <a href={modalContent.mapsLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-around",
+                  marginTop: "1rem",
+                }}
+              >
+                <a
+                  href={modalContent.mapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
                   <img
                     loading="lazy"
                     decoding="async"
@@ -132,7 +166,12 @@ const UnitList = () => {
                   />
                   <p>Maps</p>
                 </a>
-                <a href={modalContent.wazeLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                <a
+                  href={modalContent.wazeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
                   <img
                     loading="lazy"
                     decoding="async"
@@ -149,10 +188,14 @@ const UnitList = () => {
         )}
       </div>
       <p className={`mb-4 ${styles.description}`}>
-        Todas as nossas unidades são equipadas com tecnologia de ponta e contam com profissionais altamente qualificados para oferecer o melhor atendimento. Na E-Clinic, sua saúde e bem-estar são nossas prioridades.
+        Todas as nossas unidades são equipadas com tecnologia de ponta e contam
+        com profissionais altamente qualificados para oferecer o melhor
+        atendimento. Na E-Clinic, sua saúde e bem-estar são nossas prioridades.
       </p>
       <p className={`mb-4 ${styles.description}`}>
-        Venha nos visitar em uma de nossas unidades e experimente o cuidado e a excelência que só a E-Clinic pode oferecer. Estamos prontos para atender você!
+        Venha nos visitar em uma de nossas unidades e experimente o cuidado e a
+        excelência que só a E-Clinic pode oferecer. Estamos prontos para atender
+        você!
       </p>
     </section>
   );

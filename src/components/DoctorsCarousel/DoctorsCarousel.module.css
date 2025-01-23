@@ -16,7 +16,6 @@
   justify-content: center;
 }
 
-
 @media only screen and (max-width: 576px) {
   .carouselContainer {
     margin-top: 45%;

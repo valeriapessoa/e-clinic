@@ -17,8 +17,6 @@
   font-weight: 900;
 }
 
-
-/* Telas grande computador/notebook */
 @media (max-width: 1200px) and (orientation: landscape) {
   .primaryTitle {
     font-size: 1.7rem;
@@ -39,7 +37,6 @@
   }
 }
 
-/* Celular na horizotal e Tablet com tela grande */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
   .primaryTitle {
     font-size: 1.3rem;
@@ -60,7 +57,6 @@
   }
 }
 
-/* Tablet */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   .sectionTitle {
     padding: 0 0;
@@ -89,7 +85,6 @@
   }
 }
 
-/* Celular */
 @media only screen and (max-width: 576px) and (orientation: landscape) {
   .sectionTitle {
     padding: 0 0;

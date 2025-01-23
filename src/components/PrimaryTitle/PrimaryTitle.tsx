@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './PrimaryTitle.module.css';
+import React from "react";
+import styles from "./PrimaryTitle.module.css";
 
 interface PrimaryTitleProps {
   primary?: string;
@@ -7,7 +7,11 @@ interface PrimaryTitleProps {
   highlight?: string;
 }
 
-const PrimaryTitle: React.FC<PrimaryTitleProps> = ({ primary, secondary, highlight }) => {
+const PrimaryTitle: React.FC<PrimaryTitleProps> = ({
+  primary,
+  secondary,
+  highlight,
+}) => {
   return (
     <div className={`${styles.sectionTitle} text-center mb-5`}>
       <h4 className={`${styles.primaryTitle} pe-3 mb-0`}>{primary}</h4>

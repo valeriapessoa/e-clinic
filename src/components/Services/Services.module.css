@@ -1,48 +1,47 @@
-
 .containerItem {
-    margin-bottom: 15%;
+  margin-bottom: 15%;
 }
 
 .services {
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .serviceItem {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .serviceItem:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .iconCircle {
-    background-color: #103182;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
+  background-color: #103182;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
 }
 
 .serviceIcon {
-    font-size: 40px;
-    color: #FFF;
+  font-size: 40px;
+  color: #fff;
 }
 
 .textServices {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.5;
-    text-align: start;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: start;
 }

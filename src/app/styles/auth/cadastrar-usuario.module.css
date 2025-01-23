@@ -53,7 +53,9 @@
   background-color: #db4437;
   color: white;
   border-radius: 10px;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
 .googleButton:hover {
@@ -69,7 +71,9 @@
   background-color: #333;
   color: white;
   border-radius: 10px;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
 .githubButton:hover {

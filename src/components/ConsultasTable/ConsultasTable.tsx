@@ -1,5 +1,5 @@
-import React from 'react';
-import { Table, Button } from 'react-bootstrap';
+import React from "react";
+import { Table, Button } from "react-bootstrap";
 
 interface Consulta {
   _id: string;
@@ -16,7 +16,12 @@ interface ConsultasTableProps {
   formatarDataHora: (dataHora: string) => string;
 }
 
-const ConsultasTable: React.FC<ConsultasTableProps> = ({ consultas, onEdit, onDelete, formatarDataHora }) => {
+const ConsultasTable: React.FC<ConsultasTableProps> = ({
+  consultas,
+  onEdit,
+  onDelete,
+  formatarDataHora,
+}) => {
   return (
     <Table striped bordered hover responsive>
       <thead>
@@ -30,21 +35,33 @@ const ConsultasTable: React.FC<ConsultasTableProps> = ({ consultas, onEdit, onDe
       </thead>
       <tbody>
         {consultas.length > 0 ? (
-          consultas.map(consulta => (
+          consultas.map((consulta) => (
             <tr key={consulta._id}>
               <td>{consulta.pacienteNome}</td>
               <td>{consulta.unidade}</td>
               <td>{consulta.especialidade}</td>
               <td>{formatarDataHora(consulta.consultaDataHora)}</td>
               <td>
-                <Button className="btn btn-primary me-2 my-2" onClick={() => onEdit(consulta)}>Editar</Button>
-                <Button className="btn btn-danger" onClick={() => onDelete(consulta)}>Cancelar</Button>
+                <Button
+                  className="btn btn-primary me-2 my-2"
+                  onClick={() => onEdit(consulta)}
+                >
+                  Editar
+                </Button>
+                <Button
+                  className="btn btn-danger"
+                  onClick={() => onDelete(consulta)}
+                >
+                  Cancelar
+                </Button>
               </td>
             </tr>
           ))
         ) : (
           <tr>
-            <td colSpan={5} className="text-center">Nenhuma consulta agendada.</td>
+            <td colSpan={5} className="text-center">
+              Nenhuma consulta agendada.
+            </td>
           </tr>
         )}
       </tbody>

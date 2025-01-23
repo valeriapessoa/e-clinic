@@ -1,69 +1,68 @@
-.waveUp, .waveDown {
-    width: 100%;
+.waveUp,
+.waveDown {
+  width: 100%;
 }
 
 .waveDown {
-    padding-top: 10%;
+  padding-top: 10%;
 }
 
 .installations {
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    border-radius: 100px;
-    margin-bottom: 15%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 100px;
+  margin-bottom: 15%;
 }
 
 .carouselImg {
-    height: 250px;
-    object-fit: cover;
-    margin: 0 10px;
+  height: 250px;
+  object-fit: cover;
+  margin: 0 10px;
 }
 
 .text {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.5;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width: 992px) {
-    .carouselImg {
-        height: 153px;
-    }
+  .carouselImg {
+    height: 153px;
+  }
 
-    .waveDown {
-        padding-top: 15%;
-    }
-
+  .waveDown {
+    padding-top: 15%;
+  }
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
-    .carouselImg {
-        height: 150px;
-    }
+  .carouselImg {
+    height: 150px;
+  }
 
-    .waveDown {
-        padding-top: 20%;
-    }
-
+  .waveDown {
+    padding-top: 20%;
+  }
 }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-    .carouselImg {
-        height: 390px;
-    }
+  .carouselImg {
+    height: 390px;
+  }
 
-    .waveDown {
-        padding-top: 20%;
-    }
+  .waveDown {
+    padding-top: 20%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    .carouselImg {
-        height: 233px;
-    }
+  .carouselImg {
+    height: 233px;
+  }
 
-    .waveDown {
-        padding-top: 25%;
-    }
+  .waveDown {
+    padding-top: 25%;
+  }
 }

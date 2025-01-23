@@ -39,7 +39,11 @@ const HealthTips = ({ healthTips }: HealthTipsProps) => {
       >
         {healthTips.map((tip, index) => (
           <div key={index} className={styles.healthTip}>
-            <img src={tip.image} alt={`Dica ${index + 1}`} className={styles.healthTipImage} />
+            <img
+              src={tip.image}
+              alt={`Dica ${index + 1}`}
+              className={styles.healthTipImage}
+            />
             <p className={styles.healthTipText}>{tip.tip}</p>
           </div>
         ))}

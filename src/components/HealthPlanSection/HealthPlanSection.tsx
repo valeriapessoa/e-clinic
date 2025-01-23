@@ -1,6 +1,6 @@
-import React from 'react';
-import SecondaryTitle from '../SecondaryTitle/SecondaryTitle';
-import styles from './HealthPlanSection.module.css';
+import React from "react";
+import SecondaryTitle from "../SecondaryTitle/SecondaryTitle";
+import styles from "./HealthPlanSection.module.css";
 
 const images = [
   "/images/convenios/img-1.png",
@@ -23,13 +23,27 @@ const images = [
 
 const HealthPlanSection = () => {
   return (
-    <section id="convenios" className={`${styles.healthPlanSection} ${styles.container}`}>
-      <SecondaryTitle primary="Nossos Convênios" secondary="Conheça os" highlight="Planos de Saúde" />
+    <section
+      id="convenios"
+      className={`${styles.healthPlanSection} ${styles.container}`}
+    >
+      <SecondaryTitle
+        primary="Nossos Convênios"
+        secondary="Conheça os"
+        highlight="Planos de Saúde"
+      />
       <p className={styles.paragraph}>
-        Na E-Clinic, valorizamos a vida dos nossos pacientes em cada atendimento. Oferecemos cuidado excepcional com o jeito E-Clinic de fazer saúde. Nossa equipe trabalha unida diariamente para proporcionar o que há de melhor na medicina moderna a todos que confiam em nossos serviços.
+        Na E-Clinic, valorizamos a vida dos nossos pacientes em cada
+        atendimento. Oferecemos cuidado excepcional com o jeito E-Clinic de
+        fazer saúde. Nossa equipe trabalha unida diariamente para proporcionar o
+        que há de melhor na medicina moderna a todos que confiam em nossos
+        serviços.
       </p>
       <p className={styles.paragraph}>
-        Com dedicação, garantimos tratamento personalizado e de qualidade, utilizando tecnologias avançadas e técnicas inovadoras. Estabelecemos parcerias com diversas operadoras de saúde para facilitar o acesso à saúde de qualidade.
+        Com dedicação, garantimos tratamento personalizado e de qualidade,
+        utilizando tecnologias avançadas e técnicas inovadoras. Estabelecemos
+        parcerias com diversas operadoras de saúde para facilitar o acesso à
+        saúde de qualidade.
       </p>
       <p className={styles.paragraph}>
         Confira abaixo a lista completa dos convênios atendidos na E-Clinic:

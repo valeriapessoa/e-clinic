@@ -4,14 +4,14 @@ import Consultation from "@/models/Consultation";
 import { connectDB } from "@/lib/mongodb";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(
+  request: NextRequest,
+  { params }: { params: { id: string } },
+) {
   try {
     const token = await getToken({ req: request });
     if (!token) {
-      return NextResponse.json(
-        { message: "Não autorizado" },
-        { status: 401 }
-      );
+      return NextResponse.json({ message: "Não autorizado" }, { status: 401 });
     }
 
     const userId = token.id;
@@ -24,7 +24,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
     const consultaAtualizada = await Consultation.findOneAndUpdate(
       { _id: id, userId },
       { consultaDataHora: data.consultaDataHora },
-      { new: true }
+      { new: true },
     );
 
     return NextResponse.json(consultaAtualizada);
@@ -32,19 +32,19 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
     console.error("Erro ao atualizar consulta:", error);
     return NextResponse.json(
       { message: "Erro ao atualizar consulta" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: { id: string } },
+) {
   try {
     const token = await getToken({ req: request });
     if (!token) {
-      return NextResponse.json(
-        { message: "Não autorizado" },
-        { status: 401 }
-      );
+      return NextResponse.json({ message: "Não autorizado" }, { status: 401 });
     }
 
     const userId = token.id;
@@ -56,13 +56,13 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
 
     return NextResponse.json(
       { message: "Consulta excluída com sucesso" },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Erro ao excluir consulta:", error);
     return NextResponse.json(
       { message: "Erro ao excluir consulta" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

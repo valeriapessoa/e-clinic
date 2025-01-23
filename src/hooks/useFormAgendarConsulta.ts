@@ -36,7 +36,7 @@ const useFormAgendarConsulta = () => {
   const handleFormChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+    >,
   ) => {
     const { name, value } = e.target;
 
@@ -112,10 +112,13 @@ const useFormAgendarConsulta = () => {
       }
     } catch (error) {
       if (error instanceof z.ZodError) {
-        const formErrors = error.errors.reduce((acc, curr) => {
-          acc[curr.path[0]] = curr.message;
-          return acc;
-        }, {} as { [key: string]: string });
+        const formErrors = error.errors.reduce(
+          (acc, curr) => {
+            acc[curr.path[0]] = curr.message;
+            return acc;
+          },
+          {} as { [key: string]: string },
+        );
         setErrors(formErrors);
       } else {
         console.error("Erro ao agendar consulta:", error);

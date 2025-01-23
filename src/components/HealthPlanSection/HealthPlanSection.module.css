@@ -1,83 +1,84 @@
 .container {
-    margin: 75px auto;
-    max-width: 1200px;
-    padding: 0;
+  margin: 75px auto;
+  max-width: 1200px;
+  padding: 0;
 }
 
 .healthPlanSection {
-    margin-bottom: 15%;
+  margin-bottom: 15%;
 }
 
 .paragraph {
-    line-height: 1.5;
-    font-size: 1.1rem;
-    color: #666;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: #666;
 }
 
 .imageRow {
-    margin-bottom: 15%;
+  margin-bottom: 15%;
 }
 
 .block {
-    margin: 15px 0;
-    display: flex;
-    justify-content: center;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .insuranceImage {
-    max-width: 80%;
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 80%;
+  height: auto;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .insuranceImage:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
-    .container {
-        margin: 75px 85px;
-    }
+  .container {
+    margin: 75px 85px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
-    .container {
-        margin: 75px 65px;
-    }
+  .container {
+    margin: 75px 65px;
+  }
 
-    .insuranceImage {
-        max-width: 80%;
-    }
+  .insuranceImage {
+    max-width: 80%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .container {
-        margin: 75px 45px;
-    }
+  .container {
+    margin: 75px 45px;
+  }
 
-    .insuranceImage {
-        max-width: 75%;
-    }
+  .insuranceImage {
+    max-width: 75%;
+  }
 }
 
 @media only screen and (max-width: 576px) {
-    .container {
-        margin: 55px 35px;
-    }
+  .container {
+    margin: 55px 35px;
+  }
 
-    .insuranceImage {
-        max-width: 90%;
-    }
+  .insuranceImage {
+    max-width: 90%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    .container {
-        margin: 75px 35px;
-    }
+  .container {
+    margin: 75px 35px;
+  }
 
-    .insuranceImage {
-        max-width: 100%;
-    }
+  .insuranceImage {
+    max-width: 100%;
+  }
 }

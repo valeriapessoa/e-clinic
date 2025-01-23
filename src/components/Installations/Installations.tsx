@@ -1,7 +1,7 @@
-import React, { useState, useLayoutEffect } from 'react';
-import { Carousel } from 'react-bootstrap';
-import SecondaryTitle from '../SecondaryTitle/SecondaryTitle';
-import styles from './Installations.module.css';
+import React, { useState, useLayoutEffect } from "react";
+import { Carousel } from "react-bootstrap";
+import SecondaryTitle from "../SecondaryTitle/SecondaryTitle";
+import styles from "./Installations.module.css";
 
 const Installations = () => {
   const [itemsPerSlide, setItemsPerSlide] = useState(3);
@@ -38,29 +38,59 @@ const Installations = () => {
   const slides = Math.ceil(items.length / itemsPerSlide);
 
   return (
-    <div className={`container-fluid installations py-5 ${styles.installations}`}>
-      <img src="/images/home/img-0.png" className={`${styles.waveUp}`} alt="Instalação" />
+    <div
+      className={`container-fluid installations py-5 ${styles.installations}`}
+    >
+      <img
+        src="/images/home/img-0.png"
+        className={`${styles.waveUp}`}
+        alt="Instalação"
+      />
       <div className="container py-5">
         <SecondaryTitle
           primary="Nossas Instalações"
           secondary="Conheça"
           highlight="Nossa Estrutura"
         />
-        <p className={`mb-4 ${styles.text}`}>A E-Clinic disponibiliza instalações modernas para prestar atendimento de qualidade a seus pacientes. Humanização, cuidado, atenção e respeito são palavras que orientam há anos todas as atividades das equipes.</p>
-        <p className={`mb-4 ${styles.text}`}>Centro cirúrgico completo, com 17 salas preparadas para realizar quaisquer tipos de procedimentos, dos mais simples aos de alta complexidade, incluindo cirurgias por videolaparoscopia, tornando os procedimentos menos incisivos e minimizando o período de internação.</p>
+        <p className={`mb-4 ${styles.text}`}>
+          A E-Clinic disponibiliza instalações modernas para prestar atendimento
+          de qualidade a seus pacientes. Humanização, cuidado, atenção e
+          respeito são palavras que orientam há anos todas as atividades das
+          equipes.
+        </p>
+        <p className={`mb-4 ${styles.text}`}>
+          Centro cirúrgico completo, com 17 salas preparadas para realizar
+          quaisquer tipos de procedimentos, dos mais simples aos de alta
+          complexidade, incluindo cirurgias por videolaparoscopia, tornando os
+          procedimentos menos incisivos e minimizando o período de internação.
+        </p>
       </div>
       <Carousel indicators={true} nextIcon={null} prevIcon={null}>
         {Array.from({ length: slides }).map((_, slideIndex) => (
           <Carousel.Item key={slideIndex}>
             <div className="d-flex justify-content-center align-items-center">
-              {items.slice(slideIndex * itemsPerSlide, slideIndex * itemsPerSlide + itemsPerSlide).map((item, index) => (
-                <img key={index} src={item.src} className={`d-block ${styles.carouselImg}`} alt={item.alt} />
-              ))}
+              {items
+                .slice(
+                  slideIndex * itemsPerSlide,
+                  slideIndex * itemsPerSlide + itemsPerSlide,
+                )
+                .map((item, index) => (
+                  <img
+                    key={index}
+                    src={item.src}
+                    className={`d-block ${styles.carouselImg}`}
+                    alt={item.alt}
+                  />
+                ))}
             </div>
           </Carousel.Item>
         ))}
       </Carousel>
-      <img src="/images/home/img-00.png" className={`${styles.waveDown}`} alt="Instalação" />
+      <img
+        src="/images/home/img-00.png"
+        className={`${styles.waveDown}`}
+        alt="Instalação"
+      />
     </div>
   );
 };

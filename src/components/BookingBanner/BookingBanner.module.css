@@ -1,6 +1,6 @@
 .heroSection {
   position: relative;
-  background-image: url('/images/agendar-consulta/img-1.jpg');
+  background-image: url("/images/agendar-consulta/img-1.jpg");
   background-size: cover;
   background-position: center;
   height: 510px;

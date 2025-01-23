@@ -1,8 +1,8 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import PrimaryTitle from '../PrimaryTitle/PrimaryTitle';
-import styles from './About.module.css';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import PrimaryTitle from "../PrimaryTitle/PrimaryTitle";
+import styles from "./About.module.css";
 
 const About = () => {
   return (

@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import { FaUserCircle, FaCaretDown } from 'react-icons/fa';
+import Link from "next/link";
+import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { MdOutlineLibraryBooks, MdCalendarMonth } from "react-icons/md";
 import { SlLogout } from "react-icons/sl";
 import { signOut, useSession } from "next-auth/react";
-import { useState } from 'react';
+import { useState } from "react";
 
 const UserMenu = () => {
   const { data: session } = useSession();
@@ -32,28 +32,36 @@ const UserMenu = () => {
             aria-haspopup="true"
             aria-expanded={dropdownOpen}
           />
-          <div className={`user-menu-dropdown ${dropdownOpen ? 'show' : ''}`}>
+          <div className={`user-menu-dropdown ${dropdownOpen ? "show" : ""}`}>
             <div className="flex flex-column border-bottom py-2 mb-2">
               <div className="ps-3 user-info">
                 {session.user.name && (
                   <>
                     <FaUserCircle className="user-name-icon" />
-                    <span className="user-name text-capitalize">{session.user.name}</span>
+                    <span className="user-name text-capitalize">
+                      {session.user.name}
+                    </span>
                   </>
                 )}
               </div>
               {session.user.email && (
-                <div className="ps-3 user-email text-secondary fw-light">{session.user.email}</div>
+                <div className="ps-3 user-email text-secondary fw-light">
+                  {session.user.email}
+                </div>
               )}
             </div>
-            <Link href="/consultas/minhas-consultas"><MdOutlineLibraryBooks className="me-1" /> Minhas Consultas</Link>
-            <Link href="/consultas/form-agendar-consulta"><MdCalendarMonth className="me-1" /> Agendar Consulta</Link>
+            <Link href="/consultas/minhas-consultas">
+              <MdOutlineLibraryBooks className="me-1" /> Minhas Consultas
+            </Link>
+            <Link href="/consultas/form-agendar-consulta">
+              <MdCalendarMonth className="me-1" /> Agendar Consulta
+            </Link>
             <button
               onClick={() => signOut()}
-              className='logout'
+              className="logout"
               aria-label="Sair"
             >
-              <SlLogout className='me-1'/> Sair
+              <SlLogout className="me-1" /> Sair
             </button>
           </div>
         </>

@@ -1,13 +1,13 @@
 "use client";
 
-import Head from 'next/head';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
-import styles from '../styles/unidades.module.css';
-import DiagnosticBanner from '../../components/DiagnosticBanner/DiagnosticBanner';
-import DoctorsCarousel from '../../components/DoctorsCarousel/DoctorsCarousel';
-import UnitList from '../../components/UnitList/UnitList';
-import ClinicServices from '../../components/ClinicServices/ClinicServices';
+import Head from "next/head";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
+import styles from "../styles/unidades.module.css";
+import DiagnosticBanner from "../../components/DiagnosticBanner/DiagnosticBanner";
+import DoctorsCarousel from "../../components/DoctorsCarousel/DoctorsCarousel";
+import UnitList from "../../components/UnitList/UnitList";
+import ClinicServices from "../../components/ClinicServices/ClinicServices";
 
 const doctors = [
   {
@@ -16,7 +16,7 @@ const doctors = [
     image: "/images/unidades/img-1.jpg",
     facebookLink: "https://www.facebook.com/",
     instagramLink: "https://www.instagram.com/",
-    twitterLink: "https://twitter.com/"
+    twitterLink: "https://twitter.com/",
   },
   {
     name: "Dra. Isadora Figueiredo",
@@ -24,7 +24,7 @@ const doctors = [
     image: "/images/unidades/img-2.jpg",
     facebookLink: "https://www.facebook.com/",
     instagramLink: "https://www.instagram.com/",
-    twitterLink: "https://twitter.com/"
+    twitterLink: "https://twitter.com/",
   },
   {
     name: "Dr. Felipe Almeida",
@@ -32,7 +32,7 @@ const doctors = [
     image: "/images/unidades/img-3.jpg",
     facebookLink: "https://www.facebook.com/",
     instagramLink: "https://www.instagram.com/",
-    twitterLink: "https://twitter.com/"
+    twitterLink: "https://twitter.com/",
   },
   {
     name: "Dra. Beatriz Carvalho",
@@ -40,7 +40,7 @@ const doctors = [
     image: "/images/unidades/img-4.jpg",
     facebookLink: "https://www.facebook.com/",
     instagramLink: "https://www.instagram.com/",
-    twitterLink: "https://twitter.com/"
+    twitterLink: "https://twitter.com/",
   },
   {
     name: "Dr. Pedro Lacerda",
@@ -48,7 +48,7 @@ const doctors = [
     image: "/images/unidades/img-5.jpg",
     facebookLink: "https://www.facebook.com/",
     instagramLink: "https://www.instagram.com/",
-    twitterLink: "https://twitter.com/"
+    twitterLink: "https://twitter.com/",
   },
   {
     name: "Dr. Fernando Oliveira",
@@ -56,7 +56,7 @@ const doctors = [
     image: "/images/unidades/img-6.jpg",
     facebookLink: "https://www.facebook.com/",
     instagramLink: "https://www.instagram.com/",
-    twitterLink: "https://twitter.com/"
+    twitterLink: "https://twitter.com/",
   },
   {
     name: "Dr. Carlos Martins",
@@ -64,7 +64,7 @@ const doctors = [
     image: "/images/unidades/img-7.jpg",
     facebookLink: "https://www.facebook.com/",
     instagramLink: "https://www.instagram.com/",
-    twitterLink: "https://twitter.com/"
+    twitterLink: "https://twitter.com/",
   },
   {
     name: "Dra. Camila Mendes",
@@ -72,7 +72,7 @@ const doctors = [
     image: "/images/unidades/img-8.jpg",
     facebookLink: "https://www.facebook.com/",
     instagramLink: "https://www.instagram.com/",
-    twitterLink: "https://twitter.com/"
+    twitterLink: "https://twitter.com/",
   },
   {
     name: "Dra. Renata Pires",
@@ -80,7 +80,7 @@ const doctors = [
     image: "/images/unidades/img-9.jpg",
     facebookLink: "https://www.facebook.com/",
     instagramLink: "https://www.instagram.com/",
-    twitterLink: "https://twitter.com/"
+    twitterLink: "https://twitter.com/",
   },
 ];
 
@@ -92,13 +92,12 @@ const Unidades = () => {
       </Head>
       <main>
         <DiagnosticBanner />
-        <UnitList/>
+        <UnitList />
         <DoctorsCarousel
           items={doctors}
           title="Especialistas"
           subtitle="Conheça Nossa Equipe"
         />
-
         <ClinicServices />
       </main>
     </>

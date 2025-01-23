@@ -34,7 +34,7 @@ export const authOptions: NextAuthOptions = {
 
         const passwordMatch = await bcrypt.compare(
           credentials!.password,
-          userFound.password
+          userFound.password,
         );
 
         if (!passwordMatch) throw new Error("Senha inválida");
@@ -75,7 +75,7 @@ export const authOptions: NextAuthOptions = {
           _id: token.id,
           name: token.name,
           phone: token.phone,
-        }
+        },
       };
     },
   },

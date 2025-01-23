@@ -43,7 +43,9 @@ const Signin = () => {
         <h1 className="mb-4 text-center">Entrar</h1>
 
         <div className="mb-3">
-          <label htmlFor="email" className={styles.label}>E-mail</label>
+          <label htmlFor="email" className={styles.label}>
+            E-mail
+          </label>
           <div className={styles.inputContainer}>
             <input
               type="email"
@@ -56,7 +58,9 @@ const Signin = () => {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="password" className={styles.label}>Senha</label>
+          <label htmlFor="password" className={styles.label}>
+            Senha
+          </label>
           <div className={styles.inputContainer}>
             <input
               type={showPassword ? "text" : "password"}
@@ -75,7 +79,10 @@ const Signin = () => {
           </div>
         </div>
 
-        <button type="submit" className={`btn btn-primary w-100 ${styles.submitButton}`}>
+        <button
+          type="submit"
+          className={`btn btn-primary w-100 ${styles.submitButton}`}
+        >
           Entrar
         </button>
 

@@ -45,6 +45,9 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(consultas);
   } catch (error) {
     console.error("Erro ao buscar consultas:", error);
-    return NextResponse.json({ message: "Erro ao buscar consultas" }, { status: 500 });
+    return NextResponse.json(
+      { message: "Erro ao buscar consultas" },
+      { status: 500 },
+    );
   }
 }

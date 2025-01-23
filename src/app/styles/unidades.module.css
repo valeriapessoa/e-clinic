@@ -15,7 +15,7 @@
 .banner {
   width: 100vw;
   height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao banner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .bannerSection {
@@ -27,7 +27,7 @@
 
 .bannerContainer {
   position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Adiciona a sombra ao container do banner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); 
 }
 
 .banner {
@@ -38,7 +38,6 @@
 @media (max-width: 727px) {
   .unitCard {
     flex-basis: calc(100% - 30px);
-    margin-bottom:20px;
+    margin-bottom: 20px;
   }
 }
-

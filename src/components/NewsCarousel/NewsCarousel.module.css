@@ -1,80 +1,80 @@
 .container {
-    margin: 75px auto 0;
-    max-width: 1200px;
-    padding: 0 20px;
+  margin: 75px auto 0;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
- .newsSection {
-   margin-top: 15%;
- }
+.newsSection {
+  margin-top: 15%;
+}
 
- .newsItem {
-   background-color: #f9f9f9;
-   padding: 20px;
-   border-radius: 8px;
-   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   height: 100%;
-   margin: 0 10px;
- }
+.newsItem {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 10px;
+}
 
- .newsImage {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    border-radius: 8px;
- }
+.newsImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
 
- .newsContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(100% - 40px);
- }
+.newsContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 40px);
+}
 
- .newsHeadline {
-    font-weight: bold;
-    color: #103182;
-    margin-bottom: .5rem;
-    text-align: start;
- }
+.newsHeadline {
+  font-weight: bold;
+  color: #103182;
+  margin-bottom: 0.5rem;
+  text-align: start;
+}
 
- .newsSummary {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: .5rem;
-    text-align: start;
- }
+.newsSummary {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  text-align: start;
+}
 
- .newsDate {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 2.7;
-    text-align: start;
-    margin-bottom: 0.9rem;
- }
+.newsDate {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 2.7;
+  text-align: start;
+  margin-bottom: 0.9rem;
+}
 
- .readMore {
-    font-size: 1rem;
-    color: #316fd8;
-    text-decoration: none;
- }
+.readMore {
+  font-size: 1rem;
+  color: #316fd8;
+  text-decoration: none;
+}
 
- .readMore:hover {
-    text-decoration: underline;
- }
+.readMore:hover {
+  text-decoration: underline;
+}
 
- @media (max-width :768px) {
+@media (max-width: 768px) {
   .newsItem {
-      margin-bottom: 20px;
-      height: auto;
+    margin-bottom: 20px;
+    height: auto;
   }
 
   .newsDate {
-   line-height: 3.7;
-   }
- }
+    line-height: 3.7;
+  }
+}

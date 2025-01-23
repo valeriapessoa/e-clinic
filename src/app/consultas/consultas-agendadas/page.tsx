@@ -25,7 +25,10 @@ const ConsultasAgendadas = () => {
       />
       <h1>{session.user?.name}</h1>
       <p>{session.user?.email}</p>
-      <button onClick={() => signOut()} className="rounded-lg btn btn-danger px-5 py-1">
+      <button
+        onClick={() => signOut()}
+        className="rounded-lg btn btn-danger px-5 py-1"
+      >
         Sign Out
       </button>
     </main>

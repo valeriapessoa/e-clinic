@@ -5,7 +5,12 @@ import axios, { AxiosError } from "axios";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { BiLogoGoogle, BiLogoGithub, BiSolidShow, BiSolidHide } from "react-icons/bi";
+import {
+  BiLogoGoogle,
+  BiLogoGithub,
+  BiSolidShow,
+  BiSolidHide,
+} from "react-icons/bi";
 import styles from "../../styles/auth/cadastrar-usuario.module.css";
 
 const Signup = () => {
@@ -104,7 +109,10 @@ const Signup = () => {
           />
         </div>
 
-        <button type="submit" className={`btn btn-primary w-100 ${styles.submit}`}>
+        <button
+          type="submit"
+          className={`btn btn-primary w-100 ${styles.submit}`}
+        >
           Inscrever-se
         </button>
 

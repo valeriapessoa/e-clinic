@@ -88,7 +88,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,7 +167,8 @@
     flex-direction: column;
     align-items: center;
   }
-  .divImage, .list {
+  .divImage,
+  .list {
     width: 100%;
     margin-left: 0;
     padding: 0;
@@ -178,7 +179,6 @@
   }
 }
 
-/* Tablet */
 @media only screen and (max-width: 768px) {
   .container {
     padding: 1rem;
@@ -202,7 +202,6 @@
   }
 }
 
-/* Celular */
 @media only screen and (max-width: 576px) {
   .container {
     padding: 0.8rem;
@@ -248,7 +247,6 @@
   }
 }
 
-
 @media only screen and (max-width: 339px) {
   .container {
     padding: 0.8rem;
@@ -268,7 +266,6 @@
   }
   .listItem p {
     font-size: 0.8rem;
-
   }
   .description {
     margin: 0px 35px;

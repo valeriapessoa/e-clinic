@@ -1,368 +1,363 @@
 .bannerContainer {
-    width: 100%;
-    height: calc(90vh - 60px); /* Ajusta a altura do menu de navegação aqui */
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: calc(90vh - 60px); /* Ajusta a altura do menu de navegação aqui */
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .textContainer {
-    padding: 4% 3% 0 6%;
+  padding: 4% 3% 0 6%;
 }
 
 .title {
-    font-size: 1rem;
-    margin-bottom: 0;
-    font-weight: bold;
-    text-align: left;
-    text-transform: uppercase;
-    color: #103182;
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  color: #103182;
 }
 
 .subtitle {
-    margin: 25px 0;
-    font-size: 4rem;
-    font-weight: bold;
-    text-align: left;
-    color: #103182;
+  margin: 25px 0;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+  color: #103182;
 }
 
 .highlight {
-    color: #316fd8;
-    font-weight: 900;
+  color: #316fd8;
+  font-weight: 900;
 }
 
 .text {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.5;
-    text-align: justify;
-    margin-bottom: 55px;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 55px;
 }
 
 .buttonGroup {
-    text-align: left;
+  text-align: left;
 }
 
 .imageContainer {
-    position: relative;
+  position: relative;
 }
 
 .bannerImage {
-    width: 100%;
-    height: calc(90vh - 60px); /* Ajusta a altura do menu de navegação aqui */
-    object-fit: cover;
-    position: relative;
+  width: 100%;
+  height: calc(90vh - 60px); /* Ajusta a altura do menu de navegação aqui */
+  object-fit: cover;
+  position: relative;
 }
 
 .btnPrimary {
-    background-color: #316fd8;
-    border-color: #316fd8;
+  background-color: #316fd8;
+  border-color: #316fd8;
 }
 
 .btnPrimary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
 
 .btnSecondary {
-    border: 3px solid #316fd8;
-    color: #316fd8;
+  border: 3px solid #316fd8;
+  color: #316fd8;
 }
 
 .btnSecondary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-    color: #ffffff;
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #ffffff;
 }
 
-/* Telas extra grande como tvs */
 @media screen and (min-width: 1600px) {
-    .textContainer {
-        padding: 4% 5% 0 7%;
-    }
+  .textContainer {
+    padding: 4% 5% 0 7%;
+  }
 
-    .subtitle {
-        font-size: 4.5rem;
-    }
+  .subtitle {
+    font-size: 4.5rem;
+  }
 
-    .text {
-        font-size: 1.1rem;
-        margin-bottom: 60px;
-    }
+  .text {
+    font-size: 1.1rem;
+    margin-bottom: 60px;
+  }
 
-    .buttonGroup {
-        text-align: left;
-    }
+  .buttonGroup {
+    text-align: left;
+  }
 
-    .bannerImage {
-        margin-top: 0;
-    }
+  .bannerImage {
+    margin-top: 0;
+  }
 }
 
-/* Telas grande computador/notebook */
 @media only screen and (max-width: 1200px) {
-    .textContainer {
-        padding: 4% 3% 0 5%;
-    }
+  .textContainer {
+    padding: 4% 3% 0 5%;
+  }
 
-    .subtitle {
-        font-size: 3.5rem;
-    }
+  .subtitle {
+    font-size: 3.5rem;
+  }
 
-    .text {
-        font-size: 1rem;
-        margin-bottom: 45px;
-    }
+  .text {
+    font-size: 1rem;
+    margin-bottom: 45px;
+  }
 
-    .buttonGroup {
-        text-align: center;
-    }
+  .buttonGroup {
+    text-align: center;
+  }
 
-    .bannerImage {
-        margin-top: 0px;
-        height: calc(94vh - 63px);
-    }
+  .bannerImage {
+    margin-top: 0px;
+    height: calc(94vh - 63px);
+  }
 }
 
-/* Celular na horizotal e Tablet com tela grande */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
-    .textContainer {
-        padding: 4% 17% 0 17%;
-        order: 2;
-    }
+  .textContainer {
+    padding: 4% 17% 0 17%;
+    order: 2;
+  }
 
-    .subtitle {
-        font-size: 4.5rem;
-    }
+  .subtitle {
+    font-size: 4.5rem;
+  }
 
-    .text {
-        font-size: 1rem;
-        margin-bottom: 40px;
-    }
+  .text {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
 
-    .buttonGroup {
-        text-align: center;
-    }
+  .buttonGroup {
+    text-align: center;
+  }
 
-    .bannerImage {
-        margin-top: 0px;
-        height: calc(154vh - 39px);
-    }
+  .bannerImage {
+    margin-top: 0px;
+    height: calc(154vh - 39px);
+  }
 
-    .imageContainer {
-        order: 1;
-    }
+  .imageContainer {
+    order: 1;
+  }
 }
 
 @media only screen and (max-width: 992px) and (orientation: portrait) {
-    .textContainer {
-        padding: 4% 17% 0 17%;
-        order: 2;
-    }
+  .textContainer {
+    padding: 4% 17% 0 17%;
+    order: 2;
+  }
 
-    .subtitle {
-        font-size: 3.5rem;
-    }
+  .subtitle {
+    font-size: 3.5rem;
+  }
 
-    .text {
-        font-size: 1rem;
-        margin-bottom: 40px;
-    }
+  .text {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
 
-    .buttonGroup {
-        text-align: center;
-    }
+  .buttonGroup {
+    text-align: center;
+  }
 
-    .bannerImage {
-        margin-top: 0px;
-        height: calc(96vh - 60px);
-    }
+  .bannerImage {
+    margin-top: 0px;
+    height: calc(96vh - 60px);
+  }
 
-    .imageContainer {
-        order: 1;
-    }
+  .imageContainer {
+    order: 1;
+  }
 }
 
-/* Tablet */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
-    .textContainer {
-        padding: 4% 8% 0 8%;
-        order: 2;
-    }
+  .textContainer {
+    padding: 4% 8% 0 8%;
+    order: 2;
+  }
 
-    .subtitle {
-        font-size: 4.5rem;
-    }
+  .subtitle {
+    font-size: 4.5rem;
+  }
 
-    .text {
-        font-size: 0.9rem;
-        margin-bottom: 35px;
-    }
+  .text {
+    font-size: 0.9rem;
+    margin-bottom: 35px;
+  }
 
-    .buttonGroup {
-        text-align: center;
-    }
+  .buttonGroup {
+    text-align: center;
+  }
 
-    .bannerImage {
-        margin-top: 0px;
-        width: 100%;
-        height: auto;
-    }
+  .bannerImage {
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+  }
 
-    .imageContainer {
-        order: 1;
-    }
+  .imageContainer {
+    order: 1;
+  }
 }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-    .textContainer {
-        padding: 4% 8% 0 8%;
-        order: 2;
-    }
+  .textContainer {
+    padding: 4% 8% 0 8%;
+    order: 2;
+  }
 
-    .subtitle {
-        font-size: 3.5rem;
-    }
+  .subtitle {
+    font-size: 3.5rem;
+  }
 
-    .text {
-        font-size: 0.9rem;
-        margin-bottom: 35px;
-    }
+  .text {
+    font-size: 0.9rem;
+    margin-bottom: 35px;
+  }
 
-    .buttonGroup {
-        text-align: center;
-    }
+  .buttonGroup {
+    text-align: center;
+  }
 
-    .bannerImage {
-        margin-top: 0px;
-        width: 100%;
-        height: auto;
-    }
+  .bannerImage {
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+  }
 
-    .imageContainer {
-        order: 1;
-    }
+  .imageContainer {
+    order: 1;
+  }
 }
 
-/* Celular */
 @media only screen and (max-width: 576px) and (orientation: landscape) {
-    .textContainer {
-        padding: 4% 10% 0 10%;
-        order: 2;
-    }
+  .textContainer {
+    padding: 4% 10% 0 10%;
+    order: 2;
+  }
 
-    .subtitle {
-        font-size: 3.3rem;
-    }
+  .subtitle {
+    font-size: 3.3rem;
+  }
 
-    .text {
-        font-size: 1rem;
-        margin-bottom: 25px;
-    }
+  .text {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
 
-    .buttonGroup {
-        text-align: center;
-    }
+  .buttonGroup {
+    text-align: center;
+  }
 
-    .bannerImage {
-        margin-top: 0px;
-        width: 100%;
-        height: auto;
-    }
+  .bannerImage {
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+  }
 
-    .imageContainer {
-        order: 1;
-    }
+  .imageContainer {
+    order: 1;
+  }
 }
 
 @media only screen and (max-width: 576px) and (orientation: portrait) {
-    .textContainer {
-        padding: 4% 10% 0 10%;
-        order: 2;
-    }
+  .textContainer {
+    padding: 4% 10% 0 10%;
+    order: 2;
+  }
 
-    .subtitle {
-        font-size: 3.3rem;
-    }
+  .subtitle {
+    font-size: 3.3rem;
+  }
 
-    .text {
-        font-size: 1rem;
-        margin-bottom: 25px;
-    }
+  .text {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
 
-    .buttonGroup {
-        text-align: center;
-    }
+  .buttonGroup {
+    text-align: center;
+  }
 
-    .bannerImage {
-        margin-top: 0px;
-        width: 100%;
-        height: auto;
-    }
+  .bannerImage {
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+  }
 
-    .imageContainer {
-        order: 1;
-    }
+  .imageContainer {
+    order: 1;
+  }
 }
 
 @media only screen and (max-width: 480px) and (orientation: landscape) {
-    .textContainer {
-        padding: 4% 10% 0 10%;
-        order: 2;
-    }
+  .textContainer {
+    padding: 4% 10% 0 10%;
+    order: 2;
+  }
 
-    .subtitle {
-        font-size: 3.3rem;
-    }
+  .subtitle {
+    font-size: 3.3rem;
+  }
 
-    .text {
-        font-size: 1rem;
-        margin-bottom: 25px;
-    }
+  .text {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
 
-    .buttonGroup {
-        text-align: center;
-    }
+  .buttonGroup {
+    text-align: center;
+  }
 
-    .bannerImage {
-        margin-top: 0px;
-        width: 100%;
-        height: auto;
-    }
+  .bannerImage {
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+  }
 
-    .imageContainer {
-        order: 1;
-    }
+  .imageContainer {
+    order: 1;
+  }
 }
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
-    .textContainer {
-        padding: 4% 10% 0 10%;
-        order: 2;
-    }
+  .textContainer {
+    padding: 4% 10% 0 10%;
+    order: 2;
+  }
 
-    .subtitle {
-        font-size: 2.5rem;
-    }
+  .subtitle {
+    font-size: 2.5rem;
+  }
 
-    .text {
-        font-size: 1rem;
-        margin-bottom: 25px;
-    }
+  .text {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
 
-    .buttonGroup {
-        text-align: center;
-    }
+  .buttonGroup {
+    text-align: center;
+  }
 
-    .bannerImage {
-        height: calc(71vh - 305px);
-    }
+  .bannerImage {
+    height: calc(71vh - 305px);
+  }
 
-    .imageContainer {
-        order: 1;
-    }
+  .imageContainer {
+    order: 1;
+  }
 }

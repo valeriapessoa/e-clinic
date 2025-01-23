@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Modal, Form, Button } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Modal, Form, Button } from "react-bootstrap";
 import CustomDatePicker from "@/components/CustomDatePicker/CustomDatePicker";
 import { addDays, getDay } from "date-fns";
 import { consultationSchema } from "@/models/consultationSchema";
-import { z } from 'zod';
+import { z } from "zod";
 
 interface Consulta {
   _id: string;
@@ -17,8 +17,15 @@ interface EditConsultaModalProps {
   onUpdate: (id: string, updatedData: Partial<Consulta>) => Promise<void>;
 }
 
-const EditConsultaModal: React.FC<EditConsultaModalProps> = ({ show, onHide, consulta, onUpdate }) => {
-  const [formData, setFormData] = useState({ consultaDataHora: consulta?.consultaDataHora || "" });
+const EditConsultaModal: React.FC<EditConsultaModalProps> = ({
+  show,
+  onHide,
+  consulta,
+  onUpdate,
+}) => {
+  const [formData, setFormData] = useState({
+    consultaDataHora: consulta?.consultaDataHora || "",
+  });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const handleDateTimeChange = (date: Date | null) => {
@@ -32,13 +39,19 @@ const EditConsultaModal: React.FC<EditConsultaModalProps> = ({ show, onHide, con
 
     try {
       consultationSchema.pick({ consultaDataHora: true }).parse(formData);
-      await onUpdate(consulta?._id || "", { consultaDataHora: formData.consultaDataHora });
+      await onUpdate(consulta?._id || "", {
+        consultaDataHora: formData.consultaDataHora,
+      });
       onHide();
     } catch (error) {
       if (error instanceof z.ZodError) {
-        const formErrors = error.errors.reduce((acc, curr) => {
-          acc[curr.path[0]] = curr.message; return acc;
-        }, {} as { [key: string]: string });
+        const formErrors = error.errors.reduce(
+          (acc, curr) => {
+            acc[curr.path[0]] = curr.message;
+            return acc;
+          },
+          {} as { [key: string]: string },
+        );
         setErrors(formErrors);
       } else {
         console.error("Erro ao atualizar consulta:", error);
@@ -74,7 +87,11 @@ const EditConsultaModal: React.FC<EditConsultaModalProps> = ({ show, onHide, con
           <Form.Group controlId="consultaDataHora">
             <Form.Label>Data/Hora da Consulta</Form.Label>
             <CustomDatePicker
-              selected={formData.consultaDataHora ? new Date(formData.consultaDataHora) : null}
+              selected={
+                formData.consultaDataHora
+                  ? new Date(formData.consultaDataHora)
+                  : null
+              }
               onChange={handleDateTimeChange}
               minDate={new Date()}
               maxDate={addDays(new Date(), 30)}
@@ -87,7 +104,9 @@ const EditConsultaModal: React.FC<EditConsultaModalProps> = ({ show, onHide, con
               {errors.consultaDataHora}
             </Form.Control.Feedback>
           </Form.Group>
-          <Button variant="primary" type="submit" className="mt-3">Salvar Alterações</Button>
+          <Button variant="primary" type="submit" className="mt-3">
+            Salvar Alterações
+          </Button>
         </Form>
       </Modal.Body>
     </Modal>

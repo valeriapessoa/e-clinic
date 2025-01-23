@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export interface Consulta {
   _id: string;
@@ -14,8 +14,8 @@ const useConsultas = () => {
   useEffect(() => {
     const fetchConsultas = async () => {
       try {
-        const response = await fetch('/api/consultations');
-        if (!response.ok) throw new Error('Erro ao buscar consultas');
+        const response = await fetch("/api/consultations");
+        if (!response.ok) throw new Error("Erro ao buscar consultas");
         const data = await response.json();
         setConsultas(data);
       } catch (error) {
@@ -26,22 +26,24 @@ const useConsultas = () => {
   }, []);
 
   const deleteConsulta = async (id: string) => {
-    await fetch(`/api/consultations/${id}`, { method: 'DELETE' });
-    setConsultas(consultas.filter(consulta => consulta._id !== id));
+    await fetch(`/api/consultations/${id}`, { method: "DELETE" });
+    setConsultas(consultas.filter((consulta) => consulta._id !== id));
   };
 
   const updateConsulta = async (id: string, updatedData: Partial<Consulta>) => {
     const response = await fetch(`/api/consultations/${id}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(updatedData)
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updatedData),
     });
 
     if (!response.ok) {
-      throw new Error('Erro ao atualizar consulta');
+      throw new Error("Erro ao atualizar consulta");
     }
 
-    setConsultas(consultas.map(c => c._id === id ? { ...c, ...updatedData } : c));
+    setConsultas(
+      consultas.map((c) => (c._id === id ? { ...c, ...updatedData } : c)),
+    );
   };
 
   return { consultas, deleteConsulta, updateConsulta };

@@ -24,12 +24,17 @@ const Faq = ({ faqs }: FaqProps) => {
         <FaQuestionCircle className={styles.faqIcon} /> Perguntas Frequentes
       </h2>
       {faqs.map((faq, index) => (
-        <div key={index} className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""}`}>
+        <div
+          key={index}
+          className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""}`}
+        >
           <h3 onClick={() => toggleFaq(index)} className={styles.faqQuestion}>
             {faq.question}
             {activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}
           </h3>
-          {activeIndex === index && <p className={styles.faqAnswer}>{faq.answer}</p>}
+          {activeIndex === index && (
+            <p className={styles.faqAnswer}>{faq.answer}</p>
+          )}
         </div>
       ))}
     </section>
