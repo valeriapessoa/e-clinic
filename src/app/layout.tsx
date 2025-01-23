@@ -14,8 +14,8 @@ const font = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "E-Clinic",
-  description: "Bem-vindo à E-Clinic, onde cuidamos da sua saúde com dedicação e excelência. Descubra nossas unidades e serviços médicos personalizados para você e sua família.",
+  title: "E-Clinic 🩺",
+  description: "Bem-vindo à E-Clinic! Sua saúde é nossa prioridade. Cuidamos de você com dedicação e excelência. Descubra nossas unidades e serviços médicos personalizados para você e sua família.",
 };
 
 export default function RootLayout({

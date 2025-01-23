@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
       </section>
       <div className="footer-disclaimer">
-        ©2024 - E-Clinic - Todos os direitos reservados - Termos de Uso e Política de Privacidade
+        ©2024 - E-Clinic - Todos os direitos reservados - Termos de Uso e Política de Privacidade - Desenvolvido por Valéria Pessoa
       </div>
     </footer>
   );
