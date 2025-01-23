@@ -141,10 +141,9 @@ const FormAgendarConsulta = () => {
           onChange={handleFormChange}
           options={[
             { value: "Morumbi", label: "Morumbi" },
-            { value: "Centro", label: "Centro" },
-            { value: "Vila Olímpia", label: "Vila Olímpia" },
-            { value: "Pinheiros", label: "Pinheiros" },
-            { value: "Brooklin", label: "Brooklin" },
+            { value: "Paulista", label: "Paulista" },
+            { value: "Pompéia", label: "Pompéia" },
+            { value: "Sumaré", label: "Sumaré" },
           ]}
           isInvalid={!!errors.unidade}
           errorMessage={errors.unidade}
