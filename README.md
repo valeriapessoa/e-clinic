@@ -4,7 +4,7 @@
 E-Clinic é uma aplicação web desenvolvida para gerenciar consultas médicas e serviços de saúde. A aplicação permite que os usuários agendem consultas, visualizem suas consultas agendadas, alterem a data da consulta ou a cancelem. Além disso, os usuários podem acessar informações sobre convenios e unidades de saúde. O site utiliza um banco de dados MongoDB para armazenar dados de consultas e usuários, garantindo eficiência e escalabilidade. A autenticação é suportada através de integrações com Google e Facebook, proporcionando uma experiência de login simplificada e segura.
 
 ## 🌐 Link do Site
-[E-Clinic](https://e-clinic.com)
+[E-Clinic](https://e-clinic-projeto.vercel.app)
 
 ## 🛠️ Tecnologias Usadas
 - **Next.js**: Framework React para renderização do lado do servidor.
