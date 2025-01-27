@@ -55,3 +55,31 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou env
 
 ## 📜 Licença
 Este projeto está licenciado sob a Licença MIT.
+
+<br>
+
+## 📸 Screenshots
+### Tela Inicial
+![Tela Inicial](./public/images/Layouts/img-1.png)
+
+### Convênios
+![Convênios](./public/images/Layouts/img-2.png)
+
+### Unidades
+![Unidades](./public/images/Layouts/img-3.png)
+
+### Agendar Consulta
+![Agendar Consulta](./public/images/Layouts/img-4.png)
+
+### Login
+![Login](./public/images/Layouts/img-5.png)
+
+### Formulário de Agendamento de Consulta
+![Formulário de Agendamento de Consulta](./public/images/Layouts/img-6.png)
+
+### Consultas Agendadas
+![Consultas Agendadas](./public/images/Layouts/img-7.png)
+
+
+
+
